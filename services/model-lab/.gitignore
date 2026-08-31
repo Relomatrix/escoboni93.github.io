@@ -1,0 +1,16 @@
+# Local runtime artifacts
+.venv/
+.cache/
+models/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.onnx
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Evidence may include live-run outputs; keep committed JSON metrics only.
+# Never write prompts, responses, or PII into evidence/.

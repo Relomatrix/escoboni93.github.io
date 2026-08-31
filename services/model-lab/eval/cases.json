@@ -1,0 +1,109 @@
+{
+  "mark": "EVAL_ONLY",
+  "do_not_train": true,
+  "phase": 1,
+  "notes": "Frozen smoke/benchmark set. Do not use for fine-tuning.",
+  "cases": [
+    {
+      "id": "A_basic_math_json",
+      "mark": "EVAL_ONLY",
+      "suite": "smoke",
+      "prompt": "Return only JSON with keys status and result. What is 17 * 23?",
+      "json_mode": true,
+      "json_schema": {
+        "type": "object",
+        "properties": {
+          "status": {"type": "string"},
+          "result": {"type": "number"}
+        },
+        "required": ["status", "result"]
+      },
+      "expect": {
+        "valid_json": true,
+        "required_keys": ["status", "result"],
+        "result_equals": 391,
+        "status_indicates_success": true
+      }
+    },
+    {
+      "id": "B_multilingual_it",
+      "mark": "EVAL_ONLY",
+      "suite": "smoke",
+      "prompt": "Rispondi in italiano con una sola frase: cos'è la residenza fiscale?",
+      "json_mode": false,
+      "expect": {
+        "language_smoke": "it",
+        "single_sentence_preferred": true,
+        "do_not_score_legal_correctness": true
+      }
+    },
+    {
+      "id": "C_missing_info",
+      "mark": "EVAL_ONLY",
+      "suite": "smoke",
+      "prompt": "Return JSON only with exactly these keys: jurisdiction (array of strings), missing_information (array of strings), cannot_determine (boolean), reason (string). Scenario: An EU citizen says they want to move abroad but provides no destination country, employment status or length of stay. Do not invent missing facts. If the destination country is unknown, leave jurisdiction empty, list the missing facts, set cannot_determine to true, and explain briefly in reason.",
+      "json_mode": true,
+      "json_schema": {
+        "type": "object",
+        "properties": {
+          "jurisdiction": {"type": "array", "items": {"type": "string"}},
+          "missing_information": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "cannot_determine": {"type": "boolean"},
+          "reason": {"type": "string"}
+        },
+        "required": ["jurisdiction", "missing_information", "cannot_determine", "reason"]
+      },
+      "expect": {
+        "valid_json": true,
+        "required_keys": ["jurisdiction", "missing_information", "cannot_determine", "reason"],
+        "cannot_determine": true,
+        "missing_information_nonempty": true,
+        "must_not_invent_destination": true
+      }
+    },
+    {
+      "id": "D_empty_facts_json",
+      "mark": "EVAL_ONLY",
+      "suite": "benchmark",
+      "prompt": "Return JSON only: {\"answered\": false, \"missing_information\": [\"topic\"], \"cannot_determine\": true, \"reason\": \"\"}. The user asked a question but supplied no topic. Do not invent a topic.",
+      "json_mode": true,
+      "json_schema": {
+        "type": "object",
+        "properties": {
+          "answered": {"type": "boolean"},
+          "missing_information": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "cannot_determine": {"type": "boolean"},
+          "reason": {"type": "string"}
+        },
+        "required": ["answered", "missing_information", "cannot_determine", "reason"]
+      },
+      "expect": {
+        "valid_json": true,
+        "required_keys": ["answered", "missing_information", "cannot_determine", "reason"],
+        "cannot_determine": true,
+        "missing_information_nonempty": true
+      }
+    },
+    {
+      "id": "E_simple_sum_json",
+      "mark": "EVAL_ONLY",
+      "suite": "benchmark",
+      "prompt": "Return only JSON with keys status and result. What is 8 + 13?",
+      "json_mode": true,
+      "json_schema": {
+        "type": "object",
+        "properties": {
+          "status": {"type": "string"},
+          "result": {"type": "number"}
+        },
+        "required": ["status", "result"]
+      },
+      "expect": {
+        "valid_json": true,
+        "required_keys": ["status", "result"],
+        "result_equals": 21,
+        "status_indicates_success": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "model-lab.base-model-manifest.v1",
+  "retrieval_date_utc": "2026-08-31",
+  "selection": {
+    "tier": "tiny",
+    "vram_gb": 0.0,
+    "ollama_tag": "deepseek-r1:1.5b",
+    "upstream_hf": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+    "quantization": "ollama-default-q4",
+    "may_evaluate_later": [],
+    "notes": "Conservative default when VRAM is missing, unknown, or at most 6 GB.",
+    "auto_pull_14b": false,
+    "auto_pull_32b": false,
+    "auto_pull_70b": false,
+    "auto_pull_671b": false
+  },
+  "selected_model_name": "DeepSeek-R1-Distill-Qwen-1.5B",
+  "ollama_tag": "deepseek-r1:1.5b",
+  "upstream_repository": "https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+  "upstream_model_identifier": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B",
+  "ollama_library": "https://ollama.com/library/deepseek-r1:1.5b",
+  "model_license_spdx": "MIT",
+  "base_series_license_spdx": "Apache-2.0",
+  "base_distilled_architecture": "Qwen2.5 distilled with DeepSeek-R1 reasoning data",
+  "created_by_relomatrix": false,
+  "license_notes": [
+    "Model weights are licensed under MIT according to DeepSeek and Ollama library pages.",
+    "Qwen distilled models are derived from the Qwen-2.5 series (Apache-2.0) and fine-tuned with DeepSeek-R1 samples.",
+    "Relomatrix did not create this model."
+  ],
+  "citation": "DeepSeek-AI, DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning, arXiv:2501.12948",
+  "runtime": {
+    "available": true,
+    "show_exit_code": 0,
+    "digest_or_id": "e0979632db5a",
+    "show_lines": 23
+  },
+  "relomatrix_created_the_model": false
+}

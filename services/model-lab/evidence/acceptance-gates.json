@@ -1,0 +1,28 @@
+{
+  "schema": "model-lab.acceptance-gates.v1",
+  "phase": 1,
+  "captured_at_utc": "2026-08-31T22:50:00Z",
+  "execution_host": "linux_cloud_agent_not_wsl2",
+  "gates": {
+    "LOCAL_DEEPSEEK_INSTALLED": "PASS",
+    "MODEL_DOWNLOAD": "PASS",
+    "LOCAL_INFERENCE": "PASS",
+    "GPU_ACCELERATION": "MIXED-OFFLOAD",
+    "JSON_SMOKE": "PASS",
+    "MULTILINGUAL_SMOKE": "PASS",
+    "MISSING_INFO_SMOKE": "PASS",
+    "LOCALHOST_ONLY": "PASS",
+    "NO_PRODUCTION_PATH_CHANGED": "PASS",
+    "NO_SECRETS_COMMITTED": "PASS",
+    "MODEL_LAB_TESTS": "PASS"
+  },
+  "gpu_acceleration_notes": [
+    "nvidia-smi is not installed and /dev/nvidia* is absent.",
+    "Ollama startup discovery reported library=cpu and total_vram=0 B.",
+    "ollama ps reported PROCESSOR 24%/76% CPU/GPU while the model was loaded.",
+    "This is documented MIXED-OFFLOAD. NVIDIA GPU acceleration was not proven."
+  ],
+  "verdict": "HOLD",
+  "verdict_reason": "No NVIDIA GPU on this host; GPU acceleration is only documented as Ollama mixed CPU/GPU with zero discovered VRAM. Execution is a Linux cloud agent, not the Windows/WSL2 laptop named in the mission.",
+  "software_stack": "READY_ON_THIS_HOST"
+}
