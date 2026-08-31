@@ -10,6 +10,14 @@
       "suite": "smoke",
       "prompt": "Return only JSON with keys status and result. What is 17 * 23?",
       "json_mode": true,
+      "json_schema": {
+        "type": "object",
+        "properties": {
+          "status": {"type": "string"},
+          "result": {"type": "number"}
+        },
+        "required": ["status", "result"]
+      },
       "expect": {
         "valid_json": true,
         "required_keys": ["status", "result"],
@@ -35,6 +43,16 @@
       "suite": "smoke",
       "prompt": "Return JSON only with exactly these keys: jurisdiction (array of strings), missing_information (array of strings), cannot_determine (boolean), reason (string). Scenario: An EU citizen says they want to move abroad but provides no destination country, employment status or length of stay. Do not invent missing facts. If the destination country is unknown, leave jurisdiction empty, list the missing facts, set cannot_determine to true, and explain briefly in reason.",
       "json_mode": true,
+      "json_schema": {
+        "type": "object",
+        "properties": {
+          "jurisdiction": {"type": "array", "items": {"type": "string"}},
+          "missing_information": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "cannot_determine": {"type": "boolean"},
+          "reason": {"type": "string"}
+        },
+        "required": ["jurisdiction", "missing_information", "cannot_determine", "reason"]
+      },
       "expect": {
         "valid_json": true,
         "required_keys": ["jurisdiction", "missing_information", "cannot_determine", "reason"],
@@ -49,6 +67,16 @@
       "suite": "benchmark",
       "prompt": "Return JSON only: {\"answered\": false, \"missing_information\": [\"topic\"], \"cannot_determine\": true, \"reason\": \"\"}. The user asked a question but supplied no topic. Do not invent a topic.",
       "json_mode": true,
+      "json_schema": {
+        "type": "object",
+        "properties": {
+          "answered": {"type": "boolean"},
+          "missing_information": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+          "cannot_determine": {"type": "boolean"},
+          "reason": {"type": "string"}
+        },
+        "required": ["answered", "missing_information", "cannot_determine", "reason"]
+      },
       "expect": {
         "valid_json": true,
         "required_keys": ["answered", "missing_information", "cannot_determine", "reason"],
@@ -62,6 +90,14 @@
       "suite": "benchmark",
       "prompt": "Return only JSON with keys status and result. What is 8 + 13?",
       "json_mode": true,
+      "json_schema": {
+        "type": "object",
+        "properties": {
+          "status": {"type": "string"},
+          "result": {"type": "number"}
+        },
+        "required": ["status", "result"]
+      },
       "expect": {
         "valid_json": true,
         "required_keys": ["status", "result"],

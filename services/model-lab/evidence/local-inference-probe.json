@@ -1,0 +1,52 @@
+{
+  "schema": "model-lab.inference-probe.v1",
+  "captured_at_utc": "2026-08-31T22:44:09Z",
+  "model": "deepseek-r1:1.5b",
+  "health_ok": true,
+  "health_detail": "ollama_version=0.33.2; model_present=True",
+  "quantization": "Q4_K_M",
+  "latency_ms": 2214,
+  "input_tokens": 10,
+  "output_tokens": 16,
+  "tokens_per_sec": 30.048,
+  "finish_reason": "length",
+  "time_to_first_token_ms": 109,
+  "stream_chunks": 15,
+  "processor": "mixed-offload",
+  "ollama_ps_processor_hint": "see processor field; raw table omitted if it could include paths",
+  "ollama_ps_has_gpu": true,
+  "ollama_ps_has_cpu": true,
+  "gpu_before": {
+    "nvidia_smi_available": false,
+    "devices": [],
+    "total_vram_mb": 0,
+    "free_vram_mb": 0,
+    "driver_version": null,
+    "raw_exit": "command_not_found"
+  },
+  "gpu_after": {
+    "nvidia_smi_available": false,
+    "devices": [],
+    "total_vram_mb": 0,
+    "free_vram_mb": 0,
+    "driver_version": null,
+    "raw_exit": "command_not_found"
+  },
+  "ram_before_mb": {
+    "total_mb": 16014,
+    "available_mb": 15003,
+    "free_mb": 2380
+  },
+  "ram_after_mb": {
+    "total_mb": 16014,
+    "available_mb": 13748,
+    "free_mb": 1125
+  },
+  "visible_content_chars": 0,
+  "ps_before_lines": 1,
+  "ps_after_lines": 2,
+  "notes": [
+    "Prompt and completion text are not stored.",
+    "No NVIDIA GPU was required for this probe to run."
+  ]
+}

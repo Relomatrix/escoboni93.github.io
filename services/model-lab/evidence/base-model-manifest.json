@@ -30,7 +30,10 @@
   ],
   "citation": "DeepSeek-AI, DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning, arXiv:2501.12948",
   "runtime": {
-    "available": false
+    "available": true,
+    "show_exit_code": 0,
+    "digest_or_id": "e0979632db5a",
+    "show_lines": 23
   },
   "relomatrix_created_the_model": false
 }

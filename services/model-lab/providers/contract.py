@@ -23,6 +23,7 @@ class CompletionRequest:
     temperature: float = 0.0
     max_tokens: int = 1024
     json_mode: bool = False
+    json_schema: Mapping[str, Any] | None = None
 
 
 @dataclass(frozen=True)

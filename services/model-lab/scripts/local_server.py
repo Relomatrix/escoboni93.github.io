@@ -149,9 +149,13 @@ class BridgeHandler(BaseHTTPRequestHandler):
         temperature = float(body.get("temperature") or 0.0)
         max_tokens = int(body.get("max_tokens") or 1024)
         json_mode = False
+        json_schema = None
         response_format = body.get("response_format") or {}
-        if isinstance(response_format, dict) and response_format.get("type") == "json_object":
+        if isinstance(response_format, dict) and response_format.get("type") in {"json_object", "json_schema"}:
             json_mode = True
+            schema = response_format.get("json_schema") or response_format.get("schema")
+            if isinstance(schema, dict):
+                json_schema = schema
 
         try:
             result = self.provider.complete(
@@ -160,6 +164,7 @@ class BridgeHandler(BaseHTTPRequestHandler):
                     temperature=temperature,
                     max_tokens=max_tokens,
                     json_mode=json_mode,
+                    json_schema=json_schema,
                 )
             )
         except ModelLabError as exc:

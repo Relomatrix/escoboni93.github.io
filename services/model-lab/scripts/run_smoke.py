@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -18,6 +19,20 @@ from providers.model_selection import recommend_model  # noqa: E402
 from providers.ollama_deepseek import OllamaDeepSeekProvider  # noqa: E402
 
 
+def _ollama_ps() -> str:
+    try:
+        completed = subprocess.run(
+            ["ollama", "ps"],
+            check=False,
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+    except (OSError, subprocess.TimeoutExpired):
+        return ""
+    return completed.stdout or ""
+
+
 def main() -> int:
     hardware = collect_hardware()
     recommendation = recommend_model(hardware)
@@ -25,7 +40,7 @@ def main() -> int:
     health = provider.health()
     gpu_before = sample_nvidia_smi()
     cases = [c for c in load_cases() if c["id"].startswith(("A_", "B_", "C_"))]
-    results = run_cases(provider, cases)
+    results = run_cases(provider, cases, max_tokens=512)
     gpu_after = sample_nvidia_smi()
     acceleration = "none"
     if gpu_before.get("nvidia_smi_available") and gpu_before.get("devices"):
@@ -33,6 +48,14 @@ def main() -> int:
         acceleration = "gpu" if used > 256 else "unknown"
     else:
         acceleration = "cpu"
+    ps_text = _ollama_ps()
+    processor = "cpu"
+    if "CPU/GPU" in ps_text or ("CPU" in ps_text and "GPU" in ps_text):
+        processor = "mixed-offload"
+    elif "100% GPU" in ps_text:
+        processor = "gpu"
+    elif "CPU" in ps_text:
+        processor = "cpu"
     smoke = {
         "schema": "model-lab.local-deepseek-smoke.v1",
         "mark": "EVAL_ONLY",
@@ -47,6 +70,9 @@ def main() -> int:
         "results": results,
         "acceleration": {
             "mode": acceleration,
+            "ollama_processor": processor,
+            "ollama_ps_mentions_gpu": "GPU" in ps_text,
+            "ollama_ps_mentions_cpu": "CPU" in ps_text,
             "gpu_before": gpu_before,
             "gpu_after": gpu_after,
             "peak_vram_used_mb_observed": (

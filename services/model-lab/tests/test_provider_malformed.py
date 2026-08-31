@@ -29,6 +29,30 @@ def test_complete_rejects_missing_message_object() -> None:
             provider.complete(CompletionRequest(messages=[ChatMessage(role="user", content="x")]))
 
 
+def test_json_mode_sends_object_schema() -> None:
+    seen: dict[str, object] = {}
+
+    def handler(method: str, path: str, body: bytes):
+        import json
+
+        seen["payload"] = json.loads(body.decode("utf-8"))
+        return (
+            200,
+            json_bytes({"model": "deepseek-r1:1.5b", "done": True, "message": {"content": "{}"}}),
+            "application/json",
+        )
+
+    with LocalOllama(handler) as server:
+        provider = OllamaDeepSeekProvider(base_url=server.base_url, timeout_s=2)
+        provider.complete(
+            CompletionRequest(
+                messages=[ChatMessage(role="user", content="x")],
+                json_mode=True,
+            )
+        )
+    assert seen["payload"]["format"] == {"type": "object"}  # type: ignore[index]
+
+
 def test_complete_strips_think_and_drops_thinking_field() -> None:
     def handler(method: str, path: str, _body: bytes):
         return (

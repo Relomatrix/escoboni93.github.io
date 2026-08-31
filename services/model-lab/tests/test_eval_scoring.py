@@ -29,6 +29,11 @@ def test_math_json_wrong_result_fails() -> None:
     assert row["result_ok"] is False
 
 
+def test_required_keys_are_case_insensitive() -> None:
+    row = score_case(BY_ID["A_basic_math_json"], '{"Status":"ok","Result":391}')
+    assert row["passed"] is True
+
+
 def test_missing_info_requires_cannot_determine_and_gaps() -> None:
     good = score_case(
         BY_ID["C_missing_info"],

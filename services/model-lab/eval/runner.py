@@ -48,6 +48,7 @@ def run_cases(
                     temperature=0.0,
                     max_tokens=max_tokens,
                     json_mode=bool(case.get("json_mode")),
+                    json_schema=case.get("json_schema"),
                 )
             )
             content = result.content

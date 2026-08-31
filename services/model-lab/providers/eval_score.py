@@ -8,6 +8,19 @@ from typing import Any
 from providers.json_extract import extract_json_object, is_success_status, looks_italian
 from providers.reasoning import strip_hidden_reasoning
 
+def _lookup(parsed: dict[str, Any] | None, key: str) -> Any:
+    if not parsed:
+        return None
+    for candidate, value in parsed.items():
+        if str(candidate).lower() == key.lower():
+            return value
+    return None
+
+
+def _has_key(parsed: dict[str, Any] | None, key: str) -> bool:
+    return _lookup(parsed, key) is not None or (parsed is not None and any(str(k).lower() == key.lower() for k in parsed))
+
+
 INVENTED_DESTINATION_MARKERS = (
     "united states",
     "usa",
@@ -42,31 +55,31 @@ def score_case(case: dict[str, Any], content: str, timed_out: bool = False) -> d
 
     required_ok = True
     for key in expect.get("required_keys") or []:
-        if not parsed or key not in parsed:
+        if not _has_key(parsed, key):
             required_ok = False
 
     result_ok = True
     if "result_equals" in expect:
-        result_ok = bool(parsed and parsed.get("result") == expect["result_equals"])
+        result_ok = bool(_lookup(parsed, "result") == expect["result_equals"])
 
     status_ok = True
     if expect.get("status_indicates_success"):
-        status_ok = bool(parsed and is_success_status(parsed.get("status")))
+        status_ok = is_success_status(_lookup(parsed, "status"))
 
     cannot_determine_ok = True
     if "cannot_determine" in expect:
-        cannot_determine_ok = bool(parsed and parsed.get("cannot_determine") is expect["cannot_determine"])
+        cannot_determine_ok = _lookup(parsed, "cannot_determine") is expect["cannot_determine"]
 
     missing_ok = True
     if expect.get("missing_information_nonempty"):
-        missing = (parsed or {}).get("missing_information")
+        missing = _lookup(parsed, "missing_information")
         missing_ok = isinstance(missing, list) and len(missing) > 0
 
     invented = False
     if expect.get("must_not_invent_destination"):
         blob = json.dumps(parsed, ensure_ascii=False).lower() if parsed else visible.lower()
         invented = any(marker in blob for marker in INVENTED_DESTINATION_MARKERS)
-        jurisdiction = (parsed or {}).get("jurisdiction") if parsed else None
+        jurisdiction = _lookup(parsed, "jurisdiction")
         if isinstance(jurisdiction, list) and len(jurisdiction) > 0:
             invented = True
 

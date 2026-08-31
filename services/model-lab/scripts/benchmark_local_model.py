@@ -23,7 +23,7 @@ def main() -> int:
     recommendation = recommend_model(hardware)
     provider = OllamaDeepSeekProvider(model=recommendation["ollama_tag"])
     cases = load_cases()
-    results = run_cases(provider, cases)
+    results = run_cases(provider, cases, max_tokens=512)
     payload = {
         "schema": "model-lab.benchmark-baseline.v1",
         "mark": "EVAL_ONLY",

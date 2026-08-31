@@ -131,8 +131,12 @@ class OllamaDeepSeekProvider:
                 "num_predict": request.max_tokens,
             },
         }
-        if request.json_mode:
-            payload["format"] = "json"
+        if request.json_schema:
+            payload["format"] = dict(request.json_schema)
+        elif request.json_mode:
+            # Bare "json" is unreliable on small distilled models; a generic
+            # object schema produces valid objects without changing prompts.
+            payload["format"] = {"type": "object"}
 
         started = time.perf_counter()
         raw = self._request_json("POST", "/api/chat", payload)

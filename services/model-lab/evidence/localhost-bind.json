@@ -1,0 +1,46 @@
+{
+  "listeners": [
+    {
+      "ip": "127.0.0.1",
+      "port": 11434,
+      "localhost_only": true
+    },
+    {
+      "ip": "127.0.0.1",
+      "port": 8077,
+      "localhost_only": true
+    },
+    {
+      "ip": "127.0.0.1",
+      "port": 11434,
+      "localhost_only": true
+    },
+    {
+      "ip": "127.0.0.1",
+      "port": 8077,
+      "localhost_only": true
+    },
+    {
+      "ip": "127.0.0.1",
+      "port": 8077,
+      "localhost_only": true
+    },
+    {
+      "ip": "127.0.0.1",
+      "port": 11434,
+      "localhost_only": true
+    },
+    {
+      "ip": "127.0.0.1",
+      "port": 11434,
+      "localhost_only": true
+    },
+    {
+      "ip": "127.0.0.1",
+      "port": 8077,
+      "localhost_only": true
+    }
+  ],
+  "public_bind_count": 0,
+  "localhost_only": true
+}
