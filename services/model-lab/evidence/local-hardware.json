@@ -1,0 +1,43 @@
+{
+  "schema": "model-lab.local-hardware.v1",
+  "captured_at_utc": "2026-08-31T22:41:57Z",
+  "os": {
+    "system": "Linux",
+    "release": "6.12.94+",
+    "machine": "x86_64",
+    "distro": "Ubuntu 24.04.4 LTS",
+    "wsl2": false,
+    "execution_environment": "linux"
+  },
+  "cpu": {
+    "model": "Intel(R) Xeon(R) Processor",
+    "logical_cores": 4
+  },
+  "memory": {
+    "total_mb": 16014,
+    "available_mb": 15113,
+    "free_mb": 5851
+  },
+  "disk": {
+    "mount": "/",
+    "total_gb": 251.86,
+    "available_gb": 229.28
+  },
+  "gpu": {
+    "nvidia_smi_available": false,
+    "devices": [],
+    "total_vram_mb": 0,
+    "free_vram_mb": 0,
+    "driver_version": null,
+    "raw_exit": "command_not_found"
+  },
+  "software": {
+    "python": "3.12.3",
+    "git": "2.43.0"
+  },
+  "notes": [
+    "No NVIDIA GPU reported. nvidia-smi is unavailable or returned no devices.",
+    "Not running inside WSL2.",
+    "Snapshot omits machine identity, account names, home directories, and public network addresses."
+  ]
+}

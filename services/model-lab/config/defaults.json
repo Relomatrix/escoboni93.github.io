@@ -1,0 +1,15 @@
+{
+  "development_only": true,
+  "provider": "local_ollama",
+  "ollama_base_url": "http://127.0.0.1:11434",
+  "bridge_host": "127.0.0.1",
+  "bridge_port": 8077,
+  "timeout_s": 180,
+  "temperature": 0.0,
+  "max_tokens": 1024,
+  "allowed_bind_hosts": ["127.0.0.1", "localhost", "::1"],
+  "notes": [
+    "Development-only defaults. Do not expose this stack to the Internet.",
+    "Ollama must listen on localhost only (OLLAMA_HOST=127.0.0.1:11434)."
+  ]
+}
