@@ -31,3 +31,8 @@ draft: false              # optional
 ---
 ```
 Body: standard Markdown (GFM tables supported). Headings get automatic ids (e.g. `## The risks people miss` -> `#the-risks-people-miss`). Cite sources in a `## Sources` section.
+
+## Analytics and cookies (do not break)
+- Never add `<script>` tags for analytics or third-party trackers directly in pages or posts. All analytics goes through `lib/consent.ts` (GA4 `G-BKQ2JPZCKY`, loaded only after consent).
+- Do not embed third-party iframes (YouTube, maps, social widgets) in posts: they set cookies before consent. Use a link or a local image instead.
+- Keep the footer links Privacy, Cookie policy and "Preferenze cookie".

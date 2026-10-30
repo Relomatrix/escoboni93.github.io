@@ -25,3 +25,5 @@ time,.lang{font-size:14px;color:var(--copper-dark)}
 .cta-box{background:var(--navy);color:var(--ivory);padding:24px;border-radius:8px;margin-top:48px}
 .cta-box h2{color:var(--ivory);margin-top:0}.cta-box a{color:var(--copper-light);font-weight:600}
 .site-footer{background:var(--navy);color:var(--ivory);padding:24px 0;font-size:15px}.site-footer a{color:var(--copper-light)}
+
+.cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;max-width:640px;margin:0 auto;background:#fff;color:var(--navy);border:1px solid #d8d2c4;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.18);padding:16px 18px;font-size:14px;z-index:50}.cookie-banner p{margin:0 0 8px}.cookie-actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}.cookie-actions button{border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;padding:8px 14px;font:inherit;cursor:pointer}.cookie-actions button.primary{background:var(--navy);color:#fff}.linklike{background:none;border:0;padding:0;font:inherit;color:var(--copper-light);text-decoration:underline;cursor:pointer}
