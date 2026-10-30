@@ -5,7 +5,7 @@ Every push to `main` triggers the GitHub Actions workflow that builds the static
 ## Daily routine
 1. Write the article as Markdown: `content/posts/<slug>.md`. The slug is the URL: `/blog/<slug>`. Lowercase, hyphens, unique, never change it after publishing.
 2. Put images in `public/images/posts/<slug>/` and reference them as `/images/posts/<slug>/<file>`. Do not hotlink external images.
-3. Run `npm ci && npm run build` (must pass).
+3. Run `npm ci && npm run build` (must pass). `npm run check` runs only the content gate (see below).
 4. Commit and push to `main`: `git add content public && git commit -m "post: <slug>" && git push origin main`.
 5. GitHub Actions builds and publishes to Pages (check the Actions tab is green); the post appears on `/blog`, in `/sitemap.xml` and `/rss.xml`.
 
@@ -22,15 +22,29 @@ slug: "my-article-slug"   # required, URL path /blog/<slug>
 lang: "en"                # required, "en" or "it"
 image: "/images/posts/my-article-slug/cover.jpeg"  # optional, cover + Open Graph
 imageAlt: "Alt text"      # optional
-author: "Relomatrix"      # optional
-tags: ["tax", "italy"]    # optional
-faq:                      # optional, emitted as FAQPage JSON-LD
+author: "redazione"       # optional, key of lib/authors.ts (default: redazione)
+tags: ["Remote work", "Italy"]  # recommended: each tag gets a hub page /blog/tag/<tag>/ and drives related articles
+translationKey: "cbe"     # optional: same value on the IT and EN versions of one article -> hreflang + language switch
+faq:                      # required (>= 1), emitted as FAQPage JSON-LD
   - q: "Question?"
     a: "Answer."
 draft: false              # optional
 ---
 ```
-Body: standard Markdown (GFM tables supported). Headings get automatic ids (e.g. `## The risks people miss` -> `#the-risks-people-miss`). Cite sources in a `## Sources` section.
+Body: standard Markdown (GFM tables supported). Headings get automatic ids (e.g. `## The risks people miss` -> `#the-risks-people-miss`). Cite sources in a `## Sources` (en) or `## Fonti` (it) section.
+
+## Content gate (`scripts/check-posts.mjs`, runs before every build)
+The build fails, so the post is not published, when a post:
+- misses `title`, `description`, `date` (YYYY-MM-DD), `slug`, `lang` (`it`/`en`) or `faq`;
+- has a slug that is not lowercase-with-hyphens, is reserved (`tag`) or is already used;
+- has no `## Sources` / `## Fonti` section, or that section has no link to an **official source** (government, EU, OECD/ILO/UN and the Italian, French, US, UK, AR, BR institutions listed in the script);
+- uses an external image, a missing image or an image over 200 KB;
+- contains `<script>` or `<iframe>`;
+- reuses a `translationKey` for the same language, or names an `author` not in `lib/authors.ts`.
+Warnings (do not fail): opening paragraph outside ~40-60 words, description outside 120-160 chars, title over 60, no tags, image without `imageAlt`.
+
+## Language
+`lang: it` posts get `<html lang="it">` (rewritten after the build by `scripts/set-html-lang.mjs`) and Italian UI labels. Link the two versions of a translated article with the same `translationKey`.
 
 ## Analytics and cookies (do not break)
 - Never add `<script>` tags for analytics or third-party trackers directly in pages or posts. All analytics goes through `lib/consent.ts` (GA4 `G-BKQ2JPZCKY`, loaded only after consent).

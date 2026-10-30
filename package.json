@@ -1,10 +1,17 @@
 {
   "name": "relomatrix-blog",
   "private": true,
-  "scripts": { "dev": "next dev", "build": "next build", "start": "next start" },
+  "scripts": {
+    "dev": "next dev",
+    "check": "node scripts/check-posts.mjs",
+    "prebuild": "node scripts/check-posts.mjs",
+    "build": "next build",
+    "postbuild": "node scripts/set-html-lang.mjs",
+    "start": "next start"
+  },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "15.5.6",
+    "next": "15.5.27",
     "react": "19.1.1",
     "react-dom": "19.1.1",
     "rehype-slug": "^6.0.0",
@@ -14,5 +21,9 @@
     "remark-rehype": "^11.1.2",
     "unified": "^11.0.5"
   },
-  "devDependencies": { "@types/node": "^20", "@types/react": "^19", "typescript": "^5" }
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "typescript": "^5"
+  }
 }

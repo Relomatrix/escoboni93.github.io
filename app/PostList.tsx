@@ -1,16 +1,15 @@
-import { getAllPosts } from '@/lib/posts';
+import type { PostMeta } from '@/lib/posts';
+import { imageSize } from '@/lib/images';
 
-export default function PostList() {
-  const posts = getAllPosts();
+export default function PostList({ posts }: { posts: PostMeta[] }) {
   return (
-    <>
-      <h1>Relomatrix Blog</h1>
-      <p className="lead">Source-referenced guides on relocation, immigration, tax and cross-border compliance.</p>
-      <ul className="posts">
-        {posts.map((p) => (
+    <ul className="posts">
+      {posts.map((p) => {
+        const size = p.image ? imageSize(p.image) : null;
+        return (
           <li key={p.slug} lang={p.lang}>
-            <a href={`/blog/${p.slug}`}>
-              {p.image && <img src={p.image} alt={p.imageAlt || p.title} loading="lazy" />}
+            <a href={`/blog/${encodeURIComponent(p.slug)}/`}>
+              {p.image && <img src={p.image} alt={p.imageAlt || p.title} loading="lazy" decoding="async" width={size?.width} height={size?.height} />}
               <div>
                 <time dateTime={p.date}>{p.date}</time> <span className="lang">{p.lang.toUpperCase()}</span>
                 <h2>{p.title}</h2>
@@ -18,8 +17,8 @@ export default function PostList() {
               </div>
             </a>
           </li>
-        ))}
-      </ul>
-    </>
+        );
+      })}
+    </ul>
   );
 }
