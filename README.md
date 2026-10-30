@@ -2,20 +2,21 @@
 
 Self-owned Next.js (App Router, static generation) blog for https://blog.relomatrix.com. Articles live in `content/posts/*.md`. See [PUBLISHING.md](PUBLISHING.md).
 
-Routes: `/blog`, `/blog/<slug>`, `/sitemap.xml`, `/robots.txt`, `/rss.xml` (`/` meta-refreshes to `/blog/`; URLs match the previous BabyLoveGrowth blog 1:1).
+Routes: `/blog`, `/blog/<slug>`, `/blog/tag/`, `/blog/tag/<tag>`, `/chi-siamo`, `/sitemap.xml`, `/robots.txt`, `/rss.xml`, `/llms.txt` (`/` meta-refreshes to `/blog/`; URLs match the previous BabyLoveGrowth blog 1:1).
 
 ## Local
 ```
 npm ci
 npm run dev     # http://localhost:3000/blog
-npm run build   # static site in out/
+npm run build   # content check + static site in out/
+npm run check   # content check only (scripts/check-posts.mjs)
 npx serve out   # preview the export
 ```
 
 ## Deploy on GitHub Pages (free)
 The site is a fully static export (`output: 'export'`, built into `out/`). `.github/workflows/deploy.yml` builds and deploys on every push to `main`, once a day (05:15 UTC, so future-dated posts go live) and on manual run.
 
-1. Create the repo `Relomatrix/relomatrix-blog` on GitHub. On the Free plan **GitHub Pages only works on PUBLIC repositories** (Pages on private repos needs a paid plan). The repo contains no secrets, so public is fine.
+1. The code lives in the public repo `Relomatrix/escoboni93.github.io` (an existing, previously empty Pages repo; the name does not matter with a custom domain). On the Free plan **GitHub Pages only works on PUBLIC repositories**. The repo contains no secrets.
 2. Push this code to `main`.
 3. Settings > Pages > Build and deployment > Source = **GitHub Actions**. Wait for the "Deploy to GitHub Pages" workflow to go green (Actions tab).
 4. Settings > Pages > Custom domain = `blog.relomatrix.com` (the file `public/CNAME` already contains it). Until DNS points to GitHub the check will show a DNS warning: that is expected.

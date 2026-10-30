@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Libre_Baskerville, IBM_Plex_Sans } from 'next/font/google';
-import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from '@/lib/site';
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, ABOUT_PATH, organizationLd, websiteLd, jsonLd } from '@/lib/site';
 import CookieConsent, { CookiePrefsLink } from './CookieConsent';
 import { PRIVACY_URL } from '@/lib/consent';
 import './globals.css';
@@ -16,20 +16,26 @@ export const metadata: Metadata = {
   icons: { icon: '/favicon.svg' },
 };
 
+// <html lang> is rewritten to "it" for Italian posts after the build (scripts/set-html-lang.mjs).
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd([organizationLd, websiteLd]) }} />
         <header className="site-header">
           <div className="wrap">
             <a href="/blog/" aria-label="Relomatrix Blog"><img src="/logo.svg" alt="Relomatrix" width={220} height={40} /></a>
-            <a className="cta" href="https://relomatrix.com">relomatrix.com</a>
+            <nav className="site-nav">
+              <a href="/blog/tag/">Topics</a>
+              <a href={ABOUT_PATH} lang="it">Chi siamo</a>
+              <a className="cta" href="https://relomatrix.com">relomatrix.com</a>
+            </nav>
           </div>
         </header>
         <main className="wrap">{children}</main>
         <footer className="site-footer">
           <div className="wrap">
-            <p>© {new Date().getFullYear()} Relomatrix · <a href="https://relomatrix.com">relomatrix.com</a> · <a href="/rss.xml">RSS</a> · <a href={PRIVACY_URL}>Privacy</a> · <a href="/cookie">Cookie policy</a> · <CookiePrefsLink label="Preferenze cookie" /></p>
+            <p>© {new Date().getFullYear()} Relomatrix · <a href="https://relomatrix.com">relomatrix.com</a> · <a href={ABOUT_PATH}>Chi siamo</a> · <a href="/rss.xml">RSS</a> · <a href={PRIVACY_URL}>Privacy</a> · <a href="/cookie">Cookie policy</a> · <CookiePrefsLink label="Preferenze cookie" /></p>
           </div>
         </footer>
         <CookieConsent />

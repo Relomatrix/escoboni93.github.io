@@ -116,6 +116,7 @@ Legend: **[V]** = needs official-source verification of rules/numbers before pub
 Publishing rule: alternate IT/EN; translations of the same topic are linked as language versions (needs hreflang, see 4), not treated as separate keywords.
 
 ## 4. Technical checklist vs repo (/workspace/relomatrix_blog @ e156a1f)
+Update 2026-10-30: the gaps below are closed in code: `translationKey` frontmatter -> `alternates.languages` + sitemap `xhtml:link`; `<html lang="it">` for Italian posts (post-build); `/llms.txt`; byline "Redazione Relomatrix" linked to `/chi-siamo/` (editorial policy, AI-assisted drafting disclosed); Organization + WebSite JSON-LD on every page, BreadcrumbList on posts/hubs/about; `/blog/tag/<tag>/` hubs (noindex below 2 posts); related articles by shared tags; width/height + lazy loading on images, covers under 200 KB; `scripts/check-posts.mjs` fails the build without an official source. Author stays PARTIAL: a named Person should be added only for a real person who actually writes or reviews.
 | Item | Status | Note / lesson |
 |---|---|---|
 | XML sitemap (`app/sitemap.ts`) | DONE | lists /blog + posts with lastModified; submit in GSC once live (how-to-submit-a-sitemap) |
@@ -126,17 +127,17 @@ Publishing rule: alternate IT/EN; translations of the same topic are linked as l
 | Server-rendered HTML (SSG) | DONE | content in HTML, `dynamicParams=false` (how-ai-crawlers-work) |
 | Drafts/future posts hidden | DONE | `draft`, future date filter |
 | GA4 G-BKQ2JPZCKY behind consent | DONE (in code) | verify in Realtime after deploy, add key events, link GSC (how-to-set-up-ga4) |
-| hreflang it/en | **MISSING** | no translation key in frontmatter, no `alternates.languages`, sitemap lacks alternates. Add `translationOf`/`i18nKey` field |
-| `<html lang>` per language | **PARTIAL** | root is always `en`; article has `lang` attr. Make root lang follow post or use /it /en segments |
-| llms.txt | **MISSING** | add `public/llms.txt` (or route) listing pillars + about/sources policy; optional, cheap (llms-txt-explained) |
-| Author/reviewer (Person) + credentials | **MISSING** | only Organization author; add named reviewer + about page (geo-readiness-checklist) |
-| Organization/WebSite JSON-LD, BreadcrumbList | **MISSING** | nice-to-have (structured-data-for-ai) |
-| Cluster/tag hub pages | **MISSING** | `tags` exists in type but no /blog/tag or pillar hub; needed for clusters (how-to-create-a-content-cluster) |
-| Related-posts internal links block | **MISSING** | only manual links (how-to-optimize-a-page-for-seo) |
-| Image optimisation | **PARTIAL** | plain `<img>` without width/height/lazy; use next/image or set dims, WebP (technical-seo-checklist) |
+| hreflang it/en | DONE | no translation key in frontmatter, no `alternates.languages`, sitemap lacks alternates. Add `translationOf`/`i18nKey` field |
+| `<html lang>` per language | DONE | root is always `en`; article has `lang` attr. Make root lang follow post or use /it /en segments |
+| llms.txt | DONE | add `public/llms.txt` (or route) listing pillars + about/sources policy; optional, cheap (llms-txt-explained) |
+| Author/reviewer (Person) + credentials | PARTIAL | only Organization author; add named reviewer + about page (geo-readiness-checklist) |
+| Organization/WebSite JSON-LD, BreadcrumbList | DONE | nice-to-have (structured-data-for-ai) |
+| Cluster/tag hub pages | DONE | `tags` exists in type but no /blog/tag or pillar hub; needed for clusters (how-to-create-a-content-cluster) |
+| Related-posts internal links block | DONE | only manual links (how-to-optimize-a-page-for-seo) |
+| Image optimisation | DONE | plain `<img>` without width/height/lazy; use next/image or set dims, WebP (technical-seo-checklist) |
 | Core Web Vitals / speed | UNVERIFIED | run PageSpeed after deploy (technical-seo-checklist) |
 | HTTPS, no redirect chains | UNVERIFIED | GitHub Pages HTTPS (Enforce HTTPS after cert); `/` is a meta refresh to `/blog/` (no server redirects on Pages), `/blog/<slug>` 301 to trailing slash (technical-seo-checklist) |
-| Sources section enforced | **PARTIAL** | PUBLISHING.md asks for `## Sources`; add a build/lint check that fails without it and without >=1 official link |
+| Sources section enforced | DONE | PUBLISHING.md asks for `## Sources`; add a build/lint check that fails without it and without >=1 official link |
 | GSC property blog.relomatrix.com | **MISSING** | domain property covers it; submit sitemap after go-live (how-to-set-up-google-search-console) |
 | Single H1 | DONE | layout uses logo img, post uses one h1 |
 
