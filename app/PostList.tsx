@@ -8,7 +8,7 @@ export default function PostList({ posts }: { posts: PostMeta[] }) {
         const size = p.image ? imageSize(p.image) : null;
         return (
           <li key={p.slug} lang={p.lang}>
-            <a href={`/blog/${p.slug}/`}>
+            <a href={`/blog/${encodeURIComponent(p.slug)}/`}>
               {p.image && <img src={p.image} alt={p.imageAlt || p.title} loading="lazy" decoding="async" width={size?.width} height={size?.height} />}
               <div>
                 <time dateTime={p.date}>{p.date}</time> <span className="lang">{p.lang.toUpperCase()}</span>
