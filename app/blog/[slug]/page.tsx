@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!p) return {};
   return {
     title: p.title, description: p.description,
-    alternates: { canonical: `/blog/${p.slug}` },
-    openGraph: { type: 'article', title: p.title, description: p.description, url: `/blog/${p.slug}`,
+    alternates: { canonical: `/blog/${p.slug}/` },
+    openGraph: { type: 'article', title: p.title, description: p.description, url: `/blog/${p.slug}/`,
       publishedTime: p.date, modifiedTime: p.updated || p.date, locale: p.lang === 'it' ? 'it_IT' : 'en_US',
       images: p.image ? [{ url: p.image, alt: p.imageAlt || p.title }] : undefined },
     twitter: { card: 'summary_large_image', title: p.title, description: p.description, images: p.image ? [p.image] : undefined },
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Page({ params }: Props) {
   const p = await getPost((await params).slug);
   if (!p) notFound();
-  const url = `${SITE_URL}/blog/${p.slug}`;
+  const url = `${SITE_URL}/blog/${p.slug}/`;
   const ld: object[] = [{
     '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.title, description: p.description,
     datePublished: p.date, dateModified: p.updated || p.date, inLanguage: p.lang, mainEntityOfPage: url,
@@ -37,7 +37,7 @@ export default async function Page({ params }: Props) {
   return (
     <article lang={p.lang} className="post">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld).replace(/</g, '\\u003c') }} />
-      <p className="meta"><a href="/blog">← Blog</a> · <time dateTime={p.date}>{p.date}</time></p>
+      <p className="meta"><a href="/blog/">← Blog</a> · <time dateTime={p.date}>{p.date}</time></p>
       <h1>{p.title}</h1>
       {p.image && <img className="cover" src={p.image} alt={p.imageAlt || p.title} />}
       <div className="prose" dangerouslySetInnerHTML={{ __html: p.html }} />

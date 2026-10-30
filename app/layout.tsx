@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <header className="site-header">
           <div className="wrap">
-            <a href="/blog" aria-label="Relomatrix Blog"><img src="/logo.svg" alt="Relomatrix" width={220} height={40} /></a>
+            <a href="/blog/" aria-label="Relomatrix Blog"><img src="/logo.svg" alt="Relomatrix" width={220} height={40} /></a>
             <a className="cta" href="https://relomatrix.com">relomatrix.com</a>
           </div>
         </header>

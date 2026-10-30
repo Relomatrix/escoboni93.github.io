@@ -135,7 +135,7 @@ Publishing rule: alternate IT/EN; translations of the same topic are linked as l
 | Related-posts internal links block | **MISSING** | only manual links (how-to-optimize-a-page-for-seo) |
 | Image optimisation | **PARTIAL** | plain `<img>` without width/height/lazy; use next/image or set dims, WebP (technical-seo-checklist) |
 | Core Web Vitals / speed | UNVERIFIED | run PageSpeed after deploy (technical-seo-checklist) |
-| HTTPS, no redirect chains | UNVERIFIED | Vercel default HTTPS; `/`->`/blog` is 307, consider permanent (technical-seo-checklist) |
+| HTTPS, no redirect chains | UNVERIFIED | GitHub Pages HTTPS (Enforce HTTPS after cert); `/` is a meta refresh to `/blog/` (no server redirects on Pages), `/blog/<slug>` 301 to trailing slash (technical-seo-checklist) |
 | Sources section enforced | **PARTIAL** | PUBLISHING.md asks for `## Sources`; add a build/lint check that fails without it and without >=1 official link |
 | GSC property blog.relomatrix.com | **MISSING** | domain property covers it; submit sitemap after go-live (how-to-set-up-google-search-console) |
 | Single H1 | DONE | layout uses logo img, post uses one h1 |

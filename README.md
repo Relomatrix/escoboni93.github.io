@@ -2,19 +2,35 @@
 
 Self-owned Next.js (App Router, static generation) blog for https://blog.relomatrix.com. Articles live in `content/posts/*.md`. See [PUBLISHING.md](PUBLISHING.md).
 
-Routes: `/blog`, `/blog/<slug>`, `/sitemap.xml`, `/robots.txt`, `/rss.xml` (`/` redirects to `/blog`; URLs match the previous BabyLoveGrowth blog 1:1).
+Routes: `/blog`, `/blog/<slug>`, `/sitemap.xml`, `/robots.txt`, `/rss.xml` (`/` meta-refreshes to `/blog/`; URLs match the previous BabyLoveGrowth blog 1:1).
 
 ## Local
 ```
 npm ci
 npm run dev     # http://localhost:3000/blog
-npm run build
+npm run build   # static site in out/
+npx serve out   # preview the export
 ```
 
-## Deploy on Vercel (3 steps)
-1. On https://vercel.com/new choose **Import Git Repository** and select `Relomatrix/relomatrix-blog` (grant the Vercel GitHub app access to this repo if it is not listed).
-2. Keep the detected defaults (Framework: Next.js, Build: `next build`, Root: `./`, Node 20+). Optional env var: `NEXT_PUBLIC_SITE_URL=https://blog.relomatrix.com` (it is already the default). Click **Deploy** and check the `*.vercel.app` preview.
-3. Only when the preview is verified: Project > Settings > Domains > add `blog.relomatrix.com`, remove the domain from the old BabyLoveGrowth project, and point the DNS CNAME to the value Vercel shows.
+## Deploy on GitHub Pages (free)
+The site is a fully static export (`output: 'export'`, built into `out/`). `.github/workflows/deploy.yml` builds and deploys on every push to `main`, once a day (05:15 UTC, so future-dated posts go live) and on manual run.
+
+1. Create the repo `Relomatrix/relomatrix-blog` on GitHub. On the Free plan **GitHub Pages only works on PUBLIC repositories** (Pages on private repos needs a paid plan). The repo contains no secrets, so public is fine.
+2. Push this code to `main`.
+3. Settings > Pages > Build and deployment > Source = **GitHub Actions**. Wait for the "Deploy to GitHub Pages" workflow to go green (Actions tab).
+4. Settings > Pages > Custom domain = `blog.relomatrix.com` (the file `public/CNAME` already contains it). Until DNS points to GitHub the check will show a DNS warning: that is expected.
+5. Verify the site at its github.io URL first. Note: with a custom domain set, the project URL `https://relomatrix.github.io/relomatrix-blog/` redirects to the custom domain; to preview before the DNS switch, check the Actions run artifact or temporarily leave the custom domain empty (then assets load from `/` and break under the `/relomatrix-blog/` subpath, so preview is best done locally with `npx serve out`).
+6. DNS (last step, only after the new site is verified): at Register.it change `blog` CNAME from the current Vercel value to `relomatrix.github.io.` Then disable the domain on the old BabyLoveGrowth/Vercel project.
+7. When GitHub has issued the certificate (can take up to ~1 hour after DNS), tick **Enforce HTTPS** in Settings > Pages.
+
+Pitfall: the Pages hostname of an org is `<orgname>.github.io` lowercase, so `Relomatrix` -> `relomatrix.github.io`. The org already has a repo `escoboni93.github.io` with Pages; that does not conflict with this project site.
+
+### Static export limits
+- No server redirects or custom headers. `/` is a static page with `<meta http-equiv="refresh">` + canonical to `/blog/` (noindex). GitHub Pages answers `/blog/<slug>` with a 301 to `/blog/<slug>/` (trailingSlash), so old URLs without slash keep working; canonical, sitemap and RSS use the trailing-slash form.
+- `sitemap.xml`, `robots.txt`, `rss.xml` are generated at build time (`force-static`).
+- Images are served as-is (`images.unoptimized`); compress them before committing.
+- `404.html` is the custom not-found page served by Pages.
+- Security headers (CSP, X-Frame-Options) cannot be set on Pages.
 
 No secrets are needed or stored in this repo.
 

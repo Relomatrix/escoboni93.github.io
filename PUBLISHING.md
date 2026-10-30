@@ -1,13 +1,13 @@
 # Publishing an article
 
-Every push to `main` triggers a Vercel production deploy (once the repo is imported on Vercel).
+Every push to `main` triggers the GitHub Actions workflow that builds the static site and deploys it to GitHub Pages. A scheduled run every day at 05:15 UTC publishes future-dated posts whose date has arrived.
 
 ## Daily routine
 1. Write the article as Markdown: `content/posts/<slug>.md`. The slug is the URL: `/blog/<slug>`. Lowercase, hyphens, unique, never change it after publishing.
 2. Put images in `public/images/posts/<slug>/` and reference them as `/images/posts/<slug>/<file>`. Do not hotlink external images.
 3. Run `npm ci && npm run build` (must pass).
 4. Commit and push to `main`: `git add content public && git commit -m "post: <slug>" && git push origin main`.
-5. Vercel builds and publishes; the post appears on `/blog`, in `/sitemap.xml` and `/rss.xml`.
+5. GitHub Actions builds and publishes to Pages (check the Actions tab is green); the post appears on `/blog`, in `/sitemap.xml` and `/rss.xml`.
 
 Posts with `draft: true` or a `date` more than 1 day in the future are not published.
 
