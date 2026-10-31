@@ -4,7 +4,7 @@ import { getAllPosts, getPost, getRelated, getTranslations, hreflang, tagSlug } 
 import { getAuthor } from '@/lib/authors';
 import { ABOUT_PATH, ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbLd, jsonLd } from '@/lib/site';
 import { imageSize } from '@/lib/images';
-import { UI } from '@/lib/i18n';
+import { OG_LOCALE, UI } from '@/lib/i18n';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return getAllPosts().map((p) => ({ slug: p.slug })); }
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: p.title, description: p.description,
     alternates: { canonical: `/blog/${p.slug}/`, languages: hreflang(p, SITE_URL) },
     openGraph: { type: 'article', title: p.title, description: p.description, url: `/blog/${p.slug}/`,
-      publishedTime: p.date, modifiedTime: p.updated || p.date, locale: p.lang === 'it' ? 'it_IT' : 'en_US',
+      publishedTime: p.date, modifiedTime: p.updated || p.date, locale: OG_LOCALE[p.lang],
       images: p.image ? [{ url: p.image, alt: p.imageAlt || p.title }] : undefined },
     twitter: { card: 'summary_large_image', title: p.title, description: p.description, images: p.image ? [p.image] : undefined },
   };

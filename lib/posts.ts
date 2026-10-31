@@ -10,7 +10,7 @@ import rehypeStringify from 'rehype-stringify';
 import { imageSize } from './images';
 
 export type Faq = { q: string; a: string };
-export type Lang = 'it' | 'en';
+export type Lang = 'it' | 'en' | 'fr';
 export type PostMeta = {
   title: string; description: string; date: string; updated?: string; slug: string;
   lang: Lang; image?: string; imageAlt?: string; author?: string; tags?: string[];
@@ -31,7 +31,7 @@ function read(file: string): { meta: PostMeta; body: string } {
   // Slug and image end up in URLs: only allow safe shapes (scripts/check-posts.mjs reports the same rules).
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) throw new Error(`Invalid slug "${slug}" in ${file}`);
   if (data.image !== undefined && (!/^\/images\/[\w\-./]+$/.test(String(data.image)) || String(data.image).includes('..'))) throw new Error(`Invalid image path in ${file}`);
-  return { meta: { ...data, slug, date, lang: data.lang === 'it' ? 'it' : 'en' } as PostMeta, body: content };
+  return { meta: { ...data, slug, date, lang: data.lang === 'it' || data.lang === 'fr' ? data.lang : 'en' } as PostMeta, body: content };
 }
 
 export function getAllPosts(): PostMeta[] {

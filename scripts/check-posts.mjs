@@ -16,7 +16,7 @@ const OFFICIAL_HOSTS = [
   'gazzettaufficiale.it', 'normattiva.it', 'inps.it', 'inail.it', 'esteri.it', 'vistoperitalia.esteri.it', 'interno.gov.it',
   'poliziadistato.it', 'integrazionemigranti.gov.it', 'agenziaentrate.gov.it', 'camera.it', 'senato.it', 'cortecostituzionale.it',
   'giustizia.it', 'lavoro.gov.it', 'istat.it', 'bancaditalia.it', 'service-public.fr', 'legifrance.gouv.fr', 'impots.gouv.fr',
-  'cleiss.fr', 'urssaf.fr', 'ameli.fr', 'oecd.org', 'ilo.org', 'un.org', 'imf.org', 'worldbank.org', 'legislation.gov.uk',
+  'cleiss.fr', 'urssaf.fr', 'ameli.fr', 'france-visas.gouv.fr', 'administration-etrangers-en-france.interieur.gouv.fr', 'vie-publique.fr', 'francetravail.fr', 'lassuranceretraite.fr', 'info-retraite.fr', 'conseil-constitutionnel.fr', 'conseil-etat.fr', 'assemblee-nationale.fr', 'senat.fr', 'insee.fr', 'banque-france.fr', 'oecd.org', 'ilo.org', 'un.org', 'imf.org', 'worldbank.org', 'legislation.gov.uk',
   'congress.gov', 'ecfr.gov', 'federalregister.gov', 'irs.gov', 'ssa.gov', 'uscis.gov', 'state.gov', 'infoleg.gob.ar',
   'boe.es', 'planalto.gov.br', 'in.gov.br',
 ];
@@ -44,7 +44,7 @@ for (const f of files) {
   for (const k of ['title', 'description', 'date', 'slug', 'lang']) if (!data[k]) err(`missing frontmatter "${k}"`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) err(`date must be YYYY-MM-DD, got "${date}"`);
   if (data.updated && !/^\d{4}-\d{2}-\d{2}$/.test(String(data.updated instanceof Date ? data.updated.toISOString().slice(0, 10) : data.updated))) err('updated must be YYYY-MM-DD');
-  if (!['it', 'en'].includes(data.lang)) err(`lang must be "it" or "en", got "${data.lang}"`);
+  if (!['it', 'en', 'fr'].includes(data.lang)) err(`lang must be "it", "en" or "fr", got "${data.lang}"`);
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) err(`slug "${slug}" must be lowercase words separated by hyphens`);
   if (RESERVED.has(slug)) err(`slug "${slug}" is reserved`);
   if (seen.has(slug)) err(`slug "${slug}" already used by ${seen.get(slug)}`); else seen.set(slug, f);
@@ -64,9 +64,9 @@ for (const f of files) {
     translations.set(k, f);
   }
 
-  // Sources section: "## Sources" (en) or "## Fonti" (it), with at least one official link.
-  const m = content.match(/^##\s+(Sources|Fonti)\s*$([\s\S]*?)(?=^##\s|(?![\s\S]))/m);
-  if (!m) err('missing "## Sources" / "## Fonti" section');
+  // Sources section: "## Sources" (en, fr), "## Sources officielles" (fr) or "## Fonti" (it), with at least one official link.
+  const m = content.match(/^##\s+(Sources officielles|Sources|Fonti)\s*$([\s\S]*?)(?=^##\s|(?![\s\S]))/m);
+  if (!m) err('missing "## Sources" / "## Fonti" / "## Sources officielles" section');
   else {
     const links = [...m[2].matchAll(/\]\((https?:\/\/[^)\s]+)\)|<(https?:\/\/[^>\s]+)>/g)].map((x) => x[1] || x[2]);
     if (!links.length) err('Sources section has no links');

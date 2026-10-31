@@ -13,4 +13,12 @@ export const UI: Record<Lang, Record<string, string>> = {
     ctaBody: 'Relomatrix trasforma informazioni frammentate su relocation e compliance in analisi con fonti verificabili.',
     ctaLink: 'Scopri Relomatrix', language: 'Italiano',
   },
+  fr: {
+    by: 'Par', updated: 'Mis à jour', topics: 'Sujets', related: 'Articles connexes', alsoIn: 'Également disponible en',
+    ctaTitle: 'Vérifiez les risques avant de déménager',
+    ctaBody: 'Relomatrix transforme des informations éparses sur la mobilité internationale et la conformité en analyses sourcées.',
+    ctaLink: 'Découvrir Relomatrix', language: 'Français',
+  },
 };
+
+export const OG_LOCALE: Record<Lang, string> = { en: 'en_US', it: 'it_IT', fr: 'fr_FR' };

@@ -9,7 +9,7 @@ export function GET() {
   const body = [
     `# ${SITE_NAME}`, '',
     `> ${SITE_DESCRIPTION} Every legal, tax or immigration claim links to an official source; general information, not legal advice.`, '',
-    `Published by Relomatrix (https://relomatrix.com). Articles are in English or Italian (lang shown per article). Editorial policy: ${SITE_URL}${ABOUT_PATH}`, '',
+    `Published by Relomatrix (https://relomatrix.com). Articles are in English, Italian or French (lang shown per article). Editorial policy: ${SITE_URL}${ABOUT_PATH}`, '',
     '## Articles',
     ...posts.map((p) => line(p.title, `${SITE_URL}/blog/${p.slug}/`, `${p.description} (${p.lang}, updated ${p.updated || p.date})`)), '',
     '## Topics',

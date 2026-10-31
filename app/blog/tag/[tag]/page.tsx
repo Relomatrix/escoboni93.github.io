@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const langs = new Set(t.posts.map((p) => p.lang));
   return {
     title: `${t.label}: guides and articles`,
-    description: `Relomatrix articles on ${t.label}${langs.size > 1 ? ' (English and Italian)' : ''}, each with official sources.`,
+    description: `Relomatrix articles on ${t.label}${langs.size > 1 ? ` (${[...langs].map((l) => ({ en: 'English', it: 'Italian', fr: 'French' })[l]).join(', ')})` : ''}, each with official sources.`,
     alternates: { canonical: `/blog/tag/${t.slug}/` },
     robots: t.posts.length < 2 ? { index: false, follow: true } : undefined,
   };
