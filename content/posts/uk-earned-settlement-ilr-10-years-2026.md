@@ -4,9 +4,9 @@ description: "The UK's earned settlement plan makes 10 years the default route t
 date: "2026-11-07"
 slug: "uk-earned-settlement-ilr-10-years-2026"
 lang: "en"
-image: "/images/posts/uk-earned-settlement-ilr-10-years-2026/cover.jpeg"
+image: "/blog/images/posts/uk-earned-settlement-ilr-10-years-2026/cover.jpeg"
 imageAlt: "Graphic with the text UK earned settlement 10 years and a border symbol between two connected points"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["UK immigration", "Settlement", "Indefinite leave to remain", "Skilled workers"]
 translationKey: "uk-earned-settlement-2026"
 faq:

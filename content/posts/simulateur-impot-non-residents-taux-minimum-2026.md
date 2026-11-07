@@ -4,9 +4,9 @@ description: "Bercy prépare un simulateur d'impôt pour les non-résidents, qui
 date: "2026-11-07"
 slug: "simulateur-impot-non-residents-taux-minimum-2026"
 lang: "fr"
-image: "/images/posts/simulateur-impot-non-residents-taux-minimum-2026/cover.jpeg"
+image: "/blog/images/posts/simulateur-impot-non-residents-taux-minimum-2026/cover.jpeg"
 imageAlt: "Graphique avec le texte Simulateur impôt non-résidents et un symbole de frontière entre deux points reliés"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Non-résidents", "Impôt sur le revenu", "Français de l'étranger", "Taux minimum"]
 translationKey: "simulateur-non-residents-2026"
 faq:

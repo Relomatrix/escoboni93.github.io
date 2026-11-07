@@ -4,9 +4,9 @@ description: "Con il D.Lgs. 83/2026 il rinnovo del permesso di soggiorno va chie
 date: "2026-11-07"
 slug: "rinnovo-permesso-di-soggiorno-90-giorni-2026"
 lang: "it"
-image: "/images/posts/rinnovo-permesso-di-soggiorno-90-giorni-2026/cover.jpeg"
+image: "/blog/images/posts/rinnovo-permesso-di-soggiorno-90-giorni-2026/cover.jpeg"
 imageAlt: "Grafica con il testo Rinnovo permesso di soggiorno 90 giorni e un simbolo di confine tra due punti collegati"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Permesso di soggiorno", "Permesso unico", "Immigrazione", "Italia"]
 translationKey: "rinnovo-permesso-90-giorni-2026"
 faq:

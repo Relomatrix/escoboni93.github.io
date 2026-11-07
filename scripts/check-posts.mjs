@@ -88,6 +88,7 @@ for (const f of files) {
   const imgs = [data.image, ...[...content.matchAll(/!\[[^\]]*\]\(([^)\s]+)/g)].map((x) => x[1])].filter(Boolean);
   for (const src of imgs) {
     if (/^https?:/.test(src)) { err(`external image ${src}: put it in public/blog/images/posts/${slug}/`); continue; }
+    if (!/^\/blog\/images\/[\w\-./]+$/.test(src) || src.includes('..')) { err(`image ${src} must live under /blog/images/posts/${slug}/`); continue; }
     const file = path.join(ROOT, 'public', src);
     if (!fs.existsSync(file)) { err(`image not found: ${src}`); continue; }
     const size = fs.statSync(file).size;
