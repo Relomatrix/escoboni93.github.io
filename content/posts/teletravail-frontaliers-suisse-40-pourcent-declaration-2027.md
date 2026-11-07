@@ -4,9 +4,9 @@ description: "Avenant France-Suisse : jusqu'à 40 % de télétravail depuis la F
 date: "2026-11-03"
 slug: "teletravail-frontaliers-suisse-40-pourcent-declaration-2027"
 lang: "fr"
-image: "/images/posts/teletravail-frontaliers-suisse-40-pourcent-declaration-2027/cover.jpeg"
+image: "/blog/images/posts/teletravail-frontaliers-suisse-40-pourcent-declaration-2027/cover.jpeg"
 imageAlt: "Graphique avec le texte Télétravail frontaliers Suisse, la règle des 40 % et le symbole d’une frontière entre deux points reliés"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Frontaliers", "Suisse", "Télétravail", "Fiscalité internationale"]
 translationKey: "teletravail-frontaliers-suisse-40"
 faq:

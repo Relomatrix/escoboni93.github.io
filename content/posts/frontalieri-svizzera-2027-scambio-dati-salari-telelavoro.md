@@ -4,9 +4,9 @@ description: "Dal 1° gennaio 2027 la Svizzera applica la legge sullo scambio au
 date: "2026-11-03"
 slug: "frontalieri-svizzera-2027-scambio-dati-salari-telelavoro"
 lang: "it"
-image: "/images/posts/frontalieri-svizzera-2027-scambio-dati-salari-telelavoro/cover.jpeg"
+image: "/blog/images/posts/frontalieri-svizzera-2027-scambio-dati-salari-telelavoro/cover.jpeg"
 imageAlt: "Grafica con il testo Frontalieri Svizzera 2027 e il simbolo di una frontiera tra due punti collegati"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Frontalieri", "Svizzera", "Telelavoro", "Fisco internazionale"]
 translationKey: "frontalieri-svizzera-lsads-2027"
 faq:

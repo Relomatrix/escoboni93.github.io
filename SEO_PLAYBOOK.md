@@ -174,3 +174,13 @@ Starting line (from GSC, 28 days to 2026-10-30): 4 clicks, 34 impressions, avg p
 - **Invented statistics or case studies, testimonial quotes:** none without a verifiable source.
 - **BLG MCP connector / paid tools:** not needed; we read GSC/GA4 with our own read-only access.
 - **llms.txt as a ranking lever:** we add it as a cheap experiment only (llms-txt-explained).
+
+## Corridor clusters and editorial calendar (G-34, 2026-11-07)
+
+- One cluster per P0 corridor (US→IT, US→FR, IT→FR, FR→IT): the cluster page `/blog/corridor/<id>/`
+  is the pillar; target 6–8 supporting posts per language per corridor. Set `corridor` in frontmatter.
+- CTA: every post links to the corridor Risk Report page (`/report?corridor=…`) or, without a corridor,
+  to the Snapshot, always with `utm_source=blog&utm_medium=cta&utm_campaign=<slug>`. The site records a
+  `b2c_blog_cta_landing` event on arrival, visible in the admin product metrics.
+- Calendar: monthly, one post per corridor and language, plus an update whenever the source cron of
+  relomatrix.com replaces an act a post cites: update the post, set `updated`, and say what changed.

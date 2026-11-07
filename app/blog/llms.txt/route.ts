@@ -16,8 +16,8 @@ export function GET() {
     ...getAllTags().map((t) => line(t.label, `${SITE_URL}/blog/tag/${t.slug}/`)), '',
     '## Optional',
     line('About and editorial policy', `${SITE_URL}${ABOUT_PATH}`),
-    line('Sitemap', `${SITE_URL}/sitemap.xml`),
-    line('RSS', `${SITE_URL}/rss.xml`), '',
+    line('Sitemap', `${SITE_URL}/blog/sitemap.xml`),
+    line('RSS', `${SITE_URL}/blog/rss.xml`), '',
   ].join('\n');
   return new Response(body, { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 }

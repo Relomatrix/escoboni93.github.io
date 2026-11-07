@@ -7,8 +7,11 @@ import matter from 'gray-matter';
 const ROOT = process.cwd();
 const DIR = path.join(ROOT, 'content', 'posts');
 const MAX_IMAGE_BYTES = 200 * 1024;
-const RESERVED = new Set(['tag']); // static routes under /blog/
-const AUTHORS = new Set(['redazione']); // keep in sync with lib/authors.ts
+const RESERVED = new Set(['tag', 'chi-siamo', 'cookie', 'autori', 'corridor']); // static routes under /blog/
+const AUTHORS = new Set(['francesco-bonifazi', 'redazione']); // keep in sync with lib/authors.ts
+// G-31: reviewers only after a real review with written consent; keep in sync with REVIEWERS in lib/authors.ts.
+const REVIEWERS = new Set([]);
+const CORRIDORS = new Set(['US-IT', 'US-FR', 'IT-FR', 'FR-IT']); // keep in sync with lib/corridors.ts
 
 // Official sources: government, EU and international bodies (SEO_PLAYBOOK.md, "non-negotiable").
 const OFFICIAL_SUFFIXES = ['.gov', '.gov.it', '.gouv.fr', '.gov.uk', '.gob.ar', '.gov.br', '.leg.br', '.jus.br', 'europa.eu', '.int'];
@@ -49,6 +52,9 @@ for (const f of files) {
   if (RESERVED.has(slug)) err(`slug "${slug}" is reserved`);
   if (seen.has(slug)) err(`slug "${slug}" already used by ${seen.get(slug)}`); else seen.set(slug, f);
   if (data.author && !AUTHORS.has(data.author)) err(`unknown author "${data.author}" (add it to lib/authors.ts and scripts/check-posts.mjs)`);
+  if (data.reviewedBy !== undefined && !REVIEWERS.has(data.reviewedBy)) err(`unknown reviewer "${data.reviewedBy}" (reviewers are added only after a real review, with consent)`);
+  if (data.reviewedBy && !/^\d{4}-\d{2}-\d{2}$/.test(String(data.reviewedAt instanceof Date ? data.reviewedAt.toISOString().slice(0, 10) : data.reviewedAt ?? ''))) err('reviewedBy needs reviewedAt as YYYY-MM-DD');
+  if (data.corridor !== undefined && !CORRIDORS.has(data.corridor)) err(`unknown corridor "${data.corridor}" (one of ${[...CORRIDORS].join(', ')})`);
   if (data.title && String(data.title).length > 70) warn(`title is ${String(data.title).length} chars (aim for <= 60)`);
   const dl = String(data.description || '').length;
   if (dl && (dl < 70 || dl > 170)) warn(`description is ${dl} chars (aim for 120-160)`);
@@ -81,7 +87,7 @@ for (const f of files) {
   // Local images exist and are compressed.
   const imgs = [data.image, ...[...content.matchAll(/!\[[^\]]*\]\(([^)\s]+)/g)].map((x) => x[1])].filter(Boolean);
   for (const src of imgs) {
-    if (/^https?:/.test(src)) { err(`external image ${src}: put it in public/images/posts/${slug}/`); continue; }
+    if (/^https?:/.test(src)) { err(`external image ${src}: put it in public/blog/images/posts/${slug}/`); continue; }
     const file = path.join(ROOT, 'public', src);
     if (!fs.existsSync(file)) { err(`image not found: ${src}`); continue; }
     const size = fs.statSync(file).size;

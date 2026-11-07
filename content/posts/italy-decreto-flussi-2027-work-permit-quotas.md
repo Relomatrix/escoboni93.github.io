@@ -4,9 +4,10 @@ description: "Italy's decreto flussi 2027 allows 165,850 non-EU workers. Pre-fil
 date: "2026-11-01"
 slug: "italy-decreto-flussi-2027-work-permit-quotas"
 lang: "en"
-image: "/images/posts/italy-decreto-flussi-2027-work-permit-quotas/cover.jpeg"
+image: "/blog/images/posts/italy-decreto-flussi-2027-work-permit-quotas/cover.jpeg"
 imageAlt: "Graphic with the text Italy decreto flussi 2027 and a stylised calendar marking the click days"
-author: "redazione"
+author: "francesco-bonifazi"
+corridor: "US-IT"
 tags: ["Italy work permit", "Decreto flussi", "Immigration", "Hiring abroad"]
 translationKey: "decreto-flussi-2027"
 faq:

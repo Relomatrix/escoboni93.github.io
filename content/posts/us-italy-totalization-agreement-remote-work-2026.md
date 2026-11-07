@@ -4,9 +4,10 @@ description: "How the US-Italy Social Security totalization agreement assigns co
 date: "2026-11-06"
 slug: "us-italy-totalization-agreement-remote-work-2026"
 lang: "en"
-image: "/images/posts/us-italy-totalization-agreement-remote-work-2026/cover.jpeg"
+image: "/blog/images/posts/us-italy-totalization-agreement-remote-work-2026/cover.jpeg"
 imageAlt: "Graphic with the text US-Italy totalization and a border symbol between two connected points"
-author: "redazione"
+author: "francesco-bonifazi"
+corridor: "US-IT"
 tags: ["Social security", "US-Italy", "Remote work", "Totalization agreement"]
 translationKey: "us-italy-totalization-remote-2026"
 faq:

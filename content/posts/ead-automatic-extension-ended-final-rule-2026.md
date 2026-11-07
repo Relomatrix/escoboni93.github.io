@@ -4,9 +4,9 @@ description: "DHS finalized the end of automatic EAD extensions on Oct 14, 2026.
 date: "2026-11-04"
 slug: "ead-automatic-extension-ended-final-rule-2026"
 lang: "en"
-image: "/images/posts/ead-automatic-extension-ended-final-rule-2026/cover.jpeg"
+image: "/blog/images/posts/ead-automatic-extension-ended-final-rule-2026/cover.jpeg"
 imageAlt: "Graphic with the text Automatic EAD extensions end and a border symbol between two connected points"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["USCIS", "EAD", "Work authorization", "United States"]
 translationKey: "ead-automatic-extension-final-rule-2026"
 faq:

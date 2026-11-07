@@ -1,8 +1,9 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getAllPosts, getPost, getRelated, getTranslations, hreflang, tagSlug } from '@/lib/posts';
-import { getAuthor } from '@/lib/authors';
-import { ABOUT_PATH, ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbLd, jsonLd } from '@/lib/site';
+import { getAuthor, getReviewer } from '@/lib/authors';
+import { ctaHref, getCorridor } from '@/lib/corridors';
+import { AUTHOR_PATH, ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbLd, jsonLd } from '@/lib/site';
 import { imageSize } from '@/lib/images';
 import { OG_LOCALE, UI } from '@/lib/i18n';
 
@@ -31,13 +32,18 @@ export default async function Page({ params }: Props) {
   const url = `${SITE_URL}/blog/${p.slug}/`;
   const author = getAuthor(p.author);
   const authorLd = author.type === 'Person'
-    ? { '@type': 'Person', name: author.name, url: `${SITE_URL}${ABOUT_PATH}`, worksFor: { '@id': ORG_ID } }
-    : { '@type': 'Organization', name: author.name, url: `${SITE_URL}${ABOUT_PATH}`, parentOrganization: { '@id': ORG_ID } };
+    ? { '@type': 'Person', '@id': `${SITE_URL}${AUTHOR_PATH(author.key)}#person`, name: author.name, jobTitle: author.jobTitle,
+        url: `${SITE_URL}${AUTHOR_PATH(author.key)}`, worksFor: { '@id': ORG_ID } }
+    : { '@type': 'Organization', name: author.name, url: `${SITE_URL}${AUTHOR_PATH(author.key)}`, parentOrganization: { '@id': ORG_ID } };
+  const reviewer = getReviewer(p.reviewedBy);
+  const corridor = getCorridor(p.corridor);
+  const fill = (s: string) => s.replace('{corridor}', corridor ? corridor.label[p.lang] : '');
   const ld: object[] = [{
     '@context': 'https://schema.org', '@type': 'BlogPosting', headline: p.title, description: p.description,
     datePublished: p.date, dateModified: p.updated || p.date, inLanguage: p.lang, mainEntityOfPage: url,
     image: p.image ? `${SITE_URL}${p.image}` : undefined, keywords: p.tags?.join(', ') || undefined,
     author: authorLd, publisher: { '@id': ORG_ID }, isPartOf: { '@id': WEBSITE_ID },
+    ...(reviewer ? { reviewedBy: { '@type': 'Person', name: reviewer.name, url: reviewer.url }, lastReviewed: p.reviewedAt } : {}),
   }, breadcrumbLd([[p.title, `/blog/${p.slug}/`]])];
   if (p.faq?.length) ld.push({ '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: p.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
@@ -50,8 +56,9 @@ export default async function Page({ params }: Props) {
       <nav className="meta" aria-label="Breadcrumb"><a href="/blog/">Blog</a> › <span>{p.title}</span></nav>
       <h1>{p.title}</h1>
       <p className="byline">
-        {t.by} <a href={ABOUT_PATH}>{author.name}</a> · <time dateTime={p.date}>{p.date}</time>
+        {t.by} <a href={AUTHOR_PATH(author.key)} rel="author">{author.name}</a>{author.role ? <>, {author.role[p.lang]}</> : null} · <time dateTime={p.date}>{p.date}</time>
         {p.updated && p.updated !== p.date && <> · {t.updated} <time dateTime={p.updated}>{p.updated}</time></>}
+        {reviewer && <> · {t.reviewedBy} {reviewer.url ? <a href={reviewer.url}>{reviewer.name}</a> : reviewer.name}, {reviewer.qualification[p.lang]} (<time dateTime={p.reviewedAt}>{p.reviewedAt}</time>)</>}
         {others.map((o) => <span key={o.slug}> · {t.alsoIn} <a href={`/blog/${o.slug}/`} hrefLang={o.lang} lang={o.lang}>{UI[o.lang].language}</a></span>)}
       </p>
       {p.image && <img className="cover" src={p.image} alt={p.imageAlt || p.title} width={cover?.width} height={cover?.height} fetchPriority="high" />}
@@ -68,7 +75,10 @@ export default async function Page({ params }: Props) {
       <aside className="cta-box">
         <h2>{t.ctaTitle}</h2>
         <p>{t.ctaBody}</p>
-        <a href="https://relomatrix.com">{t.ctaLink}</a>
+        <a href={ctaHref(p.lang, p.slug, p.corridor)} data-cta="blog-post" data-corridor={corridor?.id}>
+          {corridor ? fill(t.ctaCorridorLink) : t.ctaLink}
+        </a>
+        {corridor && <p className="cta-cluster"><a href={`/blog/corridor/${corridor.slug}/`}>{fill(t.corridorCluster)}</a></p>}
       </aside>
     </article>
   );

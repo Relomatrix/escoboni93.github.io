@@ -6,7 +6,7 @@
     "check": "node scripts/check-posts.mjs",
     "prebuild": "node scripts/check-posts.mjs",
     "build": "next build",
-    "postbuild": "node scripts/set-html-lang.mjs",
+    "postbuild": "node scripts/set-html-lang.mjs && node scripts/move-next-assets.mjs && node scripts/build-redirect-shell.mjs",
     "start": "next start"
   },
   "dependencies": {

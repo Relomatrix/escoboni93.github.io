@@ -4,9 +4,10 @@ description: "La question 19443 du 3 novembre 2026 demande si le statut visiteur
 date: "2026-11-06"
 slug: "teletravail-visiteur-impot-cotisations-question-19443"
 lang: "fr"
-image: "/images/posts/teletravail-visiteur-impot-cotisations-question-19443/cover.jpeg"
+image: "/blog/images/posts/teletravail-visiteur-impot-cotisations-question-19443/cover.jpeg"
 imageAlt: "Graphique avec le texte Visiteur impôts et cotisations et un symbole de frontière entre deux points reliés"
-author: "redazione"
+author: "francesco-bonifazi"
+corridor: "US-FR"
 tags: ["Titre de séjour", "Télétravail", "Fiscalité internationale", "Sécurité sociale"]
 translationKey: "teletravail-visiteur-fiscal-social-2026"
 faq:

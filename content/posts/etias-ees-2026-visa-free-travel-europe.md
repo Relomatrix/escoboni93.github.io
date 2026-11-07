@@ -4,9 +4,9 @@ description: "EES has been live at Schengen borders since 10 April 2026; ETIAS i
 date: "2026-10-31"
 slug: "etias-ees-2026-visa-free-travel-europe"
 lang: "en"
-image: "/images/posts/etias-ees-2026-visa-free-travel-europe/cover.jpeg"
+image: "/blog/images/posts/etias-ees-2026-visa-free-travel-europe/cover.jpeg"
 imageAlt: "Graphic with the words ETIAS and EES and a stylised passport and border gate"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["ETIAS", "EES", "Schengen", "Visa-free travel", "Relocation"]
 translationKey: "etias-ees-2026"
 faq: [{"q": "Do I need ETIAS to travel to Europe now?", "a": "No. As of 31 October 2026 ETIAS is not in operation and no applications are collected. The EU says it will announce the start date several months before launch. Since there is no official application yet, a site asking you to pay for ETIAS today is not the official one."}, {"q": "Will EES take my fingerprints?", "a": "If you are a non-EU national entering the Schengen area for a short stay and you are not in an exempt category, yes. EES records fingerprints and a facial image together with your travel-document data and entry and exit dates."}, {"q": "I have a residence permit in an EU country. Am I registered in EES?", "a": "Generally not, if the permit or long-stay visa was issued by a country operating EES. Permits and long-stay visas issued by Cyprus or Ireland are the exception, and their holders are registered."}, {"q": "How much will ETIAS cost and how long will it last?", "a": "The fee will be €20, with exemptions for some groups such as people under 18 or over 70. A travel authorisation will be valid for up to three years or until your passport expires, whichever comes first."}]

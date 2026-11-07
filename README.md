@@ -41,3 +41,20 @@ No secrets are needed or stored in this repo.
 - Google Consent Mode v2: `analytics_storage`, `ad_storage`, `ad_user_data`, `ad_personalization` default to `denied`. gtag.js is injected **only after** "Accetta statistiche"; before that no request goes to Google. Ads signals are never granted.
 - The choice is stored in `localStorage` (`rmx_blog_consent_v1`) and in the `rmx_consent` cookie (180 days). Footer link "Preferenze cookie" reopens the banner; withdrawing sets consent back to denied and disables GA4.
 - `/cookie` is the short cookie policy; the full privacy notice is https://relomatrix.com/legal. Legal wording must be reviewed by the compliance owner.
+
+## Where the blog is served (G-30, 2026-11-07)
+
+- Canonical address: `https://relomatrix.com/blog/`. The main site build (`Relomatrix/relomatrix`,
+  `scripts/blog/embed-blog.mjs`) clones this repo, runs `npm run build` and copies `out/blog/` into
+  its own `dist/blog/`. Everything the blog owns therefore lives under `/blog/`: pages in `app/blog/`,
+  files in `public/blog/`, framework assets moved to `out/blog/_next` by `scripts/move-next-assets.mjs`.
+- `blog.relomatrix.com` (GitHub Pages): `deploy.yml` checks that `relomatrix.com/blog/` carries the
+  `relomatrix-blog` marker. If it does, it deploys `out-redirect/` (instant redirect + canonical for every
+  old URL, `scripts/build-redirect-shell.mjs`); if not, it keeps deploying the full blog.
+- New posts reach relomatrix.com when the main site rebuilds: its `blog-refresh` workflow redeploys the
+  live commit every morning after this repo's 05:15 UTC build.
+- Bylines (G-31): posts are signed by Francesco Bonifazi (`lib/authors.ts`, profile at
+  `/blog/autori/francesco-bonifazi/`). `reviewedBy` is accepted only for reviewers in `REVIEWERS`, added
+  after a real review and with consent.
+- Clusters (G-34): `corridor: "US-IT" | "US-FR" | "IT-FR" | "FR-IT"` puts a post in `/blog/corridor/<id>/`
+  and points its CTA at the corridor Risk Report page with `utm_source=blog`.

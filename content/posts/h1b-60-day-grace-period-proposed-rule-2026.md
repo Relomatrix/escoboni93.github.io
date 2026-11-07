@@ -4,9 +4,9 @@ description: "DHS proposes to remove the 60-day grace period for H-1B, L-1, O-1,
 date: "2026-11-03"
 slug: "h1b-60-day-grace-period-proposed-rule-2026"
 lang: "en"
-image: "/images/posts/h1b-60-day-grace-period-proposed-rule-2026/cover.jpeg"
+image: "/blog/images/posts/h1b-60-day-grace-period-proposed-rule-2026/cover.jpeg"
 imageAlt: "Graphic with the text H-1B 60-day grace period, DHS proposes to end it, and a symbol of a border between two linked points"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["US work visa", "H-1B", "Immigration", "Hiring abroad"]
 translationKey: "h1b-60-day-grace-period-2026"
 faq:

@@ -4,9 +4,9 @@ description: "Regulation (EU) 2026/2359 is in force since 1 November 2026. What 
 date: "2026-11-02"
 slug: "eu-social-security-coordination-reform-2026-posted-workers"
 lang: "en"
-image: "/images/posts/eu-social-security-coordination-reform-2026-posted-workers/cover.jpeg"
+image: "/blog/images/posts/eu-social-security-coordination-reform-2026-posted-workers/cover.jpeg"
 imageAlt: "Illustration of a map of Europe with arrows between countries and a calendar marking 2026 and 2028"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Social security", "Posted workers", "Cross-border employment", "EU law"]
 translationKey: "eu-social-security-coordination-2026"
 faq:

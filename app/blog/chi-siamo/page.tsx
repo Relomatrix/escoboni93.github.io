@@ -20,7 +20,7 @@ export default function About() {
       <nav className="meta" aria-label="Breadcrumb"><a href="/blog/">Blog</a> › <span>Chi siamo</span></nav>
       <section lang="it">
         <h1>Chi siamo</h1>
-        <p>Il blog è curato dalla <strong>redazione di Relomatrix</strong>. Relomatrix è una piattaforma per la relocation internazionale e il lavoro professionale tra Paesi diversi: aiuta privati, studi professionali e aziende a mettere in ordine documenti, fatti e fonti normative di un trasferimento, lasciando la decisione al professionista.</p>
+        <p>Gli articoli sono firmati da <a href="/blog/autori/francesco-bonifazi/"><strong>Francesco Bonifazi</strong></a>, cofondatore e CTO di Relomatrix, che si occupa dell&apos;architettura della piattaforma e della tracciabilità delle fonti. Quando un professionista rivede un articolo, il suo nome e la data della revisione compaiono sotto il titolo, solo con il suo consenso. Relomatrix è una piattaforma per la relocation internazionale e il lavoro professionale tra Paesi diversi: aiuta privati, studi professionali e aziende a mettere in ordine documenti, fatti e fonti normative di un trasferimento, lasciando la decisione al professionista.</p>
         <h2>Come scriviamo</h2>
         <ul>
           <li>Ogni articolo affronta una sola domanda e risponde subito, nelle prime righe.</li>
@@ -36,7 +36,7 @@ export default function About() {
       </section>
       <section lang="en">
         <h2>About us</h2>
-        <p>The blog is run by the <strong>Relomatrix editorial team</strong>. Relomatrix is a platform for international relocation and cross-border professional work: it helps individuals, firms and companies organise the documents, facts and legal sources of a move, while the professional keeps the final decision.</p>
+        <p>Articles are signed by <a href="/blog/autori/francesco-bonifazi/"><strong>Francesco Bonifazi</strong></a>, co-founder and CTO of Relomatrix, who leads the platform architecture and source traceability. When a professional reviews an article, their name and the review date appear under the title, only with their consent. Relomatrix is a platform for international relocation and cross-border professional work: it helps individuals, firms and companies organise the documents, facts and legal sources of a move, while the professional keeps the final decision.</p>
         <ul>
           <li>Every claim about law, tax, social security or immigration links to an <strong>official source</strong>. Articles without a Sources section citing at least one official source are not published; the check runs automatically at build time.</li>
           <li>No unverifiable statistics, case studies or testimonials.</li>

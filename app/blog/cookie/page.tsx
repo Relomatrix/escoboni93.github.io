@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { CookiePrefsLink } from '../CookieConsent';
+import { CookiePrefsLink } from '../../CookieConsent';
 import { PRIVACY_URL } from '@/lib/consent';
 
 export const metadata: Metadata = { title: 'Cookie policy', robots: { index: false } };
