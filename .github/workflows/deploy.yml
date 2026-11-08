@@ -30,7 +30,7 @@ jobs:
       # live, this host only redirects there; until then it keeps serving the full blog.
       - id: target
         run: |
-          html="$(curl -fsS --max-time 30 https://relomatrix.com/blog/ || true)"
+          html="$(curl -fsSL --max-time 30 https://www.relomatrix.com/blog/ || true)"
           if printf '%s' "$html" | grep -q 'name="relomatrix-blog" content="embedded"'; then
             echo "mode=redirect" >> "$GITHUB_OUTPUT"
           else

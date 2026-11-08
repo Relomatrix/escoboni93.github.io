@@ -8,7 +8,7 @@ import path from 'node:path';
 
 const OUT = path.join(process.cwd(), 'out');
 const SHELL = path.join(process.cwd(), 'out-redirect');
-const TARGET = (process.env.BLOG_CANONICAL_ORIGIN || 'https://relomatrix.com').replace(/\/$/, '');
+const TARGET = (process.env.BLOG_CANONICAL_ORIGIN || 'https://www.relomatrix.com').replace(/\/$/, '');
 
 // Old paths that moved under /blog/ with G-30.
 const MOVED = { '/': '/blog/', '/chi-siamo/': '/blog/chi-siamo/', '/cookie/': '/blog/cookie/' };
