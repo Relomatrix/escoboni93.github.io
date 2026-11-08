@@ -4,9 +4,9 @@ description: "Regime impatriati per chi rientra in Italia: reddito tassato al 50
 date: "2026-11-04"
 slug: "regime-impatriati-2026-requisiti-tassazione-50"
 lang: "it"
-image: "/images/posts/regime-impatriati-2026-requisiti-tassazione-50/cover.jpeg"
+image: "/blog/images/posts/regime-impatriati-2026-requisiti-tassazione-50/cover.jpeg"
 imageAlt: "Grafica con il testo Regime impatriati 2026 e il simbolo di una frontiera tra due punti collegati"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Impatriati", "Residenza fiscale", "Rientro in Italia", "Fisco internazionale"]
 translationKey: "regime-impatriati-2026"
 faq:

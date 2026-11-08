@@ -4,9 +4,10 @@ description: "Le ministère de l'Intérieur précise qu'un étranger en VLS-TS v
 date: "2026-11-05"
 slug: "teletravail-statut-visiteur-france-reponse-2026"
 lang: "fr"
-image: "/images/posts/teletravail-statut-visiteur-france-reponse-2026/cover.jpeg"
+image: "/blog/images/posts/teletravail-statut-visiteur-france-reponse-2026/cover.jpeg"
 imageAlt: "Graphique avec le texte Télétravail et statut visiteur et un symbole de frontière entre deux points reliés"
-author: "redazione"
+author: "francesco-bonifazi"
+corridor: "US-FR"
 tags: ["Titre de séjour", "Télétravail", "Expatriation", "Fiscalité internationale"]
 translationKey: "teletravail-statut-visiteur-2026"
 faq:

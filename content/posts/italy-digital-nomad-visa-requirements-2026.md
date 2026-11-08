@@ -4,9 +4,10 @@ description: "Italy remote-worker and digital nomad visas: highly qualified work
 date: "2026-11-05"
 slug: "italy-digital-nomad-visa-requirements-2026"
 lang: "en"
-image: "/images/posts/italy-digital-nomad-visa-requirements-2026/cover.jpeg"
+image: "/blog/images/posts/italy-digital-nomad-visa-requirements-2026/cover.jpeg"
 imageAlt: "Graphic with the text Italy digital nomad visa and a border symbol between two connected points"
-author: "redazione"
+author: "francesco-bonifazi"
+corridor: "US-IT"
 tags: ["Digital nomad visa", "Italy", "Remote work", "Residence permit"]
 translationKey: "italy-digital-nomad-visa-2026"
 faq:

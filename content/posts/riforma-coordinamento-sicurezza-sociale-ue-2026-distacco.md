@@ -4,9 +4,9 @@ description: "Dal 1° novembre 2026 è in vigore il regolamento (UE) 2026/2359: 
 date: "2026-11-02"
 slug: "riforma-coordinamento-sicurezza-sociale-ue-2026-distacco"
 lang: "it"
-image: "/images/posts/riforma-coordinamento-sicurezza-sociale-ue-2026-distacco/cover.jpeg"
+image: "/blog/images/posts/riforma-coordinamento-sicurezza-sociale-ue-2026-distacco/cover.jpeg"
 imageAlt: "Illustrazione di una mappa d'Europa con frecce tra i Paesi e un calendario con il 2026 e il 2028"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Previdenza", "Distacco dei lavoratori", "Lavoro all'estero", "Normativa UE"]
 translationKey: "eu-social-security-coordination-2026"
 faq:

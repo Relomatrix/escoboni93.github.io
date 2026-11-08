@@ -4,7 +4,7 @@ description: "What cross-border employment means, when working abroad creates ta
 date: "2026-10-30"
 slug: "cross-border-employment"
 lang: "en"
-image: "/images/posts/cross-border-employment/cover.jpeg"
+image: "/blog/images/posts/cross-border-employment/cover.jpeg"
 imageAlt: "Employee reviewing overseas work permit documents"
 tags: ["Cross-border employment", "Remote work", "Social security", "International tax"]
 faq: [{"q": "What is the difference between cross-border employment and global mobility?", "a": "Cross-border employment describes the work arrangement itself: someone working in a country other than their employer's or their home country. Global mobility is the function, usually inside a company, that manages those arrangements, including relocations, assignments and remote work abroad. In practice the terms overlap, and both involve immigration, tax and social-security questions."}, {"q": "Can an employee work remotely from another country without creating obligations?", "a": "Not automatically. Immigration status, personal tax, social-security coverage and the employer's own tax position can all be affected, depending on the countries, the duration and the role. Check each area for the specific destination and document the outcome before the person starts."}, {"q": "Do I pay social security in two countries if I work abroad?", "a": "Sometimes. A [US totalization agreement](https://www.irs.gov/individuals/international-taxpayers/social-security-tax-consequences-of-working-abroad) is designed to eliminate dual coverage for the same work, but only for countries that have one with the United States. Ask for proof of which system covers you, and confirm the rule for your specific country pair."}, {"q": "How long can someone work abroad before taxes apply?", "a": "There is no single number. Under the OECD Model many treaties use a 183-day test, but the source country may also tax if a local employer pays or bears the cost, and domestic rules can apply earlier. Read the actual treaty and count days with a log."}, {"q": "What documents should I request before an international assignment?", "a": "Ask for a written assignment letter, confirmation of your work permit category, proof of social-security coverage, and a note on who runs payroll and where. Keep your own record of days worked in each country."}]
@@ -65,7 +65,7 @@ The employer has its own exposure. The same OECD document notes that an employee
 
 Payroll withholding is separate again. A UK employer, for instance, [must keep calculating and deducting PAYE income tax](https://www.gov.uk/guidance/paying-employees-working-abroad) for employees working abroad, while National Insurance depends on the destination country and the applicable rules. When an employee returns after a stint abroad for a UK employer, [HMRC should be notified so the tax code can be reviewed](https://www.gov.uk/hmrc-internal-manuals/paye-manual/paye81545). Every country has its own version of these steps.
 
-![Income tax and taxable presence](/images/posts/cross-border-employment/income-tax-and-taxable-presence.jpeg)
+![Income tax and taxable presence](/blog/images/posts/cross-border-employment/income-tax-and-taxable-presence.jpeg)
 
 ### Social security
 
@@ -145,7 +145,7 @@ Fragmented information is the core problem. One page covers the visa, another th
 
 If you are planning a move or managing one, you can begin with the [Free Relocation Risk Snapshot](https://relomatrix.com/snapshot) to see where the open questions are. For a full written picture of your case, the [Risk Report](https://relomatrix.com/report) gives a structured, source-referenced assessment with missing facts identified.
 
-![Relomatrix](/images/posts/cross-border-employment/relomatrix.jpg)
+![Relomatrix](/blog/images/posts/cross-border-employment/relomatrix.jpg)
 
 For complex or multi-country situations, such as a team across several jurisdictions or an assignment with a possible permanent establishment question, the [Strategic Review](https://relomatrix.com/premium) is the deeper option. You can also read [how the process works](https://relomatrix.com/how-it-works) before you start.
 

@@ -40,7 +40,7 @@ export default function CookieConsent() {
   return (
     <div className="cookie-banner" role="dialog" aria-labelledby="cookie-title" lang={lang}>
       <p id="cookie-title"><strong>{t.title}</strong></p>
-      <p>{t.body} <a href="/cookie">{t.more}</a> · <a href={PRIVACY_URL}>{t.privacy}</a></p>
+      <p>{t.body} <a href="/blog/cookie/">{t.more}</a> · <a href={PRIVACY_URL}>{t.privacy}</a></p>
       <div className="cookie-actions">
         <button type="button" onClick={() => choose(false)}>{t.reject}</button>
         <button type="button" className="primary" onClick={() => choose(true)}>{t.accept}</button>

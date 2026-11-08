@@ -4,9 +4,9 @@ description: "Compte bancaire en France depuis l'étranger : ce que prévoit l'a
 date: "2026-11-04"
 slug: "banque-francais-etranger-avis-ccsf-2026"
 lang: "fr"
-image: "/images/posts/banque-francais-etranger-avis-ccsf-2026/cover.jpeg"
+image: "/blog/images/posts/banque-francais-etranger-avis-ccsf-2026/cover.jpeg"
 imageAlt: "Graphique avec le texte Banque et Français de l'étranger et le symbole d'une frontière entre deux points reliés"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Expatriation", "Banque", "Droit au compte", "Français de l'étranger"]
 translationKey: "ccsf-banque-francais-etranger-2026"
 faq:

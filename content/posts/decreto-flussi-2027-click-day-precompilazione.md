@@ -4,9 +4,9 @@ description: "Decreto flussi 2027: 165.850 quote, precompilazione sul Portale AL
 date: "2026-11-01"
 slug: "decreto-flussi-2027-click-day-precompilazione"
 lang: "it"
-image: "/images/posts/decreto-flussi-2027-click-day-precompilazione/cover.jpeg"
+image: "/blog/images/posts/decreto-flussi-2027-click-day-precompilazione/cover.jpeg"
 imageAlt: "Grafica con il testo Decreto flussi 2027 e un calendario stilizzato con le date dei click day"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Decreto flussi", "Lavoro in Italia", "Nulla osta", "Immigrazione"]
 translationKey: "decreto-flussi-2027"
 faq:

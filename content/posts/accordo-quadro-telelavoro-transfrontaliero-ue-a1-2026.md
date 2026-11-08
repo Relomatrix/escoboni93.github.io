@@ -4,9 +4,9 @@ description: "L’accordo quadro sul telelavoro transfrontaliero UE consente, so
 date: "2026-11-06"
 slug: "accordo-quadro-telelavoro-transfrontaliero-ue-a1-2026"
 lang: "it"
-image: "/images/posts/accordo-quadro-telelavoro-transfrontaliero-ue-a1-2026/cover.jpeg"
+image: "/blog/images/posts/accordo-quadro-telelavoro-transfrontaliero-ue-a1-2026/cover.jpeg"
 imageAlt: "Grafica con il testo Accordo quadro telelavoro UE e un simbolo di frontiera tra due punti collegati"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Telelavoro", "Sicurezza sociale", "Certificato A1", "Normativa UE"]
 translationKey: "accordo-quadro-telelavoro-ue-2026"
 faq:

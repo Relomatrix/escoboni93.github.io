@@ -26,10 +26,28 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npm run build
+      # G-30: the blog is served by relomatrix.com/blog/ (built there from this repo). Once that is
+      # live, this host only redirects there; until then it keeps serving the full blog.
+      - id: target
+        run: |
+          html="$(curl -fsS --max-time 30 https://relomatrix.com/blog/ || true)"
+          if printf '%s' "$html" | grep -q 'name="relomatrix-blog" content="embedded"'; then
+            echo "mode=redirect" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=full" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Build (canonical relomatrix.com, redirect shell for this host)
+        if: steps.target.outputs.mode == 'redirect'
+        run: npm run build
+      - name: Build (full blog on this host until relomatrix.com/blog/ is live)
+        if: steps.target.outputs.mode == 'full'
+        env:
+          NEXT_PUBLIC_SITE_URL: https://blog.relomatrix.com
+        run: npm run build
+      - run: echo "Deploying ${{ steps.target.outputs.mode }}" >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: out
+          path: ${{ steps.target.outputs.mode == 'redirect' && 'out-redirect' || 'out' }}
   deploy:
     needs: build
     runs-on: ubuntu-latest

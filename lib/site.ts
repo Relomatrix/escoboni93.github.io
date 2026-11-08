@@ -1,20 +1,23 @@
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://blog.relomatrix.com').replace(/\/$/, '');
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://relomatrix.com').replace(/\/$/, '');
 export const SITE_NAME = 'Relomatrix Blog';
 export const SITE_DESCRIPTION = 'Source-referenced guides on relocation, immigration, tax and cross-border compliance between Italy, the EU and the US.';
 export const ORG_URL = 'https://relomatrix.com';
-export const ABOUT_PATH = '/chi-siamo/';
+export const ABOUT_PATH = '/blog/chi-siamo/';
+export const AUTHOR_PATH = (key: string) => `/blog/autori/${key}/`;
+// G-30: the blog is served at relomatrix.com/blog/; every path the blog owns starts with /blog/.
+export const BLOG_BASE = '/blog';
 
 export const ORG_ID = `${ORG_URL}/#organization`;
-export const WEBSITE_ID = `${SITE_URL}/#website`;
+export const WEBSITE_ID = `${SITE_URL}/blog/#website`;
 
 export const organizationLd = {
   '@context': 'https://schema.org', '@type': 'Organization', '@id': ORG_ID, name: 'Relomatrix', url: ORG_URL,
-  logo: { '@type': 'ImageObject', url: `${SITE_URL}/relomatrix-wordmark-navy-on-ivory.png` },
+  logo: { '@type': 'ImageObject', url: `${SITE_URL}/blog/relomatrix-wordmark-navy-on-ivory.png` },
 };
 
 export const websiteLd = {
   '@context': 'https://schema.org', '@type': 'WebSite', '@id': WEBSITE_ID, name: SITE_NAME, url: `${SITE_URL}/blog/`,
-  description: SITE_DESCRIPTION, inLanguage: ['en', 'it'], publisher: { '@id': ORG_ID },
+  description: SITE_DESCRIPTION, inLanguage: ['en', 'it', 'fr'], publisher: { '@id': ORG_ID },
 };
 
 // BreadcrumbList from [name, path] pairs; the first item is always the blog home.

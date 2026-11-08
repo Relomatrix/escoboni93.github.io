@@ -4,9 +4,9 @@ description: "Le règlement (UE) 2026/2359 est en vigueur depuis le 1er novembre
 date: "2026-11-02"
 slug: "reforme-coordination-securite-sociale-ue-2026-detachement"
 lang: "fr"
-image: "/images/posts/reforme-coordination-securite-sociale-ue-2026-detachement/cover.jpeg"
+image: "/blog/images/posts/reforme-coordination-securite-sociale-ue-2026-detachement/cover.jpeg"
 imageAlt: "Illustration d'une carte de l'Europe avec des flèches entre les pays et un calendrier indiquant 2026 et 2028"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Sécurité sociale", "Détachement", "Travail transfrontalier", "Droit de l'UE"]
 translationKey: "eu-social-security-coordination-2026"
 faq:

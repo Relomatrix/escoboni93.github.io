@@ -12,8 +12,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: SITE_NAME, template: '%s | Relomatrix' },
   description: SITE_DESCRIPTION,
-  alternates: { types: { 'application/rss+xml': `${SITE_URL}/rss.xml` } },
-  icons: { icon: '/favicon.svg' },
+  alternates: { types: { 'application/rss+xml': `${SITE_URL}/blog/rss.xml` } },
+  icons: { icon: '/blog/favicon.svg' },
+  // G-30: blog.relomatrix.com's deploy checks this marker on relomatrix.com/blog/ before it turns into redirects.
+  other: { 'relomatrix-blog': 'embedded' },
 };
 
 // <html lang> is rewritten to "it" for Italian posts after the build (scripts/set-html-lang.mjs).
@@ -24,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd([organizationLd, websiteLd]) }} />
         <header className="site-header">
           <div className="wrap">
-            <a href="/blog/" aria-label="Relomatrix Blog"><img src="/logo.svg" alt="Relomatrix" width={220} height={40} /></a>
+            <a href="/blog/" aria-label="Relomatrix Blog"><img src="/blog/logo.svg" alt="Relomatrix" width={220} height={40} /></a>
             <nav className="site-nav">
               <a href="/blog/tag/">Topics</a>
               <a href={ABOUT_PATH} lang="it">Chi siamo</a>
@@ -35,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="wrap">{children}</main>
         <footer className="site-footer">
           <div className="wrap">
-            <p>© {new Date().getFullYear()} Relomatrix · <a href="https://relomatrix.com">relomatrix.com</a> · <a href={ABOUT_PATH}>Chi siamo</a> · <a href="/rss.xml">RSS</a> · <a href={PRIVACY_URL}>Privacy</a> · <a href="/cookie">Cookie policy</a> · <CookiePrefsLink label="Preferenze cookie" /></p>
+            <p>© {new Date().getFullYear()} Relomatrix · <a href="https://relomatrix.com">relomatrix.com</a> · <a href={ABOUT_PATH}>Chi siamo</a> · <a href="/blog/rss.xml">RSS</a> · <a href={PRIVACY_URL}>Privacy</a> · <a href="/blog/cookie/">Cookie policy</a> · <CookiePrefsLink label="Preferenze cookie" /></p>
           </div>
         </footer>
         <CookieConsent />

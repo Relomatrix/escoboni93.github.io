@@ -4,7 +4,7 @@ Every push to `main` triggers the GitHub Actions workflow that builds the static
 
 ## Daily routine
 1. Write the article as Markdown: `content/posts/<slug>.md`. The slug is the URL: `/blog/<slug>`. Lowercase, hyphens, unique, never change it after publishing.
-2. Put images in `public/images/posts/<slug>/` and reference them as `/images/posts/<slug>/<file>`. Do not hotlink external images.
+2. Put images in `public/blog/images/posts/<slug>/` and reference them as `/blog/images/posts/<slug>/<file>`. Do not hotlink external images.
 3. Run `npm ci && npm run build` (must pass). `npm run check` runs only the content gate (see below).
 4. Commit and push to `main`: `git add content public && git commit -m "post: <slug>" && git push origin main`.
 5. GitHub Actions builds and publishes to Pages (check the Actions tab is green); the post appears on `/blog`, in `/sitemap.xml` and `/rss.xml`.
@@ -20,7 +20,7 @@ date: "2026-10-30"        # required, YYYY-MM-DD, publication date
 updated: "2026-11-02"     # optional, dateModified
 slug: "my-article-slug"   # required, URL path /blog/<slug>
 lang: "en"                # required, "en" or "it"
-image: "/images/posts/my-article-slug/cover.jpeg"  # optional, cover + Open Graph
+image: "/blog/images/posts/my-article-slug/cover.jpeg"  # optional, cover + Open Graph
 imageAlt: "Alt text"      # optional
 author: "redazione"       # optional, key of lib/authors.ts (default: redazione)
 tags: ["Remote work", "Italy"]  # recommended: each tag gets a hub page /blog/tag/<tag>/ and drives related articles

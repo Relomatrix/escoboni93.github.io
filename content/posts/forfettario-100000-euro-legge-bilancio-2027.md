@@ -4,9 +4,9 @@ description: "La manovra 2027 alza a 100.000 euro la soglia del forfetario per l
 date: "2026-10-31"
 slug: "forfettario-100000-euro-legge-bilancio-2027"
 lang: "it"
-image: "/images/posts/forfettario-100000-euro-legge-bilancio-2027/cover.jpeg"
+image: "/blog/images/posts/forfettario-100000-euro-legge-bilancio-2027/cover.jpeg"
 imageAlt: "Grafica con il titolo Forfettario 100.000 euro e un grafico a barre stilizzato"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Regime forfetario", "Legge di bilancio 2027", "Partita IVA", "Trasferirsi in Italia"]
 translationKey: "forfettario-2027"
 faq: [{"q": "La soglia di 100.000 euro è già in vigore?", "a": "No. Al 31 ottobre 2026 è contenuta nel disegno di legge di bilancio 2027 approvato dal Consiglio dei ministri, che il Parlamento deve ancora esaminare e approvare. Oggi la soglia di accesso resta 85.000 euro."}, {"q": "Con ricavi tra 85.000 e 100.000 euro dovrò applicare l'IVA?", "a": "Il comunicato del governo dice che ai fini dell'esenzione IVA la soglia resta a 85.000 euro, in attesa dell'autorizzazione europea. Come funzionerà in pratica dipenderà dal testo finale della legge."}, {"q": "Posso aprire una partita IVA forfettaria se mi trasferisco in Italia?", "a": "In generale sì, se diventi fiscalmente residente in Italia e rispetti requisiti e cause di esclusione. I non residenti sono esclusi, salvo chi risiede in un Paese UE o SEE e produce in Italia almeno il 75% del reddito."}, {"q": "L'aliquota al 5% vale anche se continuo il lavoro che facevo all'estero?", "a": "Non è automatico. L'Agenzia delle Entrate richiede che la nuova attività non sia la mera prosecuzione di un'attività precedente, anche svolta come dipendente o autonomo. Va valutato caso per caso."}]

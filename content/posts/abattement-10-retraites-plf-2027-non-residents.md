@@ -4,9 +4,9 @@ description: "Le PLF 2027 voulait plafonner à 3 000 € l'abattement de 10 % su
 date: "2026-10-31"
 slug: "abattement-10-retraites-plf-2027-non-residents"
 lang: "fr"
-image: "/images/posts/abattement-10-retraites-plf-2027-non-residents/cover.jpeg"
+image: "/blog/images/posts/abattement-10-retraites-plf-2027-non-residents/cover.jpeg"
 imageAlt: "Graphique avec le texte Abattement 10 % retraites et un diagramme stylisé"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Retraites", "Impôt sur le revenu", "PLF 2027", "Non-résidents"]
 translationKey: "abattement-retraites-2027"
 faq: [{"q": "L'abattement de 10 % sur les retraites est-il plafonné à 3 000 € en 2027 ?", "a": "Non, pas à ce stade. L'article 3 du PLF 2027 le proposait, mais l'Assemblée nationale a adopté sa suppression en séance le 15 octobre 2026. Le Sénat doit encore examiner le texte, donc la version finale n'est pas connue."}, {"q": "Quel est le plafond actuel de l'abattement de 10 % sur les pensions ?", "a": "Selon l'exposé des motifs du projet de loi de finances pour 2027, le plafond de l'abattement de 10 % sur les pensions s'élève aujourd'hui à 4 439 €."}, {"q": "Les pensions d'invalidité étaient-elles concernées ?", "a": "Non. Le projet de loi indiquait que les modalités de l'abattement de 10 % pour les pensions alimentaires et d'invalidité n'étaient pas modifiées."}, {"q": "Je vis à l'étranger : comment ma pension française est-elle imposée ?", "a": "Si la convention fiscale attribue l'imposition à la France, la pension subit une retenue à la source spécifique aux non-résidents, après un abattement de 10 %. Pour les revenus 2025, le barème est de 0 %, 12 % puis 20 % au-delà de 49 667 €."}]

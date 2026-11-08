@@ -4,9 +4,9 @@ description: "Iscriversi all'AIRE è obbligatorio se si trasferisce la dimora al
 date: "2026-11-05"
 slug: "aire-residenza-fiscale-2026-iscrizione-non-basta"
 lang: "it"
-image: "/images/posts/aire-residenza-fiscale-2026-iscrizione-non-basta/cover.jpeg"
+image: "/blog/images/posts/aire-residenza-fiscale-2026-iscrizione-non-basta/cover.jpeg"
 imageAlt: "Grafica con il testo AIRE e residenza fiscale 2026 e un simbolo di frontiera tra due punti collegati"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["AIRE", "Residenza fiscale", "Lavoro all'estero", "Fisco internazionale"]
 translationKey: "aire-residenza-fiscale-2026"
 faq:

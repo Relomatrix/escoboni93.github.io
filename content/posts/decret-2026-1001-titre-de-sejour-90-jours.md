@@ -4,9 +4,10 @@ description: "Décret n° 2026-1001 : réponse du préfet en 90 jours, restricti
 date: "2026-11-01"
 slug: "decret-2026-1001-titre-de-sejour-90-jours"
 lang: "fr"
-image: "/images/posts/decret-2026-1001-titre-de-sejour-90-jours/cover.jpeg"
+image: "/blog/images/posts/decret-2026-1001-titre-de-sejour-90-jours/cover.jpeg"
 imageAlt: "Graphique avec le texte Titre de séjour salarié 90 jours et quatre cartes résumant les délais du décret 2026-1001"
-author: "redazione"
+author: "francesco-bonifazi"
+corridor: "US-FR"
 tags: ["Titre de séjour", "Carte bleue européenne", "Autorisation de travail", "CESEDA"]
 translationKey: "decret-2026-1001-titre-sejour"
 faq:

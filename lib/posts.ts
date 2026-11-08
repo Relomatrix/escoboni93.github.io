@@ -15,6 +15,7 @@ export type PostMeta = {
   title: string; description: string; date: string; updated?: string; slug: string;
   lang: Lang; image?: string; imageAlt?: string; author?: string; tags?: string[];
   translationKey?: string; faq?: Faq[]; draft?: boolean;
+  corridor?: string; reviewedBy?: string; reviewedAt?: string;
 };
 export type Post = PostMeta & { html: string };
 
@@ -30,7 +31,7 @@ function read(file: string): { meta: PostMeta; body: string } {
   if (!data.title || !data.description || !date) throw new Error(`Missing frontmatter in ${file}`);
   // Slug and image end up in URLs: only allow safe shapes (scripts/check-posts.mjs reports the same rules).
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) throw new Error(`Invalid slug "${slug}" in ${file}`);
-  if (data.image !== undefined && (!/^\/images\/[\w\-./]+$/.test(String(data.image)) || String(data.image).includes('..'))) throw new Error(`Invalid image path in ${file}`);
+  if (data.image !== undefined && (!/^\/blog\/images\/[\w\-./]+$/.test(String(data.image)) || String(data.image).includes('..'))) throw new Error(`Invalid image path in ${file}`);
   return { meta: { ...data, slug, date, lang: data.lang === 'it' || data.lang === 'fr' ? data.lang : 'en' } as PostMeta, body: content };
 }
 
