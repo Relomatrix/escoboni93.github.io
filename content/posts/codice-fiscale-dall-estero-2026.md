@@ -4,7 +4,7 @@ description: "Consolato, Fast It o modello AA4/8: come chiedere il codice fiscal
 date: "2026-11-08"
 slug: "codice-fiscale-dall-estero-2026"
 lang: "it"
-image: "/images/posts/codice-fiscale-dall-estero-2026/cover.jpeg"
+image: "/blog/images/posts/codice-fiscale-dall-estero-2026/cover.jpeg"
 imageAlt: "Grafica con il testo Codice fiscale dall'estero e un simbolo di confine tra due punti collegati"
 author: "redazione"
 tags: ["Codice fiscale", "AIRE", "Consolato", "Italia"]

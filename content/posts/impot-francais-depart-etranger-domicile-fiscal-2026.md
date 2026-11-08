@@ -4,7 +4,7 @@ description: "Si votre domicile fiscal quitte la France, vous déclarez surtout 
 date: "2026-11-08"
 slug: "impot-francais-depart-etranger-domicile-fiscal-2026"
 lang: "fr"
-image: "/images/posts/impot-francais-depart-etranger-domicile-fiscal-2026/cover.jpeg"
+image: "/blog/images/posts/impot-francais-depart-etranger-domicile-fiscal-2026/cover.jpeg"
 imageAlt: "Graphique avec le texte Partir à l'étranger : l'impôt et un symbole de frontière entre deux points reliés"
 author: "redazione"
 tags: ["Domicile fiscal", "Non-résidents", "Expatriation", "Impôt sur le revenu"]

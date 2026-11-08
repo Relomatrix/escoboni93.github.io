@@ -44,7 +44,7 @@ No secrets are needed or stored in this repo.
 
 ## Where the blog is served (G-30, 2026-11-07)
 
-- Canonical address: `https://relomatrix.com/blog/`. The main site build (`Relomatrix/relomatrix`,
+- Canonical address: `https://www.relomatrix.com/blog/`. The main site build (`Relomatrix/relomatrix`,
   `scripts/blog/embed-blog.mjs`) clones this repo, runs `npm run build` and copies `out/blog/` into
   its own `dist/blog/`. Everything the blog owns therefore lives under `/blog/`: pages in `app/blog/`,
   files in `public/blog/`, framework assets moved to `out/blog/_next` by `scripts/move-next-assets.mjs`.

@@ -1,7 +1,7 @@
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://relomatrix.com').replace(/\/$/, '');
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.relomatrix.com').replace(/\/$/, '');
 export const SITE_NAME = 'Relomatrix Blog';
 export const SITE_DESCRIPTION = 'Source-referenced guides on relocation, immigration, tax and cross-border compliance between Italy, the EU and the US.';
-export const ORG_URL = 'https://relomatrix.com';
+export const ORG_URL = 'https://www.relomatrix.com';
 export const ABOUT_PATH = '/blog/chi-siamo/';
 export const AUTHOR_PATH = (key: string) => `/blog/autori/${key}/`;
 // G-30: the blog is served at relomatrix.com/blog/; every path the blog owns starts with /blog/.
