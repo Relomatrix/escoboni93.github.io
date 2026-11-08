@@ -4,7 +4,7 @@ description: "The IRS set the 2027 foreign earned income exclusion at $137,300, 
 date: "2026-11-08"
 slug: "foreign-earned-income-exclusion-2027"
 lang: "en"
-image: "/images/posts/foreign-earned-income-exclusion-2027/cover.jpeg"
+image: "/blog/images/posts/foreign-earned-income-exclusion-2027/cover.jpeg"
 imageAlt: "Graphic with the text FEIE 2027 $137,300 and a border symbol between two connected points"
 author: "redazione"
 tags: ["US tax", "FEIE", "Remote work", "Americans abroad"]
