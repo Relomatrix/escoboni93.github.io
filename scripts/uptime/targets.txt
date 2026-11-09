@@ -1,0 +1,10 @@
+# Production endpoints watched by .github/workflows/prod-uptime.yml (G-03).
+# name|url|expected text in the body (optional)
+Sito pubblico|https://www.relomatrix.com/|Relomatrix
+Blog|https://www.relomatrix.com/blog/|
+API (readyz, include il database)|https://relomatrix-platform-api.onrender.com/readyz|
+Motore di analisi|https://relomatrix.onrender.com/health|
+App cliente|https://app.relomatrix.com/|
+App professionista|https://professional.relomatrix.com/|
+Login|https://login.relomatrix.com/|
+Admin|https://admin.relomatrix.com/|

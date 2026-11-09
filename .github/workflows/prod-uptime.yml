@@ -1,0 +1,109 @@
+# Production uptime monitor for Relomatrix (review 2026-11-07, G-03), at no cost.
+#
+# Why here: Actions minutes are free on this public repository, while a 5-minute schedule on the
+# private Relomatrix/relomatrix repository would use about 8,600 billed minutes a month.
+# It only reads public pages and health endpoints listed in scripts/uptime/targets.txt: no secret
+# of the platform, no customer data, nothing is changed on production.
+#
+# Alerts, only when the state changes (no repeat every 5 minutes):
+#   - down:     opens an issue labelled prod-down that mentions @Escoboni93 (GitHub sends the email)
+#               and sends a Telegram message if TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID are set;
+#   - recovery: comments and closes the issue, and sends the Telegram "risolto" message.
+# An open prod-down issue is the state: while it is open no new alert is sent.
+name: Monitoraggio prod
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+    inputs:
+      test_alert:
+        description: 'Invia un messaggio Telegram di prova (non apre issue)'
+        type: boolean
+        default: false
+  pull_request:
+    paths:
+      - '.github/workflows/prod-uptime.yml'
+      - 'scripts/uptime/**'
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: prod-uptime
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: scripts/uptime
+
+      - name: Controlla gli endpoint di produzione
+        run: scripts/uptime/check.sh "$RUNNER_TEMP/down.txt"
+
+      - name: Apri o chiudi l'allarme
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          EVENT: ${{ github.event_name }}
+          TEST_ALERT: ${{ inputs.test_alert }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          down="$RUNNER_TEMP/down.txt"
+          now="$(TZ=Europe/Rome date '+%d/%m %H:%M')"
+
+          telegram() {
+            if [[ -z "${TELEGRAM_BOT_TOKEN:-}" || -z "${TELEGRAM_CHAT_ID:-}" ]]; then
+              echo "::notice::Telegram non configurato (secret TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID assenti): solo email."
+              return 0
+            fi
+            curl -sS -o /dev/null -w 'Telegram HTTP %{http_code}\n' --max-time 20 \
+              "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+              --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+              --data-urlencode "text=$1" --data-urlencode "disable_web_page_preview=true" || true
+          }
+
+          if [[ "$EVENT" == "workflow_dispatch" && "$TEST_ALERT" == "true" ]]; then
+            telegram "Relomatrix monitor: messaggio di prova delle ${now}. Se lo leggi, gli avvisi Telegram funzionano."
+            echo "Prova Telegram inviata; lo stato degli allarmi non viene toccato."
+            exit 0
+          fi
+
+          if [[ "$EVENT" == "pull_request" ]]; then
+            if [[ -s "$down" ]]; then echo "Prova su PR: servizi giù (nessun allarme inviato):"; cat "$down"; exit 1; fi
+            echo "Prova su PR: tutti i servizi rispondono."; exit 0
+          fi
+
+          gh label create prod-down --repo "$GITHUB_REPOSITORY" --color B60205 \
+            --description "Allarme aperto dal monitoraggio di produzione" >/dev/null 2>&1 || true
+          open_issue="$(gh issue list --repo "$GITHUB_REPOSITORY" --label prod-down --state open \
+            --json number --jq '.[0].number // empty')"
+
+          if [[ -s "$down" ]]; then
+            if [[ -n "$open_issue" ]]; then
+              echo "Allarme già aperto (#$open_issue), nessun nuovo avviso."; cat "$down"; exit 0
+            fi
+            list="$(sed 's/^/- /' "$down")"
+            body="$(printf '@Escoboni93 il monitoraggio di produzione non riceve risposta (due tentativi a 45 secondi di distanza) da:\n\n%s\n\nRilevato alle %s (ora italiana). Run: %s\n\nQuando tutto torna a rispondere questa issue si chiude da sola.' "$list" "$now" "$RUN_URL")"
+            n="$(wc -l < "$down")"
+            title="Prod giù: $(head -1 "$down" | sed 's/ (http.*//')"
+            [[ "$n" -gt 1 ]] && title="$title e altri $((n - 1))"
+            gh issue create --repo "$GITHUB_REPOSITORY" --label prod-down --title "$title" --body "$body"
+            telegram "$(printf 'Relomatrix PROD GIÙ (%s)\n%s\n%s' "$now" "$list" "$RUN_URL")"
+            exit 1
+          fi
+
+          if [[ -n "$open_issue" ]]; then
+            gh issue comment "$open_issue" --repo "$GITHUB_REPOSITORY" \
+              --body "@Escoboni93 tutti i servizi rispondono di nuovo (controllo delle ${now}, ora italiana). Run: ${RUN_URL}"
+            gh issue close "$open_issue" --repo "$GITHUB_REPOSITORY"
+            telegram "Relomatrix prod: risolto alle ${now}, tutti i servizi rispondono."
+          fi
+          echo "Tutti i servizi rispondono."
