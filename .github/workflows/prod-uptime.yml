@@ -72,6 +72,8 @@ jobs:
 
           if [[ "$EVENT" == "workflow_dispatch" && "$TEST_ALERT" == "true" ]]; then
             telegram "Relomatrix monitor: messaggio di prova delle ${now}. Se lo leggi, gli avvisi Telegram funzionano."
+            echo "Prova Telegram inviata; lo stato degli allarmi non viene toccato."
+            exit 0
           fi
 
           if [[ "$EVENT" == "pull_request" ]]; then
