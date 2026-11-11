@@ -2,6 +2,7 @@
 title: "Regime impatriati 2026: requisiti e tassazione al 50%"
 description: "Regime impatriati per chi rientra in Italia: reddito tassato al 50% fino a 600.000 euro, 40% con figli minori, requisiti di residenza estera e durata."
 date: "2026-11-04"
+updated: "2026-11-11"
 slug: "regime-impatriati-2026-requisiti-tassazione-50"
 lang: "it"
 image: "/blog/images/posts/regime-impatriati-2026-requisiti-tassazione-50/cover.jpeg"
@@ -72,7 +73,7 @@ Per chi ha trasferito la residenza anagrafica nel 2024, il regime dura altri tre
 
 ## Compatibilità con altri regimi
 
-L'Agenzia ricorda che il nuovo regime è compatibile con gli altri regimi di favore per chi si trasferisce in Italia, purché si rispettino i requisiti di ciascuno. Un esempio citato è il rientro di un ricercatore che svolge anche lavoro autonomo (risposta n. 16/2025). Esiste anche il regime dei neo residenti, con un'imposta sostitutiva sui redditi esteri di 300.000 euro l'anno per chi si trasferisce dal 2026.
+L'Agenzia ricorda che il nuovo regime è compatibile con gli altri regimi di favore per chi si trasferisce in Italia, purché si rispettino i requisiti di ciascuno. Un esempio citato è il rientro di un ricercatore che svolge anche lavoro autonomo (risposta n. 16/2025). Esiste anche il regime dei neo residenti, con un'imposta sostitutiva sui redditi esteri di 300.000 euro l'anno per chi si trasferisce dal 2026. Attenzione: per chi trasferisce la residenza fiscale in Italia dal periodo d'imposta 2027 i due regimi non sono più cumulabili, come spieghiamo nell'articolo su [neo residenti e impatriati: stop al cumulo dal 2027](/blog/neo-residenti-impatriati-divieto-cumulo-2027/).
 
 ## Cosa cambia con il nuovo Testo unico
 
