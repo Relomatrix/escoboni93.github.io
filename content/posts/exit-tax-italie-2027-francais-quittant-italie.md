@@ -6,7 +6,7 @@ slug: "exit-tax-italie-2027-francais-quittant-italie"
 lang: "fr"
 image: "/blog/images/posts/exit-tax-italie-2027-francais-quittant-italie/cover.jpeg"
 imageAlt: "Graphique avec le texte Exit tax italienne 2027 et un symbole de frontière entre deux points reliés"
-author: "redazione"
+author: "francesco-bonifazi"
 corridor: "IT-FR"
 tags: ["Italie", "Résidence fiscale", "Exit tax", "Retour en France"]
 translationKey: "exit-tax-italia-2027-persone-fisiche"

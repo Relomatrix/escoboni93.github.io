@@ -6,7 +6,7 @@ slug: "impot-francais-depart-etranger-domicile-fiscal-2026"
 lang: "fr"
 image: "/blog/images/posts/impot-francais-depart-etranger-domicile-fiscal-2026/cover.jpeg"
 imageAlt: "Graphique avec le texte Partir à l'étranger : l'impôt et un symbole de frontière entre deux points reliés"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Domicile fiscal", "Non-résidents", "Expatriation", "Impôt sur le revenu"]
 translationKey: "impot-depart-etranger-domicile-fiscal-2026"
 faq:

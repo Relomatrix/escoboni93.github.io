@@ -6,7 +6,7 @@ slug: "neo-residenti-impatriati-divieto-cumulo-2027"
 lang: "it"
 image: "/blog/images/posts/neo-residenti-impatriati-divieto-cumulo-2027/cover.jpeg"
 imageAlt: "Grafica con il testo Neo residenti e impatriati 2027 e il simbolo di una frontiera tra due punti collegati"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Neo residenti", "Impatriati", "Residenza fiscale", "Trasferimento in Italia"]
 translationKey: "neo-residenti-impatriati-cumulo-2027"
 faq:

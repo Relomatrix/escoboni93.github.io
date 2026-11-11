@@ -6,7 +6,7 @@ slug: "fbar-americans-abroad-who-must-file-2026"
 lang: "en"
 image: "/blog/images/posts/fbar-americans-abroad-who-must-file-2026/cover.jpeg"
 imageAlt: "Graphic with the text FBAR for Americans abroad and a $10,000 threshold marker between two connected points"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["US tax", "FBAR", "Americans abroad", "Foreign accounts"]
 translationKey: "fbar-americans-abroad-who-must-file-2026"
 faq:

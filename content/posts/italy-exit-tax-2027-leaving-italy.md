@@ -6,7 +6,7 @@ slug: "italy-exit-tax-2027-leaving-italy"
 lang: "en"
 image: "/blog/images/posts/italy-exit-tax-2027-leaving-italy/cover.jpeg"
 imageAlt: "Graphic with the text Italy exit tax 2027 and a border symbol between two connected points"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Italy", "Tax residence", "Exit tax", "Moving abroad"]
 translationKey: "exit-tax-italia-2027-persone-fisiche"
 faq:

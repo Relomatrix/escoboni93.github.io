@@ -6,7 +6,7 @@ slug: "foreign-earned-income-exclusion-2027"
 lang: "en"
 image: "/blog/images/posts/foreign-earned-income-exclusion-2027/cover.jpeg"
 imageAlt: "Graphic with the text FEIE 2027 $137,300 and a border symbol between two connected points"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["US tax", "FEIE", "Remote work", "Americans abroad"]
 translationKey: "foreign-earned-income-exclusion-2027"
 faq:
