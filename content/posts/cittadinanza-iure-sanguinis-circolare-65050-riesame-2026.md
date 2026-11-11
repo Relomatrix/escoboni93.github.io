@@ -6,7 +6,7 @@ slug: "cittadinanza-iure-sanguinis-circolare-65050-riesame-2026"
 lang: "it"
 image: "/blog/images/posts/cittadinanza-iure-sanguinis-circolare-65050-riesame-2026/cover.jpeg"
 imageAlt: "Grafica con il testo Cittadinanza iure sanguinis, circolare 65050 e un simbolo di collegamento tra due punti"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Cittadinanza", "Iure sanguinis", "Cassazione", "Italia"]
 translationKey: "cittadinanza-iure-sanguinis-circolare-65050-2026"
 faq:

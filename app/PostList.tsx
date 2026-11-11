@@ -1,5 +1,6 @@
 import type { PostMeta } from '@/lib/posts';
 import { imageSize } from '@/lib/images';
+import { formatDate } from '@/lib/i18n';
 
 export default function PostList({ posts }: { posts: PostMeta[] }) {
   return (
@@ -11,7 +12,7 @@ export default function PostList({ posts }: { posts: PostMeta[] }) {
             <a href={`/blog/${encodeURIComponent(p.slug)}/`}>
               {p.image && <img src={p.image} alt={p.imageAlt || p.title} loading="lazy" decoding="async" width={size?.width} height={size?.height} />}
               <div>
-                <time dateTime={p.date}>{p.date}</time> <span className="lang">{p.lang.toUpperCase()}</span>
+                <time dateTime={p.date}>{formatDate(p.date, p.lang)}</time> <span className="lang">{p.lang.toUpperCase()}</span>
                 <h2>{p.title}</h2>
                 <p>{p.description}</p>
               </div>

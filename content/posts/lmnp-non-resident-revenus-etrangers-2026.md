@@ -6,7 +6,7 @@ slug: "lmnp-non-resident-revenus-etrangers-2026"
 lang: "fr"
 image: "/blog/images/posts/lmnp-non-resident-revenus-etrangers-2026/cover.jpeg"
 imageAlt: "Graphique avec le texte LMNP non-résident 2026 et un symbole de frontière entre deux points reliés"
-author: "redazione"
+author: "francesco-bonifazi"
 corridor: "FR-IT"
 tags: ["Location meublée", "Non-résidents", "Impôt sur le revenu", "Expatriation"]
 translationKey: "lmnp-non-resident-revenus-etrangers-2026"

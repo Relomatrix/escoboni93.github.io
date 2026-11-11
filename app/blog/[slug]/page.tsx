@@ -1,11 +1,11 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getAllPosts, getPost, getRelated, getTranslations, hreflang, tagSlug } from '@/lib/posts';
-import { getAuthor, getReviewer } from '@/lib/authors';
+import { bylineName, bylineRole, getAuthor, getReviewer } from '@/lib/authors';
 import { ctaHref, getCorridor } from '@/lib/corridors';
 import { AUTHOR_PATH, ORG_ID, SITE_URL, WEBSITE_ID, breadcrumbLd, jsonLd } from '@/lib/site';
 import { imageSize } from '@/lib/images';
-import { OG_LOCALE, UI } from '@/lib/i18n';
+import { OG_LOCALE, UI, formatDate } from '@/lib/i18n';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return getAllPosts().map((p) => ({ slug: p.slug })); }
@@ -58,9 +58,9 @@ export default async function Page({ params }: Props) {
       <nav className="meta" aria-label="Breadcrumb"><a href="/blog/">Blog</a> › <span>{p.title}</span></nav>
       <h1>{p.title}</h1>
       <p className="byline">
-        {t.by} <a href={AUTHOR_PATH(author.key)} rel="author">{author.name}</a>{author.role ? <>, {author.role[p.lang]}</> : null} · <time dateTime={p.date}>{p.date}</time>
-        {p.updated && p.updated !== p.date && <> · {t.updated} <time dateTime={p.updated}>{p.updated}</time></>}
-        {reviewer && <> · {t.reviewedBy} {reviewer.url ? <a href={reviewer.url}>{reviewer.name}</a> : reviewer.name}, {reviewer.qualification[p.lang]} (<time dateTime={p.reviewedAt}>{p.reviewedAt}</time>)</>}
+        {t.by} <a href={AUTHOR_PATH(author.key)} rel="author">{bylineName(author, p.lang)}</a>{bylineRole(author, p.lang) ? <>, {bylineRole(author, p.lang)}</> : null} · <time dateTime={p.date}>{formatDate(p.date, p.lang)}</time>
+        {p.updated && p.updated !== p.date && <> · {t.updated} <time dateTime={p.updated}>{formatDate(p.updated, p.lang)}</time></>}
+        {reviewer && <> · {t.reviewedBy} {reviewer.url ? <a href={reviewer.url}>{reviewer.name}</a> : reviewer.name}, {reviewer.qualification[p.lang]} (<time dateTime={p.reviewedAt}>{formatDate(String(p.reviewedAt), p.lang)}</time>)</>}
         {others.map((o) => <span key={o.slug}> · {t.alsoIn} <a href={`/blog/${o.slug}/`} hrefLang={o.lang} lang={o.lang}>{UI[o.lang].language}</a></span>)}
       </p>
       {p.image && <img className="cover" src={p.image} alt={p.imageAlt || p.title} width={cover?.width} height={cover?.height} fetchPriority="high" />}

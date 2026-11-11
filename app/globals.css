@@ -34,3 +34,10 @@ time,.lang{font-size:14px;color:var(--copper-dark)}
 .related{margin-top:40px;border-top:1px solid #e3dccd;padding-top:8px}.related ul{padding-left:20px}
 .tag-index{padding-left:20px}
 @media (max-width:560px){.site-nav{gap:12px}.site-nav .cta{display:none}}
+
+/* Layout labels in three languages: show the one matching <html lang> (app/layout.tsx). */
+.i18n-it,.i18n-fr{display:none!important}
+html[lang=it] .i18n-en,html[lang=fr] .i18n-en{display:none!important}
+html[lang=it] .i18n-it,html[lang=fr] .i18n-fr{display:inline!important}
+.lang-switch{display:flex;gap:12px;flex-wrap:wrap;font-size:15px;margin:8px 0 24px}.lang-switch a{font-weight:500}
+.home-intro p{margin:4px 0}

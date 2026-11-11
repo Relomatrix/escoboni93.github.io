@@ -6,7 +6,7 @@ slug: "travailleur-frontalier-france-italie-impot-salaire-2026"
 lang: "fr"
 image: "/blog/images/posts/travailleur-frontalier-france-italie-impot-salaire-2026/cover.jpeg"
 imageAlt: "Graphique avec le texte Travailleur frontalier France-Italie et un symbole de frontière entre deux points reliés"
-author: "redazione"
+author: "francesco-bonifazi"
 corridor: "FR-IT"
 tags: ["Travailleur frontalier", "France", "Italie", "Impôt sur le revenu"]
 translationKey: "travailleur-frontalier-france-italie-impot-2026"

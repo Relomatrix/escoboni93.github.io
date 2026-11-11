@@ -13,18 +13,32 @@ const T = {
     body: 'We only use necessary technical cookies. With your consent we also use Google Analytics 4 for aggregated visit statistics. You can change your mind at any time via "Cookie preferences" in the footer.',
     accept: 'Accept analytics', reject: 'Necessary only', more: 'Cookie policy', privacy: 'Privacy',
   },
+  fr: {
+    title: 'Cookies sur ce site',
+    body: 'Nous utilisons uniquement les cookies techniques nécessaires. Avec votre accord, nous utilisons aussi Google Analytics 4 pour des statistiques de visite agrégées. Vous pouvez changer d’avis à tout moment depuis « Préférences cookies » en bas de page.',
+    accept: 'Accepter les statistiques', reject: 'Nécessaires uniquement', more: 'Politique cookies', privacy: 'Confidentialité',
+  },
 };
+type ConsentLang = keyof typeof T;
+const isLang = (v: unknown): v is ConsentLang => v === 'it' || v === 'en' || v === 'fr';
 
-export function pickLang(): 'it' | 'en' {
+// The banner follows the page language (article or <html lang>, set per post at build time). On pages
+// written in several languages (blog home, topics) it follows the browser.
+export function pickLang(): ConsentLang {
   if (typeof document === 'undefined') return 'it';
   const forced = document.querySelector('[data-consent-lang]')?.getAttribute('data-consent-lang');
-  if (forced === 'en' || forced === 'it') return forced;
-  return (navigator.language || 'it').toLowerCase().startsWith('it') ? 'it' : navigator.language?.toLowerCase().startsWith('en') ? 'en' : 'it';
+  if (isLang(forced)) return forced;
+  const article = document.querySelector('article.post[lang]')?.getAttribute('lang');
+  if (isLang(article)) return article;
+  const html = document.documentElement.getAttribute('lang');
+  if (html === 'it' || html === 'fr') return html;
+  const nav = (navigator.language || 'en').toLowerCase();
+  return nav.startsWith('it') ? 'it' : nav.startsWith('fr') ? 'fr' : 'en';
 }
 
 export default function CookieConsent() {
   const [open, setOpen] = useState(false);
-  const [lang, setLang] = useState<'it' | 'en'>('it');
+  const [lang, setLang] = useState<ConsentLang>('it');
   useEffect(() => {
     setLang(pickLang());
     const c = readConsent();

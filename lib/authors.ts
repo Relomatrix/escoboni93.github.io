@@ -8,6 +8,8 @@ export type Author = {
   key: string;
   type: 'Organization' | 'Person';
   name: string;
+  /** Name shown in the byline per language, when it differs from `name` (an editorial team). */
+  displayName?: Record<Lang, string>;
   jobTitle?: string;
   role: Record<Lang, string>;
   bio?: Record<Lang, string>;
@@ -31,6 +33,7 @@ export const AUTHORS: Record<string, Author> = {
     key: 'redazione',
     type: 'Organization',
     name: 'Redazione Relomatrix',
+    displayName: { it: 'Redazione Relomatrix', en: 'Relomatrix editorial team', fr: 'Rédaction Relomatrix' },
     role: { it: 'Redazione', en: 'Editorial team', fr: 'Rédaction' },
   },
 };
@@ -43,3 +46,7 @@ export const REVIEWERS: Record<string, Reviewer> = {};
 export const getAuthor = (key?: string): Author => AUTHORS[key || DEFAULT_AUTHOR] || AUTHORS[DEFAULT_AUTHOR];
 export const getReviewer = (key?: string): Reviewer | null => (key && REVIEWERS[key]) || null;
 export const PERSON_AUTHORS = Object.values(AUTHORS).filter((a) => a.type === 'Person');
+
+/** Byline text: the person and their role, or only the team name (no "Redazione Relomatrix, Redazione"). */
+export const bylineName = (a: Author, lang: Lang) => a.displayName?.[lang] || a.name;
+export const bylineRole = (a: Author, lang: Lang) => (a.type === 'Person' ? a.role[lang] : null);

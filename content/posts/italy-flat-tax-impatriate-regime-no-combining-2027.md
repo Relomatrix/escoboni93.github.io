@@ -6,7 +6,7 @@ slug: "italy-flat-tax-impatriate-regime-no-combining-2027"
 lang: "en"
 image: "/blog/images/posts/italy-flat-tax-impatriate-regime-no-combining-2027/cover.jpeg"
 imageAlt: "Graphic with the text Italy flat tax and impatriate regime 2027 and a border symbol between two connected points"
-author: "redazione"
+author: "francesco-bonifazi"
 corridor: "US-IT"
 tags: ["Italy", "Tax residence", "Flat tax", "Impatriate regime", "Moving to Italy"]
 translationKey: "neo-residenti-impatriati-cumulo-2027"

@@ -32,7 +32,7 @@ export default function About() {
         <h2>Cosa non è</h2>
         <p>I contenuti sono informazioni generali e non sono un parere legale, fiscale o previdenziale. Per il tuo caso verifica con l&apos;autorità competente o con un professionista.</p>
         <h2>Errori e correzioni</h2>
-        <p>Se trovi un errore o una fonte superata, scrivici tramite <a href="https://relomatrix.com">relomatrix.com</a>: correggiamo l&apos;articolo e aggiorniamo la data di modifica.</p>
+        <p>Se trovi un errore o una fonte superata, scrivici tramite <a href="https://www.relomatrix.com/">relomatrix.com</a>: correggiamo l&apos;articolo e aggiorniamo la data di modifica.</p>
       </section>
       <section lang="en">
         <h2>About us</h2>
@@ -41,7 +41,7 @@ export default function About() {
           <li>Every claim about law, tax, social security or immigration links to an <strong>official source</strong>. Articles without a Sources section citing at least one official source are not published; the check runs automatically at build time.</li>
           <li>No unverifiable statistics, case studies or testimonials.</li>
           <li>Articles are drafted with the help of AI tools and published after the automated source checks. We never strip AI-provenance metadata from images.</li>
-          <li>General information only, not legal or tax advice. Found an error? Tell us via <a href="https://relomatrix.com">relomatrix.com</a>.</li>
+          <li>General information only, not legal or tax advice. Found an error? Tell us via <a href="https://www.relomatrix.com/">relomatrix.com</a>.</li>
         </ul>
         <p>Bylines: {Object.values(AUTHORS).map((a) => a.name).join(', ')}.</p>
       </section>

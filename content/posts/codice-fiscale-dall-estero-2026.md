@@ -6,7 +6,7 @@ slug: "codice-fiscale-dall-estero-2026"
 lang: "it"
 image: "/blog/images/posts/codice-fiscale-dall-estero-2026/cover.jpeg"
 imageAlt: "Grafica con il testo Codice fiscale dall'estero e un simbolo di confine tra due punti collegati"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Codice fiscale", "AIRE", "Consolato", "Italia"]
 translationKey: "codice-fiscale-dall-estero-2026"
 faq:

@@ -6,7 +6,7 @@ slug: "exit-tax-persone-fisiche-legge-bilancio-2027"
 lang: "it"
 image: "/blog/images/posts/exit-tax-persone-fisiche-legge-bilancio-2027/cover.jpeg"
 imageAlt: "Grafica con il testo Exit tax 2027 e un simbolo di confine tra due punti collegati"
-author: "redazione"
+author: "francesco-bonifazi"
 tags: ["Residenza fiscale", "Legge di bilancio 2027", "Exit tax", "Trasferimento all'estero"]
 translationKey: "exit-tax-italia-2027-persone-fisiche"
 faq:
