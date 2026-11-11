@@ -55,7 +55,9 @@ export function ctaHref(lang: Lang, slug: string, corridorId?: string) {
   const params = new URLSearchParams({ utm_source: 'blog', utm_medium: 'cta', utm_campaign: slug });
   if (c) {
     params.set('corridor', c.id);
-    return `https://relomatrix.com${SITE_PATH[lang]}/report?${params}`;
+    return `https://www.relomatrix.com${SITE_PATH[lang]}/report?${params}`;
   }
-  return `https://relomatrix.com/snapshot?${params}`;
+  // The Snapshot has no /it or /fr path: the site reads the language from ?lang=.
+  if (lang !== 'en') params.set('lang', lang);
+  return `https://www.relomatrix.com/snapshot?${params}`;
 }
