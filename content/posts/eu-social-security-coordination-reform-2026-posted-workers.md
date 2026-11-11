@@ -1,6 +1,6 @@
 ---
 title: "EU social security reform 2026: what changes for postings"
-description: "Regulation (EU) 2026/2359 is in force since 1 November 2026. What changes for posted workers, multi-country workers and benefits, and why most rules start in 2028."
+description: "Regulation (EU) 2026/2359 is in force since 1 November 2026. What changes for posted and multi-country workers and benefits, and why most rules start in 2028."
 date: "2026-11-02"
 slug: "eu-social-security-coordination-reform-2026-posted-workers"
 lang: "en"

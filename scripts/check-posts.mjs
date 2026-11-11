@@ -55,9 +55,9 @@ for (const f of files) {
   if (data.reviewedBy !== undefined && !REVIEWERS.has(data.reviewedBy)) err(`unknown reviewer "${data.reviewedBy}" (reviewers are added only after a real review, with consent)`);
   if (data.reviewedBy && !/^\d{4}-\d{2}-\d{2}$/.test(String(data.reviewedAt instanceof Date ? data.reviewedAt.toISOString().slice(0, 10) : data.reviewedAt ?? ''))) err('reviewedBy needs reviewedAt as YYYY-MM-DD');
   if (data.corridor !== undefined && !CORRIDORS.has(data.corridor)) err(`unknown corridor "${data.corridor}" (one of ${[...CORRIDORS].join(', ')})`);
-  if (data.title && String(data.title).length > 70) warn(`title is ${String(data.title).length} chars (aim for <= 60)`);
+  if (data.title && String(data.title).length > 60) warn(`title is ${String(data.title).length} chars (aim for <= 60)`);
   const dl = String(data.description || '').length;
-  if (dl && (dl < 70 || dl > 170)) warn(`description is ${dl} chars (aim for 120-160)`);
+  if (dl && (dl < 70 || dl > 160)) warn(`description is ${dl} chars (aim for 120-160)`);
   if (data.tags !== undefined && (!Array.isArray(data.tags) || data.tags.some((t) => typeof t !== 'string' || !t.trim()))) err('tags must be a list of non-empty strings');
   if (!Array.isArray(data.tags) || !data.tags.length) warn('no tags: the post will not appear in any topic hub');
 

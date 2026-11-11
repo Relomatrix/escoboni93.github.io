@@ -1,6 +1,6 @@
 ---
 title: "Exit tax 2027 per chi lascia l'Italia: cosa prevede"
-description: "Il DDL di bilancio 2027 propone una exit tax sulle plusvalenze latenti di chi trasferisce la residenza all'estero: soglia 800.000 euro, 180 giorni, differimento."
+description: "Il DDL bilancio 2027 propone una exit tax sulle plusvalenze latenti di chi trasferisce la residenza all'estero: soglia 800.000 euro, 180 giorni, differimento."
 date: "2026-11-10"
 slug: "exit-tax-persone-fisiche-legge-bilancio-2027"
 lang: "it"
