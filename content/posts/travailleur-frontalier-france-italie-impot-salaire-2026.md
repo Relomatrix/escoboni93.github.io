@@ -1,6 +1,6 @@
 ---
 title: "Travailleur frontalier France-Italie : où payer l'impôt"
-description: "Le frontalier France-Italie est imposé sur son salaire dans son pays de résidence. Zones frontalières concernées et points à vérifier auprès de l'administration."
+description: "Le frontalier France-Italie est imposé sur son salaire dans son pays de résidence. Zones frontalières concernées et points à vérifier avec l'administration."
 date: "2026-11-09"
 slug: "travailleur-frontalier-france-italie-impot-salaire-2026"
 lang: "fr"

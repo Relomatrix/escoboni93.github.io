@@ -1,6 +1,6 @@
 ---
 title: "US-Italy totalization: remote work coverage"
-description: "How the US-Italy Social Security totalization agreement assigns coverage for employees and the self-employed, and what certificates of coverage mean for remote work."
+description: "How the US-Italy totalization agreement assigns Social Security coverage to employees and the self-employed, and what it means for remote work."
 date: "2026-11-06"
 slug: "us-italy-totalization-agreement-remote-work-2026"
 lang: "en"

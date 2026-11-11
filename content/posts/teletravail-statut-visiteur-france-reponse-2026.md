@@ -1,6 +1,6 @@
 ---
 title: "Télétravail et statut visiteur : la réponse 2026"
-description: "Le ministère de l'Intérieur précise qu'un étranger en VLS-TS visiteur peut télétravailler pour un employeur étranger. Immigration, impôts et points de vigilance."
+description: "Le ministère de l'Intérieur précise qu'un étranger en VLS-TS visiteur peut télétravailler pour un employeur étranger. Immigration, impôts, points de vigilance."
 date: "2026-11-05"
 slug: "teletravail-statut-visiteur-france-reponse-2026"
 lang: "fr"

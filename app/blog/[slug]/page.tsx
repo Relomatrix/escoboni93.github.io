@@ -16,7 +16,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = await getPost((await params).slug);
   if (!p) return {};
   return {
-    title: p.title, description: p.description,
+    // The layout appends " | Relomatrix" (13 chars). Long titles keep only the article title so search
+    // results do not cut it off (Google shows about 60 characters).
+    title: p.title.length + 13 > 60 ? { absolute: p.title } : p.title, description: p.description,
     alternates: { canonical: `/blog/${p.slug}/`, languages: hreflang(p, SITE_URL) },
     openGraph: { type: 'article', title: p.title, description: p.description, url: `/blog/${p.slug}/`,
       publishedTime: p.date, modifiedTime: p.updated || p.date, locale: OG_LOCALE[p.lang],

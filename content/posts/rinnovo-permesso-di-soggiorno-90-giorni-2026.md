@@ -1,6 +1,6 @@
 ---
 title: "Rinnovo permesso di soggiorno: ora 90 giorni prima"
-description: "Con il D.Lgs. 83/2026 il rinnovo del permesso di soggiorno va chiesto almeno 90 giorni prima della scadenza. Cosa cambia per tempi, permesso unico ed esclusioni."
+description: "Con il D.Lgs. 83/2026 il rinnovo del permesso di soggiorno va chiesto almeno 90 giorni prima della scadenza. Cosa cambia su tempi, permesso unico, esclusioni."
 date: "2026-11-07"
 slug: "rinnovo-permesso-di-soggiorno-90-giorni-2026"
 lang: "it"
