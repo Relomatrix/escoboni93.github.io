@@ -2,6 +2,7 @@
 title: "AIRE e residenza fiscale 2026: l'iscrizione non basta"
 description: "Iscriversi all'AIRE è obbligatorio se si trasferisce la dimora all'estero, ma non esclude da sola la residenza fiscale in Italia. Criteri TUIR e Circolare 20/E."
 date: "2026-11-05"
+updated: "2026-11-12"
 slug: "aire-residenza-fiscale-2026-iscrizione-non-basta"
 lang: "it"
 image: "/blog/images/posts/aire-residenza-fiscale-2026-iscrizione-non-basta/cover.jpeg"
@@ -77,7 +78,7 @@ L'iscrizione all'AIRE cancella il cittadino dall'anagrafe della popolazione resi
 * se il centro delle relazioni personali e familiari resta in Italia, il domicilio può radicare la residenza anche lavorando all'estero;
 * le convenzioni contro le doppie imposizioni possono risolvere i conflitti di residenza, ma non si applicano da sole senza verificare i fatti.
 
-Per chi valuta un rientro, confronta anche il [coordinamento UE della sicurezza sociale](/blog/riforma-coordinamento-sicurezza-sociale-ue-2026-distacco/) e la guida generale al [lavoro transfrontaliero](/blog/cross-border-employment/). Una prima analisi del tuo caso è disponibile con lo [Snapshot Relomatrix](https://relomatrix.com/snapshot).
+Per chi valuta un rientro, confronta anche il [coordinamento UE della sicurezza sociale](/blog/riforma-coordinamento-sicurezza-sociale-ue-2026-distacco/) e la guida generale al [lavoro transfrontaliero](/blog/cross-border-employment/). Una prima analisi del tuo caso è disponibile con lo [Snapshot Relomatrix](https://relomatrix.com/snapshot). Se ti serve un documento d'identità, leggi anche come chiedere la [carta d'identità elettronica da iscritto AIRE](/blog/carta-identita-elettronica-aire-comune-2026/).
 
 ## FAQ
 
