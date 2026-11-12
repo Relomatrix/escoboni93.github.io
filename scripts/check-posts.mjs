@@ -7,11 +7,11 @@ import matter from 'gray-matter';
 const ROOT = process.cwd();
 const DIR = path.join(ROOT, 'content', 'posts');
 const MAX_IMAGE_BYTES = 200 * 1024;
-const RESERVED = new Set(['tag', 'chi-siamo', 'cookie', 'autori', 'corridor']); // static routes under /blog/
+const RESERVED = new Set(['tag', 'chi-siamo', 'cookie', 'autori', 'corridor', 'strumenti', 'tools']); // static routes under /blog/
 const AUTHORS = new Set(['francesco-bonifazi', 'redazione']); // keep in sync with lib/authors.ts
 // G-31: reviewers only after a real review with written consent; keep in sync with REVIEWERS in lib/authors.ts.
 const REVIEWERS = new Set([]);
-const CORRIDORS = new Set(['US-IT', 'US-FR', 'IT-FR', 'FR-IT']); // keep in sync with lib/corridors.ts
+const CORRIDORS = new Set(['US-IT', 'US-FR', 'IT-FR', 'FR-IT', 'UK-IT', 'IT-UK']); // keep in sync with lib/corridors.ts
 
 // Official sources: government, EU and international bodies (SEO_PLAYBOOK.md, "non-negotiable").
 const OFFICIAL_SUFFIXES = ['.gov', '.gov.it', '.gouv.fr', '.gov.uk', '.gob.ar', '.gov.br', '.leg.br', '.jus.br', 'europa.eu', '.int'];

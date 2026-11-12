@@ -2,7 +2,7 @@
 title: "Regime impatriati 2026: requisiti e tassazione al 50%"
 description: "Regime impatriati per chi rientra in Italia: reddito tassato al 50% fino a 600.000 euro, 40% con figli minori, requisiti di residenza estera e durata."
 date: "2026-11-04"
-updated: "2026-11-11"
+updated: "2026-11-12"
 slug: "regime-impatriati-2026-requisiti-tassazione-50"
 lang: "it"
 image: "/blog/images/posts/regime-impatriati-2026-requisiti-tassazione-50/cover.jpeg"
@@ -25,6 +25,8 @@ draft: false
 ---
 
 Il regime impatriati riduce le tasse a chi trasferisce la residenza fiscale in Italia: i redditi di lavoro prodotti in Italia, fino a 600.000 euro l'anno, sono tassati solo sul 50%, o sul 40% con figli minorenni. Servono almeno tre anni di residenza estera, un impegno a restare quattro anni e un'elevata qualificazione.
+
+**Vuoi sapere subito se fa per te?** Fai il [test gratuito sul regime impatriati](/blog/strumenti/regime-impatriati/): 10 domande, 2 minuti.
 
 Questa guida riassume le regole del regime previsto dall'articolo 5 del decreto legislativo n. 209/2023, così come le descrive l'Agenzia delle Entrate. Per il quadro generale del lavoro tra Paesi diversi vedi la nostra [guida al lavoro transfrontaliero](/blog/cross-border-employment/).
 

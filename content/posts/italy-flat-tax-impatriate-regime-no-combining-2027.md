@@ -2,6 +2,7 @@
 title: "Italy flat tax and impatriate regime: no combining in 2027"
 description: "From 2027, people moving their tax residence to Italy can't combine the EUR 300,000 flat tax with the impatriate regime. What Decree-Law 38/2026 says."
 date: "2026-11-11"
+updated: "2026-11-12"
 slug: "italy-flat-tax-impatriate-regime-no-combining-2027"
 lang: "en"
 image: "/blog/images/posts/italy-flat-tax-impatriate-regime-no-combining-2027/cover.jpeg"
@@ -25,6 +26,8 @@ draft: false
 ---
 
 From tax year 2027, people who move their tax residence to Italy can no longer combine the flat tax for new residents with the impatriate regime for workers. Article 2 of Decree-Law 38 of 27 March 2026 sets this rule, and Law 88 of 22 May 2026 converted it without changing that article.
+
+**Not sure you qualify for the impatriate regime at all?** Take our [free 2-minute impatriate regime check](/blog/tools/italy-impatriate-regime-check/).
 
 This matters most for people with large foreign income who also plan to work in Italy, for example Americans relocating with a US portfolio and an Italian job. See also our guide to the [US-Italy totalization agreement](/blog/us-italy-totalization-agreement-remote-work-2026/).
 

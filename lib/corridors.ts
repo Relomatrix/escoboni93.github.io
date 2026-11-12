@@ -42,6 +42,24 @@ export const CORRIDORS: Corridor[] = [
       fr: 'Sécurité sociale, résidence fiscale et travail pour s’installer de France en Italie.',
     },
   },
+  {
+    id: 'UK-IT', slug: 'uk-it',
+    label: { en: 'United Kingdom → Italy', it: 'Regno Unito → Italia', fr: 'Royaume-Uni → Italie' },
+    intro: {
+      en: 'Visas, tax residence, the impatriate regime and social security for moving from the United Kingdom to Italy.',
+      it: 'Visti, residenza fiscale, regime impatriati e previdenza per chi si trasferisce dal Regno Unito in Italia.',
+      fr: 'Visas, résidence fiscale, régime des impatriés et sécurité sociale pour s’installer du Royaume-Uni en Italie.',
+    },
+  },
+  {
+    id: 'IT-UK', slug: 'it-uk',
+    label: { en: 'Italy → United Kingdom', it: 'Italia → Regno Unito', fr: 'Italie → Royaume-Uni' },
+    intro: {
+      en: 'Visas, tax residence and social security for moving from Italy to the United Kingdom.',
+      it: 'Visti, residenza fiscale e previdenza per chi si trasferisce dall’Italia nel Regno Unito.',
+      fr: 'Visas, résidence fiscale et sécurité sociale pour s’installer d’Italie au Royaume-Uni.',
+    },
+  },
 ];
 
 export const CORRIDOR_IDS = new Set(CORRIDORS.map((c) => c.id));

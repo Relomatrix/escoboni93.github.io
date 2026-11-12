@@ -41,3 +41,16 @@ html[lang=it] .i18n-en,html[lang=fr] .i18n-en{display:none!important}
 html[lang=it] .i18n-it,html[lang=fr] .i18n-fr{display:inline!important}
 .lang-switch{display:flex;gap:12px;flex-wrap:wrap;font-size:15px;margin:8px 0 24px}.lang-switch a{font-weight:500}
 .home-intro p{margin:4px 0}
+
+/* Free tools (app/ImpatriatiCheck.tsx): one question at a time, big buttons, plain words. */
+.check{background:var(--paper);border-radius:8px;padding:24px;margin:24px 0}
+.check h2{margin-top:0}
+.check-step{font-size:15px;color:var(--copper-dark);margin:0 0 4px}
+.check-help{font-size:16px;color:var(--navy-surface)}
+.check-options{display:grid;gap:12px;margin:16px 0}
+.check-options button{font:inherit;text-align:left;padding:14px 16px;min-height:52px;border:2px solid var(--navy);border-radius:8px;background:#fff;color:var(--navy);cursor:pointer}
+.check-options button:hover,.check-options button:focus-visible{border-color:var(--copper);outline:none}
+.check-options button.chosen{background:var(--navy);color:var(--ivory)}
+.check-link{font:inherit;font-size:16px;background:none;border:0;padding:8px 0;color:var(--copper-dark);text-decoration:underline;cursor:pointer}
+.result-likely>h2:first-child{color:#1f6b3a}.result-unlikely>h2:first-child{color:#8a2b1d}
+.check .cta-box{margin-top:24px}
