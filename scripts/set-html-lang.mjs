@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 
 const OUT = path.join(process.cwd(), 'out');
 const DIR = path.join(process.cwd(), 'content', 'posts');
-const pages = [['blog/chi-siamo', 'it']];
+const pages = [['blog/chi-siamo', 'it'], ['blog/strumenti/regime-impatriati', 'it']];
 for (const f of fs.readdirSync(DIR).filter((f) => f.endsWith('.md'))) {
   const { data } = matter(fs.readFileSync(path.join(DIR, f), 'utf8'));
   if (data.lang === 'it' || data.lang === 'fr') pages.push([`blog/${data.slug || f.replace(/\.md$/, '')}`, data.lang]);
