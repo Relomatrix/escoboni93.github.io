@@ -58,9 +58,27 @@ write('404.html', `<!doctype html><html><head><meta charset="utf-8"><title>Relom
   + `<body><p><a href="${TARGET}/blog/">${TARGET}/blog/</a></p></body></html>\n`);
 
 // Feed readers and crawlers keep working on the old host until they pick up the new URLs.
+// relomatrix.com/blog/ is rebuilt only when the main site is released, while this host is rebuilt every
+// day: a post published in between would be announced here (sitemap, RSS) before it exists there, and
+// Google would find the home page at its URL. With BLOG_SHELL_MIRROR_LIVE=1 (deploy.yml) these files are
+// copied from the live relomatrix.com/blog/ instead, so the old host lists only what is really online.
+async function liveCopy(f) {
+  if (process.env.BLOG_SHELL_MIRROR_LIVE !== '1') return null;
+  try {
+    const res = await fetch(`${TARGET}/blog/${f}`, { redirect: 'follow', signal: AbortSignal.timeout(20000) });
+    const body = await res.text();
+    const ok = res.ok && (f === 'llms.txt' ? body.length > 0 : /<(urlset|rss)[\s>]/.test(body));
+    if (!ok) console.warn(`build-redirect-shell: live ${f} not usable (${res.status}), using the local build`);
+    return ok ? body : null;
+  } catch (e) {
+    console.warn(`build-redirect-shell: live ${f} not reachable (${e?.message || e}), using the local build`);
+    return null;
+  }
+}
 for (const f of ['rss.xml', 'sitemap.xml', 'llms.txt']) {
   const src = path.join(OUT, 'blog', f);
-  if (fs.existsSync(src)) { write(path.join('blog', f), fs.readFileSync(src)); write(f, fs.readFileSync(src)); }
+  const body = (await liveCopy(f)) ?? (fs.existsSync(src) ? fs.readFileSync(src) : null);
+  if (body != null) { write(path.join('blog', f), body); write(f, body); }
 }
 write('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${TARGET}/blog/sitemap.xml\n`);
 const cname = path.join(process.cwd(), 'public', 'CNAME');

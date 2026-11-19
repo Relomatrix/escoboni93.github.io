@@ -38,6 +38,9 @@ jobs:
           fi
       - name: Build (canonical relomatrix.com, redirect shell for this host)
         if: steps.target.outputs.mode == 'redirect'
+        env:
+          # The old host lists (sitemap, RSS) only the posts already live on relomatrix.com/blog/.
+          BLOG_SHELL_MIRROR_LIVE: '1'
         run: npm run build
       - name: Build (full blog on this host until relomatrix.com/blog/ is live)
         if: steps.target.outputs.mode == 'full'
