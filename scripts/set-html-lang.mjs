@@ -21,4 +21,15 @@ for (const [page, lang] of pages) {
   fs.writeFileSync(file, next);
   n++;
 }
+// Topic pages declare their language themselves (data-page-lang, app/blog/tag/[tag]/page.tsx).
+const TAGS = path.join(OUT, 'blog', 'tag');
+if (fs.existsSync(TAGS)) for (const d of fs.readdirSync(TAGS)) {
+  const file = path.join(TAGS, d, 'index.html');
+  if (!fs.existsSync(file)) continue;
+  const html = fs.readFileSync(file, 'utf8');
+  const m = html.match(/data-page-lang="(it|fr)"/);
+  if (!m) continue;
+  fs.writeFileSync(file, html.replace(/<html lang="en"/, `<html lang="${m[1]}"`));
+  n++;
+}
 console.log(`set-html-lang: ${n} page(s) set to lang="it"/"fr"`);
