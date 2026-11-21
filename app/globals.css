@@ -160,3 +160,43 @@ html[data-ui=it] .i18n-it,html[data-ui=fr] .i18n-fr{display:inline!important}
 .hero-small{padding-bottom:32px}.hero-small h1{margin-top:20px}.hero-small .hero-lead{margin-bottom:0}
 .chip-count{opacity:.65;font-size:14px;margin-left:2px}
 .topic-index{padding-bottom:16px}
+
+/* ---------- Dark colours: follow the reader's system setting. Same navy / ivory / copper family,
+   text contrast at least 7:1 on the page background, copper-light for links and dates. ---------- */
+@media (prefers-color-scheme: dark){
+  :root{color-scheme:dark;--navy-surface:#C3CEDA;--paper:#1A2C40;--copper-dark:#E8B892;--bg:#0B1724;--card:#132639;--line:#2A3F56;--text:#ECF0F4}
+  body{background:var(--bg);color:var(--text)}
+  h1,h2,h3{color:#F5F3EE}
+  a{color:var(--copper-light)}
+  .site-header{background:var(--bg)}
+  .nav-search{color:var(--text)!important}
+  .nav-search:hover{background:var(--card)}
+  .hero{background:#102A45}
+  .posts li{background:var(--card);border-color:var(--line)}
+  .posts li:hover{box-shadow:0 12px 28px rgba(0,0,0,.45)}
+  .posts img{background:var(--paper)}
+  .chip{background:var(--card);color:var(--text);border-color:var(--copper)}
+  .chip:hover{background:var(--copper);color:#fff}
+  .chip-all{background:var(--copper-light);border-color:var(--copper-light);color:#0B1724}
+  .chip-all:hover{background:#F0C7A6}
+  .search-field{background:var(--bg);border-color:#3E5670;color:#C3CEDA}
+  .search-field input{color:var(--text)}
+  .search-field input::placeholder{color:#93A3B4}
+  .suggest{background:var(--card);color:var(--text);box-shadow:0 18px 40px rgba(0,0,0,.55);border:1px solid var(--line)}
+  .suggest li.active,.suggest li:hover{background:#1D3650}
+  .suggest-tag{background:var(--copper-light);color:#0B1724}
+  .search-results{border-bottom-color:var(--line)}
+  .search-results h3 mark{background:rgba(226,175,135,.28)}
+  .btn-ghost{border-color:var(--text);color:var(--text)}
+  .btn-ghost:hover{background:var(--text);color:var(--bg)}
+  .topics-title{color:#C3CEDA}
+  .related{border-top-color:var(--line)}
+  .prose th,.prose td{border-color:var(--line)}
+  .cta-box{background:var(--card);border:1px solid var(--line);color:var(--text)}
+  .cta-box h2{color:#F5F3EE}
+  .site-footer{background:#06111C;color:#C3CEDA}
+  .cookie-banner{background:var(--card);color:var(--text);border-color:var(--line);box-shadow:0 10px 30px rgba(0,0,0,.5)}
+  .cookie-actions button{background:transparent;color:var(--text);border-color:var(--text)}
+  .cookie-actions button.primary{background:var(--copper-light);color:#0B1724;border-color:var(--copper-light)}
+  .lang{border-color:var(--copper-light)}
+}

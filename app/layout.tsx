@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Libre_Baskerville, IBM_Plex_Sans } from 'next/font/google';
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, ABOUT_PATH, organizationLd, websiteLd, jsonLd } from '@/lib/site';
 import CookieConsent, { CookiePrefsLink } from './CookieConsent';
@@ -19,6 +19,12 @@ export const metadata: Metadata = {
   other: { 'relomatrix-blog': 'embedded' },
 };
 
+// Light or dark colours follow the reader's system setting (globals.css, prefers-color-scheme).
+export const viewport: Viewport = {
+  colorScheme: 'light dark',
+  themeColor: [{ media: '(prefers-color-scheme: light)', color: '#FDFBF7' }, { media: '(prefers-color-scheme: dark)', color: '#0B1724' }],
+};
+
 // <html lang> is rewritten to "it"/"fr" for Italian and French posts after the build (scripts/set-html-lang.mjs).
 // The layout is shared by every page, so its labels are written in the three languages and globals.css shows
 // only the one matching <html lang> (a CSS switch, so hydration sees the same markup everywhere).
@@ -30,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd([organizationLd, websiteLd]) }} />
         <header className="site-header">
           <div className="wrap">
-            <a href="/blog/" aria-label="Relomatrix Blog"><img src="/blog/logo.svg" alt="Relomatrix" width={220} height={40} /></a>
+            <a href="/blog/" aria-label="Relomatrix Blog"><picture><source srcSet="/blog/logo-dark.svg" media="(prefers-color-scheme: dark)" /><img src="/blog/logo.svg" alt="Relomatrix" width={220} height={40} /></picture></a>
             <nav className="site-nav">
               <a className="nav-search" href="/blog/#cerca">
                 <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" strokeWidth="2.4" /><path d="M15.5 15.5L21 21" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" /></svg>
