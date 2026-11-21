@@ -157,3 +157,6 @@ html[data-ui=it] .i18n-it,html[data-ui=fr] .i18n-fr{display:inline!important}
   html .site-nav a.cta,html .site-nav a.nav-about{display:none!important}
   .site-nav{font-size:15px}
 }
+.hero-small{padding-bottom:32px}.hero-small h1{margin-top:20px}.hero-small .hero-lead{margin-bottom:0}
+.chip-count{opacity:.65;font-size:14px;margin-left:2px}
+.topic-index{padding-bottom:16px}

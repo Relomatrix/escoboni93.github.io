@@ -79,3 +79,20 @@ export const HOME: Record<Lang, {
     tryWith: 'Essayez', clear: 'Effacer la recherche', otherLang: 'Dans une autre langue',
   },
 };
+
+/** Labels of the topic pages (/blog/tag/ and /blog/tag/<topic>/). */
+export const TOPICS: Record<Lang, { title: string; lead: string; section: string; one: string; many: string; metaTitle: string; metaDesc: string; back: string }> = {
+  it: { title: 'Tutti gli argomenti', lead: 'Tocca un argomento per vedere tutti gli articoli che ne parlano.', section: 'Argomenti in italiano',
+    one: '1 articolo', many: '{n} articoli', metaTitle: '{t}: guide e articoli', metaDesc: 'Articoli di Relomatrix su {t}, ognuno con le fonti ufficiali.', back: 'Tutti gli argomenti' },
+  en: { title: 'All topics', lead: 'Tap a topic to see every article about it.', section: 'Topics in English',
+    one: '1 article', many: '{n} articles', metaTitle: '{t}: guides and articles', metaDesc: 'Relomatrix articles on {t}, each with official sources.', back: 'All topics' },
+  fr: { title: 'Tous les sujets', lead: 'Touchez un sujet pour voir tous les articles qui en parlent.', section: 'Sujets en français',
+    one: '1 article', many: '{n} articles', metaTitle: '{t} : guides et articles', metaDesc: 'Articles Relomatrix sur {t}, chacun avec ses sources officielles.', back: 'Tous les sujets' },
+};
+
+/** Language most of these posts are written in (ties: it, then fr, then en). */
+export function mainLang(posts: { lang: Lang }[]): Lang {
+  const n = { it: 0, fr: 0, en: 0 } as Record<Lang, number>;
+  for (const p of posts) n[p.lang] += 1;
+  return (['it', 'fr', 'en'] as Lang[]).reduce((a, b) => (n[b] > n[a] ? b : a));
+}
