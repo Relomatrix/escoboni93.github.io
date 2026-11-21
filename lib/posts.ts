@@ -16,6 +16,8 @@ export type PostMeta = {
   lang: Lang; image?: string; imageAlt?: string; author?: string; tags?: string[];
   translationKey?: string; faq?: Faq[]; draft?: boolean;
   corridor?: string; reviewedBy?: string; reviewedAt?: string;
+  /** Minutes to read the body at about 200 words a minute (computed, never set in frontmatter). */
+  readingMinutes: number;
 };
 export type Post = PostMeta & { html: string };
 
@@ -32,7 +34,9 @@ function read(file: string): { meta: PostMeta; body: string } {
   // Slug and image end up in URLs: only allow safe shapes (scripts/check-posts.mjs reports the same rules).
   if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(slug)) throw new Error(`Invalid slug "${slug}" in ${file}`);
   if (data.image !== undefined && (!/^\/blog\/images\/[\w\-./]+$/.test(String(data.image)) || String(data.image).includes('..'))) throw new Error(`Invalid image path in ${file}`);
-  return { meta: { ...data, slug, date, lang: data.lang === 'it' || data.lang === 'fr' ? data.lang : 'en' } as PostMeta, body: content };
+  const words = content.replace(/\[([^\]]*)\]\([^)]*\)/g, '$1').split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w)).length;
+  const readingMinutes = Math.max(1, Math.round(words / 200));
+  return { meta: { ...data, slug, date, readingMinutes, lang: data.lang === 'it' || data.lang === 'fr' ? data.lang : 'en' } as PostMeta, body: content };
 }
 
 export function getAllPosts(): PostMeta[] {

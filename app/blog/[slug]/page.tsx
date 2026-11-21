@@ -58,7 +58,7 @@ export default async function Page({ params }: Props) {
       <nav className="meta" aria-label="Breadcrumb"><a href="/blog/">Blog</a> › <span>{p.title}</span></nav>
       <h1>{p.title}</h1>
       <p className="byline">
-        {t.by} <a href={AUTHOR_PATH(author.key)} rel="author">{bylineName(author, p.lang)}</a>{bylineRole(author, p.lang) ? <>, {bylineRole(author, p.lang)}</> : null} · <time dateTime={p.date}>{formatDate(p.date, p.lang)}</time>
+        {t.by} <a href={AUTHOR_PATH(author.key)} rel="author">{bylineName(author, p.lang)}</a>{bylineRole(author, p.lang) ? <>, {bylineRole(author, p.lang)}</> : null} · <time dateTime={p.date}>{formatDate(p.date, p.lang)}</time> · {t.readMin.replace('{n}', String(p.readingMinutes))}
         {p.updated && p.updated !== p.date && <> · {t.updated} <time dateTime={p.updated}>{formatDate(p.updated, p.lang)}</time></>}
         {reviewer && <> · {t.reviewedBy} {reviewer.url ? <a href={reviewer.url}>{reviewer.name}</a> : reviewer.name}, {reviewer.qualification[p.lang]} (<time dateTime={p.reviewedAt}>{formatDate(String(p.reviewedAt), p.lang)}</time>)</>}
         {others.map((o) => <span key={o.slug}> · {t.alsoIn} <a href={`/blog/${o.slug}/`} hrefLang={o.lang} lang={o.lang}>{UI[o.lang].language}</a></span>)}

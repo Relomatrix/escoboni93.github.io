@@ -25,15 +25,19 @@ export const metadata: Metadata = {
 const k = (key: string) => LANGS.map((l) => [l, UI[l][key]] as const);
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${display.variable} ${body.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd([organizationLd, websiteLd]) }} />
         <header className="site-header">
           <div className="wrap">
             <a href="/blog/" aria-label="Relomatrix Blog"><img src="/blog/logo.svg" alt="Relomatrix" width={220} height={40} /></a>
             <nav className="site-nav">
+              <a className="nav-search" href="/blog/#cerca">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" strokeWidth="2.4" /><path d="M15.5 15.5L21 21" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" /></svg>
+                {k('navSearch').map(([l, v]) => <span key={l} className={`i18n-${l}`} lang={l}>{v}</span>)}
+              </a>
               {k('navTopics').map(([l, v]) => <a key={l} className={`i18n-${l}`} lang={l} href="/blog/tag/">{v}</a>)}
-              {k('navAbout').map(([l, v]) => <a key={l} className={`i18n-${l}`} lang={l} href={ABOUT_PATH} hrefLang="it">{v}</a>)}
+              {k('navAbout').map(([l, v]) => <a key={l} className={`nav-about i18n-${l}`} lang={l} href={ABOUT_PATH} hrefLang="it">{v}</a>)}
               {k('siteHome').map(([l, v]) => <a key={l} className={`cta i18n-${l}`} href={v}>relomatrix.com</a>)}
             </nav>
           </div>
