@@ -42,6 +42,24 @@ export const CORRIDORS: Corridor[] = [
       fr: 'Sécurité sociale, résidence fiscale et travail pour s’installer de France en Italie.',
     },
   },
+  {
+    id: 'CH-IT', slug: 'ch-it',
+    label: { en: 'Switzerland → Italy', it: 'Svizzera → Italia', fr: 'Suisse → Italie' },
+    intro: {
+      en: 'Tax residence, health insurance, pensions and the paperwork for moving from Switzerland to Italy.',
+      it: 'Residenza fiscale, assicurazione malattia, previdenza e pratiche per chi si trasferisce dalla Svizzera in Italia.',
+      fr: 'Résidence fiscale, assurance maladie, prévoyance et démarches pour s’installer de Suisse en Italie.',
+    },
+  },
+  {
+    id: 'IT-CH', slug: 'it-ch',
+    label: { en: 'Italy → Switzerland', it: 'Italia → Svizzera', fr: 'Italie → Suisse' },
+    intro: {
+      en: 'Residence permits, tax, health insurance and pensions for moving from Italy to Switzerland.',
+      it: 'Permessi, fisco, assicurazione malattia e previdenza per chi si trasferisce dall’Italia in Svizzera.',
+      fr: 'Autorisations de séjour, fiscalité, assurance maladie et prévoyance pour s’installer d’Italie en Suisse.',
+    },
+  },
 ];
 
 export const CORRIDOR_IDS = new Set(CORRIDORS.map((c) => c.id));

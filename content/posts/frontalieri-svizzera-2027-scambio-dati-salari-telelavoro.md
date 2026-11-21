@@ -7,6 +7,7 @@ lang: "it"
 image: "/blog/images/posts/frontalieri-svizzera-2027-scambio-dati-salari-telelavoro/cover.jpeg"
 imageAlt: "Grafica con il testo Frontalieri Svizzera 2027 e il simbolo di una frontiera tra due punti collegati"
 author: "francesco-bonifazi"
+corridor: "IT-CH"
 tags: ["Frontalieri", "Svizzera", "Telelavoro", "Fisco internazionale"]
 translationKey: "frontalieri-svizzera-lsads-2027"
 faq:
@@ -81,7 +82,7 @@ Anche la sicurezza sociale ha regole proprie sul telelavoro: vedi il nostro arti
 * Aspettati l'informativa del datore sullo scambio dei dati entro il 28 febbraio dell'anno della prima trasmissione.
 * Controlla che i dati del certificato di salario coincidano con quelli che dichiari in Italia.
 
-Per capire in pochi minuti quali regole si applicano al tuo caso puoi usare lo [Snapshot di Relomatrix](https://relomatrix.com/snapshot) oppure vedere [come funziona Relomatrix](https://relomatrix.com/how-it-works).
+Per un primo orientamento gratuito puoi usare lo [Snapshot di Relomatrix](https://www.relomatrix.com/snapshot?utm_source=blog&utm_medium=cta&utm_campaign=frontalieri-svizzera-2027-scambio-dati-salari-telelavoro&lang=it). Se invece stai valutando di trasferire la residenza tra Italia e Svizzera, il Risk Report per [Italia → Svizzera](https://www.relomatrix.com/it/report?corridor=IT-CH&utm_source=blog&utm_medium=cta&utm_campaign=frontalieri-svizzera-2027-scambio-dati-salari-telelavoro) o [Svizzera → Italia](https://www.relomatrix.com/it/report?corridor=CH-IT&utm_source=blog&utm_medium=cta&utm_campaign=frontalieri-svizzera-2027-scambio-dati-salari-telelavoro) ti dà i punti da controllare con la fonte ufficiale di ciascuno, riletto da una persona prima dell'invio (129 euro IVA inclusa; non è una consulenza fiscale o legale).
 
 ## FAQ
 

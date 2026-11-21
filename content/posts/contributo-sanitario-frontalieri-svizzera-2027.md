@@ -2,11 +2,13 @@
 title: "Tassa sulla salute frontalieri 2027: da 30 a 150 euro"
 description: "Legge di bilancio 2027, art. 70: il contributo SSN dei frontalieri in Svizzera diventa una quota fissa da 30 a 150 euro al mese. Chi paga e cosa cambia."
 date: "2026-11-14"
+updated: "2026-11-22"
 slug: "contributo-sanitario-frontalieri-svizzera-2027"
 lang: "it"
 image: "/blog/images/posts/contributo-sanitario-frontalieri-svizzera-2027/cover.jpeg"
 imageAlt: "Grafica con il testo Tassa sulla salute frontalieri 2027 e un simbolo di confine tra due punti collegati"
 author: "francesco-bonifazi"
+corridor: "IT-CH"
 tags: ["Frontalieri", "Svizzera", "Sanità", "Legge di bilancio 2027"]
 faq:
   - q: "Cos'è la tassa sulla salute dei frontalieri?"
@@ -74,7 +76,15 @@ Le entrate vanno al bilancio della regione di residenza e sostengono il servizio
 * **Segui la tua regione**: l'importo esatto, tra 30 e 150 euro, sarà deciso ogni anno dalla regione di residenza.
 * **Controlla il testo finale** della legge di bilancio 2027 quando sarà approvata: gli emendamenti possono modificare l'articolo 70.
 
-Per un primo quadro di un trasferimento puoi usare lo [Snapshot Relomatrix](https://www.relomatrix.com/snapshot?utm_source=blog&utm_medium=cta&utm_campaign=contributo-sanitario-frontalieri-svizzera-2027). Se lavori dall'estero, leggi anche la guida sulla [residenza fiscale e l'iscrizione AIRE](/blog/aire-residenza-fiscale-2026-iscrizione-non-basta/).
+Se lavori dall'estero, leggi anche la guida sulla [residenza fiscale e l'iscrizione AIRE](/blog/aire-residenza-fiscale-2026-iscrizione-non-basta/).
+
+## Se stai pensando di trasferirti
+
+Questo contributo riguarda chi continua a vivere in Italia e lavora in Svizzera. Se invece stai pensando di spostare la residenza, dall'Italia alla Svizzera o dalla Svizzera all'Italia, le domande diventano altre: in quale Paese paghi le tasse, chi ti copre per la salute, cosa succede ai contributi versati e quali pratiche vanno fatte prima e dopo il trasloco.
+
+Per questo caso c'è il Risk Report di Relomatrix, per [Italia → Svizzera](https://www.relomatrix.com/it/report?corridor=IT-CH&utm_source=blog&utm_medium=cta&utm_campaign=contributo-sanitario-frontalieri-svizzera-2027) e per [Svizzera → Italia](https://www.relomatrix.com/it/report?corridor=CH-IT&utm_source=blog&utm_medium=cta&utm_campaign=contributo-sanitario-frontalieri-svizzera-2027). Rispondi a un questionario sulla tua situazione e ricevi un documento con i punti da controllare, le informazioni che mancano e, per ogni indicazione, la fonte ufficiale da cui viene. Una persona lo rilegge prima dell'invio. Costa 129 euro, IVA inclusa. Non è una consulenza fiscale o legale: serve ad arrivare preparato dal commercialista o dall'avvocato, sapendo già cosa chiedere.
+
+Se vuoi solo un primo orientamento, lo [Snapshot](https://www.relomatrix.com/snapshot?utm_source=blog&utm_medium=cta&utm_campaign=contributo-sanitario-frontalieri-svizzera-2027&lang=it) è gratuito.
 
 ## FAQ
 

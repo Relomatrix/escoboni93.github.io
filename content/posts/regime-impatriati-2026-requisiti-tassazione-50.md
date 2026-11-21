@@ -1,8 +1,8 @@
 ---
-title: "Regime impatriati 2026: requisiti e tassazione al 50%"
-description: "Regime impatriati per chi rientra in Italia: reddito tassato al 50% fino a 600.000 euro, 40% con figli minori, requisiti di residenza estera e durata."
+title: "Regime impatriati 2026: requisiti, 50% e novità dal 2027"
+description: "Regime impatriati: chi si trasferisce o rientra in Italia paga le tasse sul 50% del reddito di lavoro, 40% con figli. Requisiti, durata, esempi e novità 2027."
 date: "2026-11-04"
-updated: "2026-11-11"
+updated: "2026-11-22"
 slug: "regime-impatriati-2026-requisiti-tassazione-50"
 lang: "it"
 image: "/blog/images/posts/regime-impatriati-2026-requisiti-tassazione-50/cover.jpeg"
@@ -12,103 +12,121 @@ tags: ["Impatriati", "Residenza fiscale", "Rientro in Italia", "Fisco internazio
 translationKey: "regime-impatriati-2026"
 faq:
   - q: "Quanto si risparmia con il regime impatriati?"
-    a: "I redditi di lavoro prodotti in Italia, entro 600.000 euro l'anno, concorrono al reddito complessivo solo per il 50%. Con un figlio minorenne residente in Italia la quota imponibile scende al 40%."
+    a: "I redditi di lavoro prodotti in Italia, entro 600.000 euro l'anno, contano nel reddito imponibile solo per il 50%. Con un figlio minorenne residente in Italia la quota scende al 40%. Su 60.000 euro di stipendio, per esempio, nel reddito su cui si calcola l'IRPEF entrano 30.000 euro, o 24.000 con un figlio."
   - q: "Quanti anni bisogna aver vissuto all'estero?"
-    a: "Almeno tre periodi d'imposta senza residenza fiscale in Italia. Se si lavora per lo stesso datore o per lo stesso gruppo dell'estero, servono sei periodi, o sette se prima dell'espatrio si lavorava in Italia per quel datore o gruppo."
+    a: "Almeno tre periodi d'imposta senza residenza fiscale in Italia. Se in Italia si lavora per lo stesso datore di lavoro o per lo stesso gruppo dell'estero ne servono sei, o sette se prima di partire si lavorava già in Italia per quel datore o gruppo."
   - q: "Quanto dura l'agevolazione?"
-    a: "Si applica dal periodo d'imposta del trasferimento e per i quattro successivi. Chi non mantiene la residenza in Italia per almeno quattro anni perde i benefici e deve restituirli con gli interessi."
+    a: "Dall'anno in cui si trasferisce la residenza fiscale e per i quattro successivi, quindi cinque anni in tutto. Chi non resta residente in Italia almeno quattro anni perde i benefici e li restituisce con gli interessi."
   - q: "Serve una laurea?"
-    a: "Serve possedere i requisiti di elevata qualificazione o specializzazione indicati dai decreti legislativi n. 108/2012 e n. 206/2007."
+    a: "Serve possedere i requisiti di elevata qualificazione o specializzazione dei decreti legislativi 108/2012 e 206/2007, oppure aver svolto attività di ricerca, anche applicata, nelle tecnologie di intelligenza artificiale."
+  - q: "Il regime impatriati esiste ancora dal 2027?"
+    a: "Sì. Il nuovo Testo unico delle imposte sui redditi (d.lgs. 117/2026), che si applica dal 1° gennaio 2027, riporta il regime nell'articolo 225 con le stesse regole. Dal 2027 cambia invece il cumulo con la flat tax dei neo residenti, che non è più possibile per chi si trasferisce da quell'anno."
   - q: "Come si dimostra la residenza estera per un cittadino italiano?"
-    a: "Secondo l'Agenzia delle Entrate, il cittadino italiano si considera residente all'estero se è stato iscritto all'AIRE oppure se ha avuto la residenza in un altro Stato in base a una convenzione contro le doppie imposizioni."
+    a: "Per gli anni precedenti al 29 dicembre 2023 la norma considera residente all'estero il cittadino italiano iscritto all'AIRE oppure residente in un altro Stato secondo una convenzione contro le doppie imposizioni."
 draft: false
 ---
 
-Il regime impatriati riduce le tasse a chi trasferisce la residenza fiscale in Italia: i redditi di lavoro prodotti in Italia, fino a 600.000 euro l'anno, sono tassati solo sul 50%, o sul 40% con figli minorenni. Servono almeno tre anni di residenza estera, un impegno a restare quattro anni e un'elevata qualificazione.
+Il regime impatriati riduce le tasse a chi trasferisce la residenza fiscale in Italia dopo almeno tre anni all'estero: i redditi di lavoro prodotti in Italia, fino a 600.000 euro l'anno, sono tassati solo per metà, o per il 40% con un figlio minorenne. Dura cinque anni e richiede di restare in Italia almeno quattro.
 
-Questa guida riassume le regole del regime previsto dall'articolo 5 del decreto legislativo n. 209/2023, così come le descrive l'Agenzia delle Entrate. Per il quadro generale del lavoro tra Paesi diversi vedi la nostra [guida al lavoro transfrontaliero](/blog/cross-border-employment/).
+Vale per italiani che rientrano e per stranieri che si trasferiscono. Questa guida segue il testo dell'[articolo 5 del decreto legislativo 209/2023](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-12-27;209) e dell'articolo 225 del nuovo Testo unico delle imposte sui redditi, che lo sostituisce dal 2027.
 
-## TL;DR
+## In breve
 
-* Vale per chi trasferisce la residenza fiscale in Italia dal periodo d'imposta 2024 in poi.
-* I redditi di lavoro prodotti in Italia, entro 600.000 euro annui, concorrono al reddito complessivo per il 50%.
-* Con un figlio minorenne residente in Italia la quota scende al 40%.
-* Servono almeno tre periodi d'imposta di residenza estera, sei o sette se si resta con lo stesso datore o gruppo.
-* Durata: anno del trasferimento più quattro anni. Chi lascia l'Italia prima di quattro anni restituisce i benefici con gli interessi.
+* **Per chi**: chi trasferisce la residenza fiscale in Italia **dal 2024 in poi** e non è stato residente in Italia nei **tre anni** precedenti.
+* **Sconto**: il reddito di lavoro prodotto in Italia conta per il **50%**, entro **600.000 euro** l'anno; per il **40%** con un figlio minorenne.
+* **Quali redditi**: lavoro dipendente, redditi assimilati e lavoro autonomo da arti e professioni.
+* **Durata**: anno del trasferimento più **quattro anni**. Chi lascia l'Italia prima di quattro anni restituisce i benefici con gli interessi.
+* **Dal 2027**: il regime passa nell'articolo 225 del nuovo TUIR con le stesse regole; non si può più cumulare con la flat tax dei neo residenti.
 
-## Chi può accedere
+## I quattro requisiti
 
-Secondo la scheda dell'Agenzia delle Entrate, il regime si applica quando ricorrono tutte queste condizioni:
+Secondo l'articolo 5, comma 1, servono **tutte** queste condizioni:
 
-* il lavoratore si impegna a risiedere fiscalmente in Italia per almeno quattro anni;
-* non è stato fiscalmente residente in Italia nei tre periodi d'imposta precedenti il trasferimento;
-* l'attività lavorativa è prestata per la maggior parte del periodo d'imposta in Italia;
-* possiede i requisiti di elevata qualificazione o specializzazione dei decreti legislativi n. 108/2012 e n. 206/2007.
+1. **Impegno a restare**: ti impegni a risiedere fiscalmente in Italia per almeno quattro anni.
+2. **Residenza estera**: non sei stato residente fiscale in Italia nei tre periodi d'imposta prima del trasferimento (ne servono di più se resti con lo stesso datore di lavoro, vedi sotto).
+3. **Lavoro in Italia**: lavori in Italia per la maggior parte dell'anno.
+4. **Elevata qualificazione**: hai i requisiti di elevata qualificazione o specializzazione dei decreti legislativi 108/2012 e 206/2007, oppure hai svolto attività di ricerca, anche applicata, nelle tecnologie di intelligenza artificiale.
 
-Riguarda i redditi di lavoro dipendente e assimilati e i redditi di lavoro autonomo derivanti dall'esercizio di arti e professioni prodotti in Italia.
+### Se resti con lo stesso datore di lavoro
 
-## Quanto si paga
+Se in Italia lavori per lo stesso datore di lavoro che avevi all'estero, o per una società del suo gruppo, il periodo all'estero si allunga:
 
-| Situazione | Quota imponibile | Limite annuo |
+* **sei anni**, se prima di partire non avevi lavorato in Italia per quel datore o gruppo;
+* **sette anni**, se prima di partire lavoravi già in Italia per quel datore o gruppo.
+
+Fanno parte dello stesso gruppo le società legate da un rapporto di controllo, diretto o indiretto, o controllate dallo stesso soggetto (comma 2). È il caso tipico di chi rientra in distacco o resta nella stessa multinazionale.
+
+## Quanto si paga: due esempi
+
+Il regime non cambia le aliquote: riduce la parte di reddito su cui si calcolano.
+
+| Stipendio lordo annuo prodotto in Italia | Quanto conta nel reddito (50%) | Con un figlio minorenne (40%) |
 |---|---|---|
-| Regola base | 50% del reddito | 600.000 euro |
-| Con figlio minorenne residente in Italia | 40% del reddito | 600.000 euro |
+| 60.000 euro | 30.000 euro | 24.000 euro |
+| 120.000 euro | 60.000 euro | 48.000 euro |
 
-La quota del 40% vale se il lavoratore si trasferisce con un figlio minore, oppure se un figlio nasce o viene adottato durante il regime. In questo secondo caso decorre dal periodo d'imposta della nascita o dell'adozione e per il tempo residuo. Il minore deve essere residente in Italia.
+Sopra i 600.000 euro l'anno la parte eccedente conta per intero.
 
-## La residenza estera "rafforzata"
-
-Se in Italia si lavora per lo stesso soggetto per cui si lavorava all'estero, o per una società dello stesso gruppo, il periodo minimo all'estero si allunga:
-
-* **sei periodi d'imposta**, se prima non si era lavorato in Italia per quel soggetto o gruppo;
-* **sette periodi d'imposta**, se prima dell'espatrio si era già lavorato in Italia per quel soggetto o gruppo.
-
-Per l'Agenzia appartengono allo stesso gruppo i soggetti legati da un rapporto di controllo diretto o indiretto e quelli sottoposti al controllo comune di un altro soggetto. È il caso tipico di chi rientra in distacco o resta dipendente della stessa multinazionale.
+La quota del 40% vale se ti trasferisci con un figlio minorenne, oppure se un figlio nasce o viene adottato mentre usi il regime: in questo caso parte dall'anno della nascita o dell'adozione. Il figlio deve essere residente in Italia (commi 4 e 5).
 
 ## Durata e decadenza
 
-Il regime si applica dall'anno in cui si trasferisce la residenza fiscale e per i quattro periodi d'imposta successivi. Se la residenza in Italia non viene mantenuta per almeno quattro anni, il lavoratore decade e i benefici già goduti vengono recuperati con gli interessi.
+Il regime si applica dall'anno in cui trasferisci la residenza fiscale e per i quattro anni successivi: **cinque anni** in tutto. Se non mantieni la residenza in Italia per almeno quattro anni, perdi i benefici e devi restituire quelli già avuti, con gli interessi (comma 3).
 
-Per chi ha trasferito la residenza anagrafica nel 2024, il regime dura altri tre periodi d'imposta se il lavoratore è diventato proprietario della casa di abitazione principale in Italia entro il 31 dicembre 2023 e nei dodici mesi precedenti il trasferimento.
+Per chi ha trasferito la residenza anagrafica nel **2024** c'è un caso particolare: il regime dura altri tre anni, sempre al 50%, se il lavoratore è diventato proprietario della casa di abitazione principale in Italia entro il 31 dicembre 2023 e nei dodici mesi prima del trasferimento (comma 10). Chi ha trasferito la residenza anagrafica entro il 31 dicembre 2023 resta invece con le regole del vecchio regime (comma 9).
 
-## Compatibilità con altri regimi
+## Italiani che rientrano: la prova della residenza estera
 
-L'Agenzia ricorda che il nuovo regime è compatibile con gli altri regimi di favore per chi si trasferisce in Italia, purché si rispettino i requisiti di ciascuno. Un esempio citato è il rientro di un ricercatore che svolge anche lavoro autonomo (risposta n. 16/2025). Esiste anche il regime dei neo residenti, con un'imposta sostitutiva sui redditi esteri di 300.000 euro l'anno per chi si trasferisce dal 2026. Attenzione: per chi trasferisce la residenza fiscale in Italia dal periodo d'imposta 2027 i due regimi non sono più cumulabili, come spieghiamo nell'articolo su [neo residenti e impatriati: stop al cumulo dal 2027](/blog/neo-residenti-impatriati-divieto-cumulo-2027/).
+Per gli anni prima del 29 dicembre 2023, la norma considera residente all'estero il cittadino italiano che era **iscritto all'AIRE** oppure che era residente in un altro Stato secondo una **convenzione contro le doppie imposizioni** (comma 6). Se non eri iscritto all'AIRE, la prova passa dalla convenzione e va preparata con un professionista. Su questo leggi anche la nostra guida su [residenza fiscale e iscrizione AIRE](/blog/aire-residenza-fiscale-2026-iscrizione-non-basta/).
 
-## Cosa cambia con il nuovo Testo unico
+## Cosa cambia dal 2027
 
-Il decreto legislativo 19 giugno 2026, n. 117, pubblicato nella Gazzetta Ufficiale del 3 luglio 2026, approva il nuovo Testo unico delle imposte sui redditi. Chi pianifica un rientro nel 2027 dovrebbe verificare con un professionista come la disciplina degli impatriati è collocata nel nuovo testo e se ci sono modifiche ai requisiti.
+**Il regime resta.** Il [decreto legislativo 117/2026](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2026-06-19;117), il nuovo Testo unico delle imposte sui redditi, si applica dal 1° gennaio 2027 (articolo 377). Il regime impatriati diventa il suo **articolo 225**, con gli stessi requisiti, le stesse percentuali e lo stesso limite di 600.000 euro.
 
-Se stai valutando anche un trasferimento in altri Paesi, leggi le guide sul [coordinamento UE della sicurezza sociale e il distacco](/blog/riforma-coordinamento-sicurezza-sociale-ue-2026-distacco/) e sui [frontalieri in Svizzera dal 2027](/blog/frontalieri-svizzera-2027-scambio-dati-salari-telelavoro/). Per una prima analisi del tuo caso prova lo [Snapshot Relomatrix](https://relomatrix.com/snapshot).
+**Niente cumulo con la flat tax dei neo residenti.** Per chi trasferisce la residenza fiscale in Italia dal 2027, il regime impatriati non si può più sommare alla flat tax sui redditi esteri: lo spieghiamo nell'articolo su [neo residenti e impatriati, stop al cumulo dal 2027](/blog/neo-residenti-impatriati-divieto-cumulo-2027/).
+
+## Cosa fare prima di trasferirti
+
+* **Conta gli anni all'estero** da quando hai perso la residenza fiscale italiana, e controlla se resti con lo stesso datore di lavoro o gruppo.
+* **Raccogli le prove**: iscrizione AIRE, certificati di residenza fiscale del Paese estero, contratti.
+* **Verifica la qualificazione**: titolo di studio o professione regolamentata, oppure ricerca nell'intelligenza artificiale.
+* **Parla con il datore di lavoro** o con il commercialista di come chiedere l'agevolazione per il tuo tipo di reddito.
+
+## Come può aiutarti Relomatrix
+
+Il regime impatriati è solo una parte del trasferimento: ci sono anche la residenza fiscale nell'anno del passaggio, i contributi e le pratiche da fare nei due Paesi. Il Risk Report di Relomatrix parte da un questionario sulla tua situazione e ti dà i punti da controllare, le informazioni che mancano e, per ogni indicazione, la fonte ufficiale da cui viene. Una persona lo rilegge prima dell'invio. È disponibile per chi si trasferisce in Italia da [Stati Uniti](https://www.relomatrix.com/it/report?corridor=US-IT&utm_source=blog&utm_medium=cta&utm_campaign=regime-impatriati-2026-requisiti-tassazione-50), [Regno Unito](https://www.relomatrix.com/it/report?corridor=UK-IT&utm_source=blog&utm_medium=cta&utm_campaign=regime-impatriati-2026-requisiti-tassazione-50), [Francia](https://www.relomatrix.com/it/report?corridor=FR-IT&utm_source=blog&utm_medium=cta&utm_campaign=regime-impatriati-2026-requisiti-tassazione-50), [Svizzera](https://www.relomatrix.com/it/report?corridor=CH-IT&utm_source=blog&utm_medium=cta&utm_campaign=regime-impatriati-2026-requisiti-tassazione-50), [Argentina](https://www.relomatrix.com/it/report?corridor=AR-IT&utm_source=blog&utm_medium=cta&utm_campaign=regime-impatriati-2026-requisiti-tassazione-50) e [Brasile](https://www.relomatrix.com/it/report?corridor=BR-IT&utm_source=blog&utm_medium=cta&utm_campaign=regime-impatriati-2026-requisiti-tassazione-50), e costa 129 euro IVA inclusa. Non è una consulenza fiscale: serve ad arrivare dal commercialista sapendo già cosa chiedere. Per un primo orientamento gratuito c'è lo [Snapshot](https://www.relomatrix.com/snapshot?utm_source=blog&utm_medium=cta&utm_campaign=regime-impatriati-2026-requisiti-tassazione-50&lang=it).
 
 ## FAQ
 
 ### Quanto si risparmia con il regime impatriati?
 
-I redditi di lavoro prodotti in Italia, entro 600.000 euro l'anno, concorrono al reddito complessivo solo per il 50%. Con un figlio minorenne residente in Italia la quota imponibile scende al 40%.
+I redditi di lavoro prodotti in Italia, entro 600.000 euro l'anno, contano solo per il 50%, o per il 40% con un figlio minorenne residente in Italia. Su 60.000 euro di stipendio, nel reddito su cui si calcola l'IRPEF entrano 30.000 euro, o 24.000 con un figlio.
 
 ### Quanti anni bisogna aver vissuto all'estero?
 
-Almeno tre periodi d'imposta senza residenza fiscale in Italia. Se si lavora per lo stesso datore o per lo stesso gruppo dell'estero, servono sei periodi, o sette se prima dell'espatrio si lavorava in Italia per quel datore o gruppo.
+Almeno tre. Sei o sette se in Italia lavori per lo stesso datore di lavoro o gruppo che avevi all'estero.
 
 ### Quanto dura l'agevolazione?
 
-Si applica dal periodo d'imposta del trasferimento e per i quattro successivi. Chi non mantiene la residenza in Italia per almeno quattro anni perde i benefici e deve restituirli con gli interessi.
+Cinque anni: l'anno del trasferimento e i quattro successivi. Se lasci l'Italia prima di quattro anni restituisci i benefici con gli interessi.
 
 ### Serve una laurea?
 
-Serve possedere i requisiti di elevata qualificazione o specializzazione indicati dai decreti legislativi n. 108/2012 e n. 206/2007.
+Servono i requisiti di elevata qualificazione o specializzazione dei decreti legislativi 108/2012 e 206/2007, oppure attività di ricerca nelle tecnologie di intelligenza artificiale.
+
+### Il regime impatriati esiste ancora dal 2027?
+
+Sì, nell'articolo 225 del nuovo TUIR, con le stesse regole. Per chi si trasferisce dal 2027 non si può più cumulare con la flat tax dei neo residenti.
 
 ### Come si dimostra la residenza estera per un cittadino italiano?
 
-Secondo l'Agenzia delle Entrate, il cittadino italiano si considera residente all'estero se è stato iscritto all'AIRE oppure se ha avuto la residenza in un altro Stato in base a una convenzione contro le doppie imposizioni.
+Per gli anni prima del 29 dicembre 2023 vale l'iscrizione all'AIRE, oppure la residenza in un altro Stato secondo una convenzione contro le doppie imposizioni.
 
 ## Fonti
 
-Consultate il 4 novembre 2026.
+* [Normattiva: decreto legislativo 27 dicembre 2023, n. 209, articolo 5 (nuovo regime per i lavoratori impatriati)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-12-27;209) (testo vigente letto l'11/11/2026)
+* [Normattiva: decreto legislativo 19 giugno 2026, n. 117, nuovo Testo unico delle imposte sui redditi, articoli 225 e 377](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2026-06-19;117) (testo vigente letto il 12/11/2026)
+* [Agenzia delle Entrate: lavoratori impatriati, nuovo regime dal periodo d'imposta 2024](https://www.agenziaentrate.gov.it/portale/lavoratori-impatriati-209-2023/infogen-lavoratori-impatriati-209-2023-cittadini) (consultata il 4/11/2026)
+* [Gazzetta Ufficiale: decreto legislativo 19 giugno 2026, n. 117](https://www.gazzettaufficiale.it/eli/id/2026/07/03/26G00131/sg) (consultata il 4/11/2026)
 
-* [Lavoratori impatriati, nuovo regime dal periodo d'imposta 2024 (Agenzia delle Entrate)](https://www.agenziaentrate.gov.it/portale/lavoratori-impatriati-209-2023/infogen-lavoratori-impatriati-209-2023-cittadini)
-* [Agevolazioni per chi trasferisce la residenza in Italia (Agenzia delle Entrate)](https://www.agenziaentrate.gov.it/portale/agevolazioni-per-chi-trasferisce-la-residenza-in-italia)
-* [Decreto legislativo 19 giugno 2026, n. 117, Testo unico delle imposte sui redditi (Gazzetta Ufficiale)](https://www.gazzettaufficiale.it/eli/id/2026/07/03/26G00131/sg)
-
-*Informazioni di carattere generale, non consulenza fiscale. Verifica il tuo caso con l'Agenzia delle Entrate o con un professionista.*
+*Informazioni di carattere generale, non consulenza fiscale. Verifica il tuo caso con l'Agenzia delle Entrate o con un professionista prima di trasferirti.*
