@@ -57,10 +57,10 @@ The same group means companies linked by direct or indirect control, or controll
 
 The regime does not change the tax rates: it reduces the part of your income they apply to.
 
-| Gross annual salary earned in Italy | Basic rule (50%) | With a minor child (40%) |
+| Gross annual salary earned in Italy | Counts as income (50%) | With a minor child (40%) |
 |---|---|---|
-| 100,000 euros | 50,000 euros count as income | 40,000 euros count as income |
-| 200,000 euros | 100,000 euros count as income | 80,000 euros count as income |
+| 100,000 euros | 50,000 euros | 40,000 euros |
+| 200,000 euros | 100,000 euros | 80,000 euros |
 
 The 40% rate applies if you move with a minor child, or if a child is born or adopted while you use the regime, from that year onwards. The child must be resident in Italy (article 5(4) and (5)).
 

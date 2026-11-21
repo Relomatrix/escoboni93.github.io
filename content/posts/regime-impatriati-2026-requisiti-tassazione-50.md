@@ -60,10 +60,10 @@ Fanno parte dello stesso gruppo le società legate da un rapporto di controllo, 
 
 Il regime non cambia le aliquote: riduce la parte di reddito su cui si calcolano.
 
-| Stipendio lordo annuo prodotto in Italia | Regola base (50%) | Con figlio minorenne (40%) |
+| Stipendio lordo annuo prodotto in Italia | Quanto conta nel reddito (50%) | Con un figlio minorenne (40%) |
 |---|---|---|
-| 60.000 euro | conta nel reddito per 30.000 euro | conta nel reddito per 24.000 euro |
-| 120.000 euro | conta nel reddito per 60.000 euro | conta nel reddito per 48.000 euro |
+| 60.000 euro | 30.000 euro | 24.000 euro |
+| 120.000 euro | 60.000 euro | 48.000 euro |
 
 Sopra i 600.000 euro l'anno la parte eccedente conta per intero.
 

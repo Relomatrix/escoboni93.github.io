@@ -58,10 +58,10 @@ Font partie du même groupe les sociétés liées par un rapport de contrôle di
 
 Le régime ne change pas les taux : il réduit la part du revenu à laquelle ils s'appliquent.
 
-| Salaire brut annuel produit en Italie | Règle de base (50 %) | Avec un enfant mineur (40 %) |
+| Salaire brut annuel produit en Italie | Compte comme revenu (50 %) | Avec un enfant mineur (40 %) |
 |---|---|---|
-| 60 000 euros | 30 000 euros comptent comme revenu | 24 000 euros comptent comme revenu |
-| 120 000 euros | 60 000 euros comptent comme revenu | 48 000 euros comptent comme revenu |
+| 60 000 euros | 30 000 euros | 24 000 euros |
+| 120 000 euros | 60 000 euros | 48 000 euros |
 
 Le taux de 40 % s'applique si vous vous installez avec un enfant mineur, ou si un enfant naît ou est adopté pendant le régime, à partir de cette année-là. L'enfant doit résider en Italie (alinéas 4 et 5).
 
