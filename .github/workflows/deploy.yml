@@ -26,31 +26,27 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      # G-30: the blog is served by relomatrix.com/blog/ (built there from this repo). Once that is
-      # live, this host only redirects there; until then it keeps serving the full blog.
-      - id: target
+      # G-30: the blog lives at www.relomatrix.com/blog/ (built there from this repo) and this host only
+      # redirects there. It used to fall back to the full blog, with blog.relomatrix.com as canonical,
+      # whenever relomatrix.com/blog/ did not answer within 30 s: a single slow check would put every
+      # article back on Google under both hosts. The redirect shell is now the only output.
+      - name: Check that relomatrix.com/blog/ serves the blog (warning only)
         run: |
           html="$(curl -fsSL --max-time 30 https://www.relomatrix.com/blog/ || true)"
           if printf '%s' "$html" | grep -q 'name="relomatrix-blog" content="embedded"'; then
-            echo "mode=redirect" >> "$GITHUB_OUTPUT"
+            echo "relomatrix.com/blog/ is live" >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "mode=full" >> "$GITHUB_OUTPUT"
+            echo "::warning::relomatrix.com/blog/ did not answer with the blog marker; deploying the redirect shell anyway"
           fi
-      - name: Build (canonical relomatrix.com, redirect shell for this host)
-        if: steps.target.outputs.mode == 'redirect'
+      - name: Build (canonical www.relomatrix.com, redirect shell for this host)
         env:
           # The old host lists (sitemap, RSS) only the posts already live on relomatrix.com/blog/.
           BLOG_SHELL_MIRROR_LIVE: '1'
         run: npm run build
-      - name: Build (full blog on this host until relomatrix.com/blog/ is live)
-        if: steps.target.outputs.mode == 'full'
-        env:
-          NEXT_PUBLIC_SITE_URL: https://blog.relomatrix.com
-        run: npm run build
-      - run: echo "Deploying ${{ steps.target.outputs.mode }}" >> "$GITHUB_STEP_SUMMARY"
+      - run: test -f out-redirect/index.html && echo "Deploying redirect" >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: ${{ steps.target.outputs.mode == 'redirect' && 'out-redirect' || 'out' }}
+          path: out-redirect
   deploy:
     needs: build
     runs-on: ubuntu-latest
